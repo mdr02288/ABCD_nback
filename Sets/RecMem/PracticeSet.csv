@@ -1,0 +1,3 @@
+BlockType,TargetType,Stimulus,Stim_CRESP
+Rec,newposface,Stimuli/PracticeRec4.bmp,New
+Rec,oldposface,Stimuli/PracticeHO2.bmp,Old

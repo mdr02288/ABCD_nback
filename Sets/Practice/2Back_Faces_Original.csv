@@ -1,0 +1,7 @@
+BlockType,TargetType,Stimulus,Stim_CRESP
+Cue2Back,Faces,,
+2Back,NegFace,Stimuli/PracticeFO2.bmp,No Match
+2Back,NegFace,Stimuli/PracticeFO4.bmp,No Match
+2Back,NegFace,Stimuli/PracticeFO2.bmp,Match
+2Back,NegFace,Stimuli/PracticeFO4.bmp,Match
+2Back,NegFace,Stimuli/PracticeFO1.bmp,No Match

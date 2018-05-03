@@ -1,0 +1,89 @@
+BlockType,StimType,Stimulus,TargetType,Stim_CRESP,RunTrialNumber_Block,Block,Run
+Cue0Back,Faces,HF02_HO.bmp,,,,,
+0-Back,PosFace,29M_HO.bmp,nonlure,No Match,2,1,1
+0-Back,PosFace,HF02_HO.bmp,target,Match,3,1,1
+0-Back,PosFace,13F_HO.bmp,nonlure,No Match,4,1,1
+0-Back,PosFace,BM026_HO.bmp,nonlure,No Match,5,1,1
+0-Back,PosFace,29M_HO.bmp,lure,No Match,6,1,1
+0-Back,PosFace,WM01_HO.bmp,nonlure,No Match,7,1,1
+0-Back,PosFace,WM01_HO.bmp,lure,No Match,8,1,1
+0-Back,PosFace,WF03_HO.bmp,nonlure,No Match,9,1,1
+0-Back,PosFace,HF02_HO.bmp,target,Match,10,1,1
+0-Back,PosFace,13F_HO.bmp,lure,No Match,11,1,1
+Cue2Back,Places,,,,,,
+2-Back,Place,PL_046_SCENE03.bmp,nonlure,No Match,12,2,1
+2-Back,Place,PL_046_SCENE03.bmp,lure,No Match,13,2,1
+2-Back,Place,PL_045_SCENE02.bmp,nonlure,No Match,14,2,1
+2-Back,Place,PL_047_SCENE04.bmp,nonlure,No Match,15,2,1
+2-Back,Place,PL_045_SCENE02.bmp,target,Match,16,2,1
+2-Back,Place,PL_049_SCENE06.bmp,nonlure,No Match,17,2,1
+2-Back,Place,PL_048_SCENE05.bmp,nonlure,No Match,18,2,1
+2-Back,Place,PL_047_SCENE04.bmp,lure,No Match,19,2,1
+2-Back,Place,PL_048_SCENE05.bmp,target,Match,20,2,1
+2-Back,Place,PL_050_SCENE07.bmp,nonlure,No Match,21,2,1
+Cue2Back,Faces,,,,,,
+2-Back,PosFace,BF016_HO.bmp,nonlure,No Match,22,3,1
+2-Back,PosFace,32M_HO.bmp,nonlure,No Match,23,3,1
+2-Back,PosFace,BF016_HO.bmp,target,Match,24,3,1
+2-Back,PosFace,BM06_HO.bmp,nonlure,No Match,25,3,1
+2-Back,PosFace,BM06_HO.bmp,lure,No Match,26,3,1
+2-Back,PosFace,32M_HO.bmp,lure,No Match,27,3,1
+2-Back,PosFace,WF007_HO.bmp,nonlure,No Match,28,3,1
+2-Back,PosFace,20M_HO.bmp,nonlure,No Match,29,3,1
+2-Back,PosFace,19F_HO.bmp,nonlure,No Match,30,3,1
+2-Back,PosFace,20M_HO.bmp,target,Match,31,3,1
+Cue0Back,Places,PL_040_LEXINGTON16.bmp,,,,,
+0-Back,Place,PL_041_LEXINGTON17.bmp,nonlure,No Match,32,4,1
+0-Back,Place,PL_044_SCENE01.bmp,nonlure,No Match,33,4,1
+0-Back,Place,PL_040_LEXINGTON16.bmp,target,Match,34,4,1
+0-Back,Place,PL_040_LEXINGTON16.bmp,target,Match,35,4,1
+0-Back,Place,PL_043_LEXINGTON19.bmp,nonlure,No Match,36,4,1
+0-Back,Place,PL_043_LEXINGTON19.bmp,lure,No Match,37,4,1
+0-Back,Place,PL_044_SCENE01.bmp,lure,No Match,38,4,1
+0-Back,Place,o89.1.bmp,nonlure,No Match,39,4,1
+0-Back,Place,PL_034_FOXISLAND.bmp,nonlure,No Match,40,4,1
+0-Back,Place,PL_042_LEXINGTON18.bmp,lure,No Match,41,4,1
+Cue2Back,Faces,,,,,,
+2-Back,NeutFace,AF235_NC.bmp,nonlure,No Match,42,5,1
+2-Back,NeutFace,LF209_NC.bmp,nonlure,No Match,43,5,1
+2-Back,NeutFace,AF235_NC.bmp,target,Match,44,5,1
+2-Back,NeutFace,WM036_NC.bmp,nonlure,No Match,45,5,1
+2-Back,NeutFace,BF201_NC.bmp,nonlure,No Match,46,5,1
+2-Back,NeutFace,BF201_NC.bmp,lure,No Match,47,5,1
+2-Back,NeutFace,WM036_NC.bmp,lure,No Match,48,5,1
+2-Back,NeutFace,BM04_NC.bmp,nonlure,No Match,49,5,1
+2-Back,NeutFace,AM04_NC.bmp,nonlure,No Match,50,5,1
+2-Back,NeutFace,BM04_NC.bmp,target,Match,51,5,1
+Cue0Back,Faces,AM05_FO.bmp,,,,,
+0-Back,NegFace,BM023_FO.bmp,nonlure,No Match,52,6,1
+0-Back,NegFace,16F_FO.bmp,nonlure,No Match,53,6,1
+0-Back,NegFace,AM05_FO.bmp,target,Match,54,6,1
+0-Back,NegFace,3F_FO.bmp,nonlure,No Match,55,6,1
+0-Back,NegFace,16F_FO.bmp,lure,No Match,56,6,1
+0-Back,NegFace,WM003_FO.bmp,nonlure,No Match,57,6,1
+0-Back,NegFace,WM003_FO.bmp,lure,No Match,58,6,1
+0-Back,NegFace,1F_FO.bmp,nonlure,No Match,59,6,1
+0-Back,NegFace,BM023_FO.bmp,lure,No Match,60,6,1
+0-Back,NegFace,AM05_FO.bmp,target,Match,61,6,1
+Cue0Back,Faces,LM211_NC.bmp,,,,,
+0-Back,NeutFace,AM210_NC.bmp,nonlure,No Match,62,7,1
+0-Back,NeutFace,AF216_NC.bmp,nonlure,No Match,63,7,1
+0-Back,NeutFace,WF02_NC.bmp,nonlure,No Match,64,7,1
+0-Back,NeutFace,LM211_NC.bmp,target,Match,65,7,1
+0-Back,NeutFace,14F_NC.bmp,nonlure,No Match,66,7,1
+0-Back,NeutFace,WF02_NC.bmp,lure,No Match,67,7,1
+0-Back,NeutFace,WM04_NC.bmp,nonlure,No Match,68,7,1
+0-Back,NeutFace,AM210_NC.bmp,lure,No Match,69,7,1
+0-Back,NeutFace,14F_NC.bmp,lure,No Match,70,7,1
+0-Back,NeutFace,LM211_NC.bmp,target,Match,71,7,1
+Cue2Back,Faces,,,,,,
+2-Back,NegFace,WF034_FO.bmp,nonlure,No Match,72,8,1
+2-Back,NegFace,43M_FO.bmp,nonlure,No Match,73,8,1
+2-Back,NegFace,5F_FO.bmp,nonlure,No Match,74,8,1
+2-Back,NegFace,43M_FO.bmp,target,Match,75,8,1
+2-Back,NegFace,5F_FO.bmp,target,Match,76,8,1
+2-Back,NegFace,BF10_FO.bmp,nonlure,No Match,77,8,1
+2-Back,NegFace,BF10_FO.bmp,lure,No Match,78,8,1
+2-Back,NegFace,BM05_FO.bmp,nonlure,No Match,79,8,1
+2-Back,NegFace,33M_FO.bmp,nonlure,No Match,80,8,1
+2-Back,NegFace,33M_FO.bmp,lure,No Match,81,8,1

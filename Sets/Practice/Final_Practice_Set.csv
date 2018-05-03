@@ -1,0 +1,21 @@
+BlockType,TargetType,Stimulus,Stim_CRESP,Trial_Number
+Cue2Back,,,,
+2Back,PosFace,Stimuli/PracticeHO1.bmp,No Match,1
+2Back,PosFace,Stimuli/PracticeHO2.bmp,No Match,2
+2Back,PosFace,Stimuli/PracticeHO3.bmp,No Match,3
+2Back,PosFace,Stimuli/PracticeHO2.bmp,Match,4
+Cue0Back,Place,Stimuli/Place3.bmp,Target,
+0Back,Place,Stimuli/Place5.bmp,No Match,5
+0Back,Place,Stimuli/Place3.bmp,Target,6
+0Back,Place,Stimuli/Place6.bmp,No Match,7
+0Back,Place,Stimuli/Place3.bmp,Target,8
+Cue2Back,,,,
+2Back,Place,Stimuli/Place3.bmp,No Match,9
+2Back,Place,Stimuli/Place5.bmp,Match,10
+2Back,Place,Stimuli/Place1.bmp,No Match,11
+2Back,Place,Stimuli/Place5.bmp,Match,12
+Cue0Back,NeutFace,Stimuli/PracticeNC2.bmp,Target,
+0Back,NeutFace,Stimuli/PracticeNC1.bmp,No Match,13
+0Back,NeutFace,Stimuli/PracticeNC2.bmp,Match,14
+0Back,NeutFace,Stimuli/PracticeNC3.bmp,No Match,15
+0Back,NeutFace,Stimuli/PracticeNC2.bmp,Match,16

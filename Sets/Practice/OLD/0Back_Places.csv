@@ -1,0 +1,7 @@
+Condition,StimType,Stimulus,ResponseType
+Cue0Back,Place,Stimuli/Place1.bmp,Target
+0Back,Place,Stimuli/Place1.bmp,Match
+0Back,Place,Stimuli/Place3.bmp,No Match
+0Back,Place,Stimuli/Place5.bmp,No Match
+0Back,Place,Stimuli/Place1.bmp,Match
+0Back,Place,Stimuli/Place3.bmp,No Match

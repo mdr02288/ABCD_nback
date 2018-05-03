@@ -1,0 +1,7 @@
+BlockType,TargetType,Stimulus,Stim_CRESP
+Cue2Back,Places,,
+2Back,Place,Stimuli/Place1.bmp,No Match
+2Back,Place,Stimuli/Place5.bmp,No Match
+2Back,Place,Stimuli/Place1.bmp,Match
+2Back,Place,Stimuli/Place6.bmp,No Match
+2Back,Place,Stimuli/Place1.bmp,Match

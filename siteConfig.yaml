@@ -1,0 +1,19 @@
+keys:
+  NoMatch: ['2','num_2','right']
+  Match: ['1','num_1','left']
+  Next: ['space']
+  Quit: ['escape']
+trigger: ['5','7','^','num_5','num_7','=']
+style:  # Units: deg
+  'titleLetterSize': 3.0
+  'textLetterSize': 1.0
+  'fixLetterSize': 2.5
+  'subtitleLetterSize': 1.0
+  'wrapWidth': 40.0
+dimensions:
+  'width': 800
+  'height': 600
+siteScanner:
+  'site': 'Yale'
+  'scanner': 'GE'
+  'goggles': None

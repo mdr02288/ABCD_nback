@@ -1,0 +1,89 @@
+BlockType,StimType,Stimulus,TargetType,Stim_CRESP,RunTrialNumber_Block,Block,Run
+Cue2Back,Places,"""""","""""","""""","""""","""""",""""""
+2-Back,Place,PL_099_O81.1.bmp,nonlure,No Match,82,1,2
+2-Back,Place,PL_100_O82.1.bmp,nonlure,No Match,83,1,2
+2-Back,Place,PL_097_O75.1.bmp,nonlure,No Match,84,1,2
+2-Back,Place,PL_100_O82.1.bmp,target,Match,85,1,2
+2-Back,Place,PL_099_O81.1.bmp,lure,No Match,86,1,2
+2-Back,Place,PL_096_O69.1.bmp,nonlure,No Match,87,1,2
+2-Back,Place,PL_095_O65.1.bmp,nonlure,No Match,88,1,2
+2-Back,Place,PL_096_O69.1.bmp,target,Match,89,1,2
+2-Back,Place,PL_094_O6.1.bmp,nonlure,No Match,90,1,2
+2-Back,Place,PL_094_O6.1.bmp,lure,No Match,91,1,2
+Cue2Back,Faces,"""""","""""","""""","""""","""""",""""""
+2-Back,NegFace,WM006_FO.bmp,nonlure,No Match,92,2,2
+2-Back,NegFace,15F_FO.bmp,nonlure,No Match,93,2,2
+2-Back,NegFace,BM028_FO.bmp,nonlure,No Match,94,2,2
+2-Back,NegFace,15F_FO.bmp,target,Match,95,2,2
+2-Back,NegFace,BM028_FO.bmp,target,Match,96,2,2
+2-Back,NegFace,HF01_FO.bmp,nonlure,No Match,97,2,2
+2-Back,NegFace,38M_FO.bmp,nonlure,No Match,98,2,2
+2-Back,NegFace,38M_FO.bmp,lure,No Match,99,2,2
+2-Back,NegFace,HF01_FO.bmp,lure,No Match,100,2,2
+2-Back,NegFace,BF08_FO.bmp,nonlure,No Match,101,2,2
+Cue0Back,Faces,BF018_HO.bmp,"""""","""""","""""","""""",""""""
+0-Back,PosFace,WF05_HO.bmp,nonlure,No Match,102,3,2
+0-Back,PosFace,BM009_HO.bmp,nonlure,No Match,103,3,2
+0-Back,PosFace,BF018_HO.bmp,target,Match,104,3,2
+0-Back,PosFace,31M_HO.bmp,nonlure,No Match,105,3,2
+0-Back,PosFace,31M_HO.bmp,lure,No Match,106,3,2
+0-Back,PosFace,HF05_HO.bmp,nonlure,No Match,107,3,2
+0-Back,PosFace,BF018_HO.bmp,target,Match,108,3,2
+0-Back,PosFace,BM009_HO.bmp,lure,No Match,109,3,2
+0-Back,PosFace,BM01_HO.bmp,nonlure,No Match,110,3,2
+0-Back,PosFace,BM01_HO.bmp,lure,No Match,111,3,2
+Cue2Back,Faces,"""""","""""","""""","""""","""""",""""""
+2-Back,NeutFace,30M_NC.bmp,nonlure,No Match,112,4,2
+2-Back,NeutFace,AF201_NC.bmp,nonlure,No Match,113,4,2
+2-Back,NeutFace,30M_NC.bmp,target,Match,114,4,2
+2-Back,NeutFace,AF201_NC.bmp,target,Match,115,4,2
+2-Back,NeutFace,WF223_NC.bmp,nonlure,No Match,116,4,2
+2-Back,NeutFace,LM242_NC.bmp,nonlure,No Match,117,4,2
+2-Back,NeutFace,AM221_NC.bmp,nonlure,No Match,118,4,2
+2-Back,NeutFace,BF02_NC.bmp,nonlure,No Match,119,4,2
+2-Back,NeutFace,LM242_NC.bmp,lure,No Match,120,4,2
+2-Back,NeutFace,AM221_NC.bmp,lure,No Match,121,4,2
+Cue0Back,Faces,WM03_FO.bmp,"""""","""""","""""","""""",""""""
+0-Back,NegFace,BF05_FO.bmp,nonlure,No Match,122,5,2
+0-Back,NegFace,WF04_FO.bmp,nonlure,No Match,123,5,2
+0-Back,NegFace,WM029_FO.bmp,nonlure,No Match,124,5,2
+0-Back,NegFace,AF01_FO.bmp,nonlure,No Match,125,5,2
+0-Back,NegFace,WM029_FO.bmp,lure,No Match,126,5,2
+0-Back,NegFace,WM03_FO.bmp,target,Match,127,5,2
+0-Back,NegFace,40M_FO.bmp,nonlure,No Match,128,5,2
+0-Back,NegFace,AF01_FO.bmp,lure,No Match,129,5,2
+0-Back,NegFace,BF05_FO.bmp,lure,No Match,130,5,2
+0-Back,NegFace,WM03_FO.bmp,target,Match,131,5,2
+Cue0Back,Places,PL_090_O47.1.bmp,"""""","""""","""""","""""",""""""
+0-Back,Place,PL_091_O5.1.bmp,nonlure,No Match,132,6,2
+0-Back,Place,PL_073_P53.1.bmp,nonlure,No Match,133,6,2
+0-Back,Place,PL_091_O5.1.bmp,lure,No Match,134,6,2
+0-Back,Place,PL_073_P53.1.bmp,lure,No Match,135,6,2
+0-Back,Place,PL_090_O47.1.bmp,target,Match,136,6,2
+0-Back,Place,PL_093_O57.1.bmp,nonlure,No Match,137,6,2
+0-Back,Place,PL_090_O47.1.bmp,target,Match,138,6,2
+0-Back,Place,PL_093_O57.1.bmp,lure,No Match,139,6,2
+0-Back,Place,PL_089_O45.1.bmp,nonlure,No Match,140,6,2
+0-Back,Place,PL_092_O50.1.bmp,nonlure,No Match,141,6,2
+Cue2Back,Faces,"""""","""""","""""","""""","""""",""""""
+2-Back,PosFace,2F_HO.bmp,nonlure,No Match,142,7,2
+2-Back,PosFace,BF01_HO.bmp,nonlure,No Match,143,7,2
+2-Back,PosFace,BM030_HO.bmp,nonlure,No Match,144,7,2
+2-Back,PosFace,BM030_HO.bmp,lure,No Match,145,7,2
+2-Back,PosFace,2F_HO.bmp,lure,No Match,146,7,2
+2-Back,PosFace,AM02_HO.bmp,nonlure,No Match,147,7,2
+2-Back,PosFace,BF009_HO.bmp,nonlure,No Match,148,7,2
+2-Back,PosFace,AM02_HO.bmp,target,Match,149,7,2
+2-Back,PosFace,BF009_HO.bmp,target,Match,150,7,2
+2-Back,PosFace,36M_HO.bmp,nonlure,No Match,151,7,2
+Cue0Back,Faces,LF207_NC.bmp,"""""","""""","""""","""""",""""""
+0-Back,NeutFace,LF207_NC.bmp,target,Match,152,8,2
+0-Back,NeutFace,AM204_NC.bmp,nonlure,No Match,153,8,2
+0-Back,NeutFace,WF011_NC.bmp,nonlure,No Match,154,8,2
+0-Back,NeutFace,BM02_NC.bmp,nonlure,No Match,155,8,2
+0-Back,NeutFace,LF207_NC.bmp,target,Match,156,8,2
+0-Back,NeutFace,27M_NC.bmp,nonlure,No Match,157,8,2
+0-Back,NeutFace,BF03_NC.bmp,nonlure,No Match,158,8,2
+0-Back,NeutFace,BF03_NC.bmp,lure,No Match,159,8,2
+0-Back,NeutFace,WF011_NC.bmp,lure,No Match,160,8,2
+0-Back,NeutFace,AM204_NC.bmp,lure,No Match,161,8,2
