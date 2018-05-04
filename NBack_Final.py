@@ -105,6 +105,12 @@ thisExp = data.ExperimentHandler(name=expName, version='',
     dataFileName=filename)
 
 #save a log file for detail verbose info
+if expInfo['Session'] in ['Behavioral','MRI']:
+    filename = filename+'_WM'
+elif expInfo['Session'] == 'Practice':
+    filename = filename+'_NBack_Practice'
+else:
+    filename = filename+'REC'
 logFile = logging.LogFile(filename+'.log', level=logging.EXP)
 logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
 
