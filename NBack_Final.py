@@ -19,6 +19,11 @@ from numpy import sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, ra
 from numpy.random import random, randint, normal, shuffle
 import os, glob, sys, yaml, itertools  # handy system and path functions
 
+## Escape from script with button combination.
+## Adding assertions in case Taking too long to load frames
+## Add assertion to check randomization 
+## Place assumed refresh rate into logFile
+
 # # Record Git Status in Subject Logs
 # from subprocess import check_output, check_call, CalledProcessError
 # try:
@@ -56,6 +61,7 @@ sys.getfilesystemencoding()
 # Store info about the experiment session. 
 
 # PLACE IN WHILE LOOP TO PREVENT PARTICIPANT FROM MOVING ON WITH BLANK FIELDS
+print "Please be sure to check you have the correct pGUID and Version before running the script!!"
 expName = 'Emo_Nback_20180527'  # from the Builder filename that created this script
 expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Behavioral',u'MRI',u'Practice',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Debugging':[True, False],u'Version':range(1,5)}
 #expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Practice',u'Behavioral',u'MRI',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Goggles':[True, False],u'Version':range(1,5)}
@@ -152,9 +158,12 @@ win.recordFrameIntervals = True
 # store frame rate of monitor if we can measure it successfully
 expInfo['Main.RefreshRate']=win.getActualFrameRate()
 
-# Store frame rate of monitor if we can measure it successfully.  Make a rough guess if you cannot
+# Store frame rate of monitor if we can measure it successfully.  Make a rough guess if you cannot\
+## PASS REFRESHRATE ASSUMPTION INTO LOG FILE!!!
 if not expInfo['Main.RefreshRate']:
     expInfo['Main.RefreshRate'] = 1.0/60.0
+    print "Assuming default refresh rate" % expInfo['Main.RefreshRate']
+
 ISI = core.StaticPeriod(screenHz=expInfo['Main.RefreshRate'])
 
 # Initialize components for Routine "intro"
@@ -371,6 +380,7 @@ class nbackStim:
                 self.response = event.getKeys(keyList=hand['Quit']+hand['Match']+hand['NoMatch'],timeStamped=globalClock)
                 
                 if self.response: stimRTTime = globalClock.getTime()
+
         if not stimRTTime: stimRTTime = 0
 
         # Record Stimuli Offset Time and stop drawing stimuli
@@ -583,7 +593,7 @@ def nBackBlock(taskList,taskName):
         if 'Cue' in thisTrial['BlockType']:
             # Load stimuli
             nBackPresent = nbackStim(thisTrial,ISI=ISI)
-#
+
 #            # If Present the target or indicate a 2Back trial to participant
             if thisTrial['BlockType'] == 'Cue2Back':
                 nBackPresent.cue2Back(thisExp,nBack)
@@ -1441,10 +1451,6 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
     # Present instructions for the task
     if expInfo['Session'] == 'MRI':
         hand['Trigger'] = config['trigger']
-        #instructions[3] = taskScreenImg4
-        #instructions[5] = triggerScreen
-        # instructions[-2] = taskScreenImg7
-        #instructions[-1] = triggerScreen
 
     elif expInfo['Session'] == 'Behavioral':
         hand['Trigger'] = config['keys']['Next']
@@ -1461,22 +1467,27 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
         run = [1,2]
     else:
         run = [2]
+
+    # Iterate through the number of runs experimenter selected
     for j in run:
+
+        # Determine the instruction slides to present by the number of runs experimenter selected
         if j == 1:
             instructionSlides = instructions[0:run1Index]
         else:
             instructionSlides = instructions[run1Index:]
 
-        #for i in instructions[0:run1Index]:
+        # Iterate through list of instructions slides
         for i in instructionSlides:
             t = instructionsClock.getTime()
 
-            if not isinstance(i,list):
+            # Present instructions
+            if not isinstance(i,list): # If element is not a list of more instructions
                 i.tStart = t
                 i.frameNStart = frameN
                 i.draw()
 
-            else:
+            else: # There is a list that contains all elements for the screen
                 for element in i:
                     # Create instructions on the screen
                     element.tStart = t
@@ -1527,13 +1538,11 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
             if 'escape' in keypress:
                 exitProtocol()
 
-        #x = []
         #launchScan(win,{'TR':0.8,'volumes':370, 'sync':'5','skip':10,'sound':True},globalClock=globalClock,
         #    simResponses = x, mode='Test',wait_msg='waiting for scanner...', wait_timeout=120)
-        #nBackBlock('Sets/Task/Version%d_%d.csv' % (expInfo['Version'],j),'nBack')
         nBackBlock(os.path.join('Sets','Task','Version%d_%d.csv' % (expInfo['Version'],j)),'nBack')
-elif expInfo['Session'] == 'RecMem':
 
+elif expInfo['Session'] == 'RecMem':
     # Create instructions stim to iterate through
     recScreen1_1 = visual.TextStim(win=win,ori=0,name='recScreen1_1',text='Now, we will test your memory for some of the',font='Arial',pos=np.array([0,2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen1_2 = visual.TextStim(win=win,ori=0,name='recScreen1_2',text='faces and places you saw during the 0-Back and 2-back games.',font='Arial',pos=np.array([0,1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
@@ -1560,6 +1569,7 @@ elif expInfo['Session'] == 'RecMem':
     recScreen6_5 = visual.TextStim(win=win,ori=0,name='recScreen6_5',text='MIDDLE',font='Arial',pos=np.array([4,-1])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen6_6 = visual.TextStim(win=win,ori=0,name='recScreen6_6',text='Press SPACE to start the game',font='Arial',pos=np.array([0,-6])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 
+    # Create list of all elements that should be presented to the participant on one screen
     screen1 = [recScreen1_1, recScreen1_2, recScreen1_3]
     screen2 = [recScreen2_1, recScreen2_2, recScreen2_3]
     screen3 = [recScreen3_1, recScreen3_2, recScreen3_3, recScreen3_4]
@@ -1573,7 +1583,7 @@ elif expInfo['Session'] == 'RecMem':
 
     # Set timers
     recPractice = True
-    instructionsClock.reset
+    instructionsClock.reset()
     globalClock.reset()
     routineTimer.reset()
 
@@ -1598,7 +1608,6 @@ elif expInfo['Session'] == 'RecMem':
             exitProtocol()
 
     recPractice = True
-    #nBackBlock('Sets/RecMem/PracticeSet.csv','RecMemPractice')
     nBackBlock(os.path.join('Sets','RecMem','PracticeSet.csv'),'RecMemPractice')
         
     # Present instructions to participant
@@ -1623,7 +1632,6 @@ elif expInfo['Session'] == 'RecMem':
 
     # Start RecMem Final task
     recPractice = False
-    #nBackBlock('Sets/RecMem/Version%d.csv' % expInfo['Version'],'RecMemTask')
     nBackBlock(os.path.join('Sets','RecMem','Version%d.csv' % expInfo['Version']),'RecMemTask')
 
 
