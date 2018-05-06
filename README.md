@@ -11,12 +11,11 @@ Emotional NBack is one of three tasks used in the Adolescent Brain and Cognitive
 ## How to run
 Open NBack_Final.py in Coder view and the click "Run".  A dialog box will open and ask for the participant information, Session, run number, and handedness.
 
-
-
 ## Credits
-_Psychopy implementation by Tariq R. Cannonier_  
-**********************************************************************************************
+_**Psychopy implementation by Tariq R. Cannonier**_
+
 Tested with Psychopy 1.83.04; Psyexp Experiment Builder XML available upon request  
   _Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13._  
-  _Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008_
+  _Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi:  
+      10.3389/neuro.11.010.2008_  
 
