@@ -719,6 +719,7 @@ def formatOutput(fname):
         'Stim.OnsetTime[Trial]','Stim.OnsetToOnsetTime[Trial]','Stim.RESP[Trial]','Stim.RT[Trial]','Stim.RTTime[Trial]','Stim.StartTime[Trial]','StimType[Trial]','Stimulus[Trial]',
         'SyncSlide.Duration','SyncSlide.DurationError','SyncSlide.FinishTime','SyncSlide.OnsetDelay','SyncSlide.OnsetTime','SyncSlide.OnsetToOnsetTime','SyncSlide.RESP','SyncSlide.StartTime',
         'SyncSlideDur','VFDuration[Trial]']
+
     # Read in data from output
     rawData = pd.read_csv(fname)
     newFname = fname.replace('.csv','_Corrected.csv')
@@ -726,15 +727,17 @@ def formatOutput(fname):
 
     # Iterate through headerList and create a new file with the reorganized information
     for colHeader in headerList:
+        # Determine if the element in the headerList exists in the Data computed.
+        # Create and extend a list of valid headers that work
         try:
             rawData[colHeader]
             validHeader.extend([colHeader])
         except KeyError:
-            print "This header, %s, was not in the data file" % colHeader        
+            print "This column, %s, was not in the data file" % colHeader        
 
     # Reorder and save
     orgData = rawData[validHeader]
-    orgData.to_csv(fname, index=False)
+    orgData.to_csv(fname, index=False) # Remove index from output file
 
 def exitProtocol():
     '''A protocol to save all data  before the script exits.  Will run at the end of the script or when the 
