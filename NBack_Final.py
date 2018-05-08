@@ -395,7 +395,6 @@ class nbackStim:
                 self.response = event.getKeys(keyList=hand['Quit']+hand['Match']+hand['NoMatch'],timeStamped=globalClock)
                 
                 if self.response: stimRTTime = globalClock.getTime()
-
         if not stimRTTime: stimRTTime = 0
 
         # Record Stimuli Offset Time and stop drawing stimuli
@@ -513,8 +512,6 @@ class nbackStim:
             # Otherwise, participant's response was incorrect
             accuracy = 0
 
-        #print accuracy
-
         # Record participant responses
         if self.response:
             # Record the participant's response, reaction time, and Correct Response
@@ -579,9 +576,7 @@ def nBackBlock(taskList,taskName):
             triggerToInitScan = 8
             event.clearEvents()
             waitingScreen.setAutoDraw(True)
-            
-            #bFixation.setAutoDraw(True)
-            
+
             # Present a black fixation cross and wait for the necessary number of trigger signals from scanner
             while triggerCount < triggerToInitScan:
                 win.flip()
@@ -613,7 +608,7 @@ def nBackBlock(taskList,taskName):
             # Load stimuli
             nBackPresent = nbackStim(thisTrial,ISI=ISI)
 
-#            # If Present the target or indicate a 2Back trial to participant
+            # If Present the target or indicate a 2Back trial to participant
             if thisTrial['BlockType'] == 'Cue2Back':
                 nBackPresent.cue2Back(thisExp,nBack)
             elif thisTrial['BlockType'] == 'Cue0Back':
@@ -739,7 +734,7 @@ def formatOutput(fname):
 
     # Reorder and save
     orgData = rawData[validHeader]
-    orgData.to_csv(fname)
+    orgData.to_csv(fname, index=False)
 
 def exitProtocol():
     '''A protocol to save all data  before the script exits.  Will run at the end of the script or when the 
@@ -748,17 +743,6 @@ def exitProtocol():
     # If the subdirectory for the file does not exist, create it.
     if not os.path.exists(pathname):
         os.makedirs(pathname)
-
-    # Saves Practice , WM, and RecMem files differently
-#    if expInfo['Session'] == 'Practice':
-#        fname = filename+'_NBack_Practice.csv'
-#        wildcard = '_NBack_Practice*.csv'
-#    elif expInfo['Session'] in ['Behavioral','MRI']:
-#        fname = filename+'_WM.csv'
-#        wildcard = '*WM*.csv'
-#    elif expInfo['Session'] == 'RecMem':
-#        fname = filename+'_REC.csv'
-#        wildcard = '*REC*.csv'
 
     # Save the data in wide format and in Pickle
     thisExp.saveAsWideText(filename+'.csv')
@@ -1047,7 +1031,6 @@ if expInfo['Session'] == 'Practice':
         exitProtocol()
 
     # Present practice Block for 0Back Place
-    #nBackBlock('Sets/Practice/0Back_Places.csv','Places0Back')
     testingBlock = ['0Back_Places.csv','Places0Back']
     nBackBlock(os.path.join('Sets','Practice',testingBlock[0],testingBlock[1]))
 
@@ -1384,9 +1367,6 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
         screen4 = [taskScreen4_1,taskScreen4_2,taskScreen4_3,taskScreen4_4]
         screen7 = [taskScreen7_1,taskScreen7_2,taskScreen7_3,taskScreen7_4]
 
-        #MR_setting = {'TR': 0.8, 'volumes': 0, 'sync': hand['Trigger'],'skip': 0}
-    #instructions = [taskScreen1,taskScreen2,taskScreen3,taskScreen4,taskScreen5,waitingScreen,taskScreen6,taskScreen7,waitingScreen]
-
     # Group all instructions together for all screens
     instructions = [screen1,screen2,screen3,screen4,screen5,screen6,screen7]
     run1Index = 5 # Index the instructions screen for the first run
@@ -1405,8 +1385,8 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
     t = 0
     introClock.reset()  # clock 
     frameN = -1
+    
     # update component parameters for each repeat
-
     introResp = event.BuilderKeyResponse()  # create an object of type KeyResponse
     introResp.status = NOT_STARTED
 
@@ -1424,7 +1404,6 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
     while continueRoutine:
         # get current time
         t = introClock.getTime()
-        #frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         frameN+=1
 
         # Presents Name of the task
@@ -1655,9 +1634,6 @@ elif expInfo['Session'] == 'RecMem':
     # Start RecMem Final task
     recPractice = False
     nBackBlock(os.path.join('Sets','RecMem','Version%d.csv' % expInfo['Version']),'RecMemTask')
-
-
-
 
 # Save and exit from the experiment
 exitProtocol()
