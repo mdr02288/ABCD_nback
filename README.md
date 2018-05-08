@@ -9,9 +9,9 @@ Emotional NBack is one of three tasks used in the Adolescent Brain and Cognitive
 * Pyglet
 
 ## How to run
-Open NBack_Final.py in Coder view and the click "Run".  A dialog box will open and ask for the participant information, Session, run number, and handedness.
+Open NBack_Final.py in Coder view and  click "Run".  A dialog box will open and ask for the participant information, session, run number, and handedness in dropdown menus.
 
-Changes for different should be made in the siteConfig.yaml file.  Changes can be made regarding which keys can be used throughout the experiment, size of text, dimensions of the screen, and details about the MRI Scanner.
+Changes for different sites should be made in the siteConfig.yaml file.  Changes can be made regarding which keys can be used throughout the experiment, size of text, dimensions of the screen, and details about the MRI Scanner.
 
 ## Credits
 _**Psychopy implementation by Tariq R. Cannonier**_
