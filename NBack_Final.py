@@ -104,13 +104,19 @@ thisExp = data.ExperimentHandler(name=expName, version='',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 
-#save a log file for detail verbose info
+# Create a different logFile for each of the tasks
 if expInfo['Session'] in ['Behavioral','MRI']:
     filename = filename+'_WM'
 elif expInfo['Session'] == 'Practice':
     filename = filename+'_NBack_Practice'
 else:
     filename = filename+'REC'
+
+# Make sure to avoid overwriting the previous logFile
+if expInfo['Run'] == 'Run2':
+    filename = filename+'-2'
+
+#save a log file for detail verbose info
 logFile = logging.LogFile(filename+'.log', level=logging.EXP)
 logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
 
@@ -165,10 +171,10 @@ win.recordFrameIntervals = True
 expInfo['Main.RefreshRate']=win.getActualFrameRate()
 
 # Store frame rate of monitor if we can measure it successfully.  Make a rough guess if you cannot\
-## PASS REFRESHRATE ASSUMPTION INTO LOG FILE!!!
 if not expInfo['Main.RefreshRate']:
     expInfo['Main.RefreshRate'] = 1.0/60.0
-    print "Assuming default refresh rate" % expInfo['Main.RefreshRate']
+    notes = "Assuming default refresh rate: %f" % expInfo['Main.RefreshRate']
+    log.exp(notes)
 
 ISI = core.StaticPeriod(screenHz=expInfo['Main.RefreshRate'])
 
@@ -508,14 +514,18 @@ class nbackStim:
 
         # Record participant responses
         if self.response:
-            # Record the participant's response and reaction time
+            # Record the participant's response, reaction time, and Correct Response
             tHandler.addData('Stim.RESP',self.response[0][0])
             if self.response[0][0] != 'escape':
                 tHandler.addData('Stim.RT',int((self.response[0][1]-self.time['Stim.OnsetTime'])*1000))
-
         else:
             tHandler.addData('Stim.RESP','')
             tHandler.addData('Stim.RT',0)
+
+        # Record trial correct response
+        if not self.trial.Stim_CRESP:
+            self.trial.Stim_CRESP = ''
+        tHandler.addData('Stim.CRESP',self.trial.Stim_CRESP)
 
         # Add fields for all time measurements in the time dictionary (i.e. StimOnset, fixationDuration, etc.)
         for i in self.time.keys():
