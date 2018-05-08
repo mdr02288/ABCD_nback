@@ -4,7 +4,7 @@
 Part of the ABCD - fMRI Battery
 Psychopy implementation by Tariq R. Cannonier
 **********************************************************************************************
-Tested with Psychopy 1.83.04; Psyexp Experiment Builder XML available upon request
+Tested with Psychopy 1.86.6; Psyexp Experiment Builder XML available upon request
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
 """
@@ -107,10 +107,13 @@ thisExp = data.ExperimentHandler(name=expName, version='',
 # Create a different logFile for each of the tasks
 if expInfo['Session'] in ['Behavioral','MRI']:
     filename = filename+'_WM'
+    wildcard = '*WM*.csv'
 elif expInfo['Session'] == 'Practice':
     filename = filename+'_NBack_Practice'
+    wildcard = '*NBack_Practice*.csv'
 else:
     filename = filename+'REC'
+    wildcard = '*REC*.csv'
 
 # Make sure to avoid overwriting the previous logFile
 if expInfo['Run'] == 'Run2':
@@ -747,24 +750,27 @@ def exitProtocol():
         os.makedirs(pathname)
 
     # Saves Practice , WM, and RecMem files differently
-    if expInfo['Session'] == 'Practice':
-        fname = filename+'_NBack_Practice.csv'
-        wildcard = '_NBack_Practice*.csv'
-    elif expInfo['Session'] in ['Behavioral','MRI']:
-        fname = filename+'_WM.csv'
-        wildcard = '*WM*.csv'
-    elif expInfo['Session'] == 'RecMem':
-        fname = filename+'_REC.csv'
-        wildcard = '*REC*.csv'
+#    if expInfo['Session'] == 'Practice':
+#        fname = filename+'_NBack_Practice.csv'
+#        wildcard = '_NBack_Practice*.csv'
+#    elif expInfo['Session'] in ['Behavioral','MRI']:
+#        fname = filename+'_WM.csv'
+#        wildcard = '*WM*.csv'
+#    elif expInfo['Session'] == 'RecMem':
+#        fname = filename+'_REC.csv'
+#        wildcard = '*REC*.csv'
 
     # Save the data in wide format and in Pickle
-    thisExp.saveAsWideText(fname)
-    thisExp.saveAsPickle(fname[:-4])
+    thisExp.saveAsWideText(filename+'.csv')
+    thisExp.saveAsPickle(filename)
     
     # Find the last dataFile in the list of data
     listedFiles = glob.glob(pathname+os.sep+wildcard)
     fileNum = len(listedFiles)-1
-    fname.replace('.csv','_%d.csv'%fileNum)
+    filename.replace('.csv','_%d.csv'%fileNum)
+
+    print listedFiles
+    print listedFiles[fileNum]
 
     # Format Output file to look like EPrime outputs
     formatOutput(listedFiles[fileNum])
