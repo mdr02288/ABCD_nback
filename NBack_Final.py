@@ -61,11 +61,28 @@ sys.getfilesystemencoding()
 # Store info about the experiment session. 
 
 # PLACE IN WHILE LOOP TO PREVENT PARTICIPANT FROM MOVING ON WITH BLANK FIELDS
-print "Please be sure to check you have the correct pGUID and Version before running the script!!"
-expName = 'Emo_Nback_20180527'  # from the Builder filename that created this script
-expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Behavioral',u'MRI',u'Practice',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Debugging':[True, False],u'Version':range(1,5)}
-#expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Practice',u'Behavioral',u'MRI',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Goggles':[True, False],u'Version':range(1,5)}
-dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
+dlgCorrect = False
+while not dlgCorrect:
+    print "Please be sure to check you have the correct pGUID and Version before running the script!!"
+    expName = 'Emo_Nback_20180527'  # from the Builder filename that created this script
+    expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Behavioral',u'MRI',u'Practice',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Debugging':[True, False],u'Version':range(1,5)}
+    #expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Practice',u'Behavioral',u'MRI',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Goggles':[True, False],u'Version':range(1,5)}
+    dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
+    if dlg.OK == False: core.quit()  # user pressed cancel
+
+    dCorrect = gui.Dlg()
+    dCorrect.addText('Is this information correct?')
+    for i in expInfo.keys():
+        dCorrect.addText('%s: %s' % (i, expInfo[i]))
+    dCorrect.addField("Correct: ", choices=['No','Yes'])
+    ok_data = dCorrect.show()
+    
+    # Check if the entered fields are valid.
+    if 'Yes' in ok_data: # Experimenter verified that informtion entered is correct
+        dlgCorrect = True
+    elif len(expInfo['NARGUID']) != 8: # Make sure NARGUID is 8 chars long
+        print "NARGUID must be 8 characters long!"
+        dlgCorrect = False
 
 # Preserve data fields to be the same as EPrime scripts
 try:
@@ -89,7 +106,6 @@ expInfo['StudioVersion'] = '2.0.10.252'; expInfo['SUBID'] = 0; expInfo['Target']
 expInfo['TotalRespGreater200[Session]'] = 0; expInfo['TrialsPerRun[Session]'] = 160; 
 expInfo['StimuliDir'] = 'Stimuli'+os.sep
 
-if dlg.OK == False: core.quit()  # user pressed cancel
 expInfo['date'] = datetime.datetime.now().strftime(u'%Y-%m-%d_%H%M%S')  # add a simple timestamp
 
 # Determine the file name and path to data file
