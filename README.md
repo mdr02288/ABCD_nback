@@ -26,5 +26,5 @@ Tested with Psychopy 1.83.04;
 
       
 ## License
-This project is licensed under the GNU General Public License - see the LICENSE.md file for details.
+This project is licensed under the terms of the MIT license - see the LICENSE.md file for details.
 
