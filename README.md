@@ -16,8 +16,11 @@ Changes for different sites should be made in the siteConfig.yaml file.  Changes
 ## Credits
 _**Psychopy implementation by Tariq R. Cannonier**_
 
-Tested with Psychopy 1.83.04; Psyexp Experiment Builder XML available upon request  
+Tested with Psychopy 1.83.04; 
   _Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13._  
   _Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi:  
       10.3389/neuro.11.010.2008_  
+      
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
