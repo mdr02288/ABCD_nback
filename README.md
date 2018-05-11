@@ -17,10 +17,14 @@ Changes for different sites should be made in the siteConfig.yaml file.  Changes
 _**Psychopy implementation by Tariq R. Cannonier**_
 
 Tested with Psychopy 1.83.04; 
+
+  _Casey, BJ, Cannonier, T., Conley, M., Cohen, A., et. al (2018) The Adolescent Brain Cognitive Development (ABCD)
+      Study: Imaging Acquisition across 21 Sites. Developmental cognitive neuroscience, 10.1016/j.dcn.2018.03.001_  
   _Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13._  
   _Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi:  
       10.3389/neuro.11.010.2008_  
+
       
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the GNU General Public License - see the LICENSE.md file for details.
 
