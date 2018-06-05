@@ -60,7 +60,7 @@ sys.getfilesystemencoding()
 
 # Store info about the experiment session. 
 
-# PLACE IN WHILE LOOP TO PREVENT PARTICIPANT FROM MOVING ON WITH BLANK FIELDS
+# PLACE IN WHILE LOOP TO PREVENT EXPERIMENTER FROM MOVING ON WITH BLANK FIELDS
 dlgCorrect = False
 while not dlgCorrect:
     print "Please be sure to check you have the correct pGUID and Version before running the script!!"
@@ -70,6 +70,7 @@ while not dlgCorrect:
     dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
     if dlg.OK == False: core.quit()  # user pressed cancel
 
+    # Confirm that information entered is correct
     dCorrect = gui.Dlg()
     dCorrect.addText('Is this information correct?')
     for i in expInfo.keys():
@@ -78,11 +79,11 @@ while not dlgCorrect:
     ok_data = dCorrect.show()
     
     # Check if the entered fields are valid.
-    if 'Yes' in ok_data: # Experimenter verified that informtion entered is correct
-        dlgCorrect = True
-    elif len(expInfo['NARGUID']) != 8: # Make sure NARGUID is 8 chars long
+    if len(expInfo['NARGUID']) != 8: # Make sure NARGUID is 8 chars long
         print "NARGUID must be 8 characters long!"
         dlgCorrect = False
+    elif 'Yes' in ok_data: # Experimenter verified that information entered is correct
+        dlgCorrect = True
 
 # Preserve data fields to be the same as EPrime scripts
 try:
@@ -128,7 +129,7 @@ elif expInfo['Session'] == 'Practice':
     filename = filename+'_NBack_Practice'
     wildcard = '*NBack_Practice*.csv'
 else:
-    filename = filename+'REC'
+    filename = filename+'_REC'
     wildcard = '*REC*.csv'
 
 # Make sure to avoid overwriting the previous logFile
@@ -240,12 +241,21 @@ class nbackStim:
                 self.stim = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=[0,0],height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
             elif thisTrial['BlockType'] == 'Fix15secProc':
                 self.stim = []
-            elif thisTrial['BlockType'] in ['0-Back','2-Back','Cue0Back']:
+            elif thisTrial['BlockType'] in ['0-Back','0Back','2-Back','2Back','Cue0Back','Rec']:
+                if 'Stimuli' not in thisTrial['Stimulus']:
+                    stimPath = expInfo['StimuliDir']+thisTrial['Stimulus']
+                else:
+                    stimPath = thisTrial['Stimulus']
                 self.stim = visual.ImageStim(win=win, name=thisTrial['Stimulus'],
-                    image=expInfo['StimuliDir']+thisTrial['Stimulus'], mask=None, ori=0, pos=[0,0], size=np.array([10,10])*stimScale,#size=[10,10],
+                    image=stimPath, mask=None, ori=0, pos=[0,0], size=np.array([10,10])*stimScale,#size=[10,10],
                     color=[1,1,1],colorSpace='rgb', opacity=1,
                     flipHoriz=False, flipVert=False,
                     texRes=128, interpolate=True, depth=-1.0)
+#                self.stim = visual.ImageStim(win=win, name=thisTrial['Stimulus'],
+#                    image=expInfo['StimuliDir']+thisTrial['Stimulus'], mask=None, ori=0, pos=[0,0], size=np.array([10,10])*stimScale,#size=[10,10],
+#                    color=[1,1,1],colorSpace='rgb', opacity=1,
+#                    flipHoriz=False, flipVert=False,
+#                    texRes=128, interpolate=True, depth=-1.0)
 
         # Reusing the global stimuli with each class instance 
         self.pointerFingerPrompt = pointerFingerPrompt
@@ -735,6 +745,8 @@ def formatOutput(fname):
         'Stim.OnsetTime[Trial]','Stim.OnsetToOnsetTime[Trial]','Stim.RESP[Trial]','Stim.RT[Trial]','Stim.RTTime[Trial]','Stim.StartTime[Trial]','StimType[Trial]','Stimulus[Trial]',
         'SyncSlide.Duration','SyncSlide.DurationError','SyncSlide.FinishTime','SyncSlide.OnsetDelay','SyncSlide.OnsetTime','SyncSlide.OnsetToOnsetTime','SyncSlide.RESP','SyncSlide.StartTime',
         'SyncSlideDur','VFDuration[Trial]']
+    elif expInfo['Session'] == 'Practice':
+        print "Practice Files also need to be organized similarly to above lol"
 
     # Read in data from output
     rawData = pd.read_csv(fname)
@@ -1036,7 +1048,7 @@ if expInfo['Session'] == 'Practice':
     # Present practice Block for the 0Back Faces
     #nBackBlock('Sets/Practice/0Back_Faces.csv','Faces0Back')
     testingBlock = ['0Back_Faces.csv','Faces0Back']
-    nBackBlock(os.path.join('Sets','Practice',testingBlock[0],testingBlock[1]))
+    nBackBlock(os.path.join('Sets','Practice',testingBlock[0]),testingBlock[1])
 
     # Present break to transition to 0Back Places
     practiceScreen8.draw()

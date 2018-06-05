@@ -1,7 +1,7 @@
 BlockType,TargetType,Stimulus,Stim_CRESP,Trial_Number
-Cue0Back,Place,Stimuli/Place1.bmp,Target,1
-0Back,Place,Stimuli/Place1.bmp,Match,2
-0Back,Place,Stimuli/Place3.bmp,No Match,3
-0Back,Place,Stimuli/Place5.bmp,No Match,4
-0Back,Place,Stimuli/Place1.bmp,Match,5
-0Back,Place,Stimuli/Place3.bmp,No Match,6
+Cue0Back,Place,Place1.bmp,Target,1
+0Back,Place,Place1.bmp,Match,2
+0Back,Place,Place3.bmp,No Match,3
+0Back,Place,Place5.bmp,No Match,4
+0Back,Place,Place1.bmp,Match,5
+0Back,Place,Place3.bmp,No Match,6
