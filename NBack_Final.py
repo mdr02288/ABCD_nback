@@ -65,7 +65,7 @@ dlgCorrect = False
 while not dlgCorrect:
     print "Please be sure to check you have the correct pGUID and Version before running the script!!"
     expName = 'Emo_Nback_20180527'  # from the Builder filename that created this script
-    expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Behavioral',u'MRI',u'Practice',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Debugging':[True, False],u'Version':range(1,5)}
+    expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Behavioral',u'MRI',u'Practice',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Debugging':[True, False], u'Goggles':[False, True],u'Version':range(1,5)}
     #expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Practice',u'Behavioral',u'MRI',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Goggles':[True, False],u'Version':range(1,5)}
     dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
     if dlg.OK == False: core.quit()  # user pressed cancel
@@ -95,7 +95,8 @@ expInfo['ExperimentName'] = expName
 
 # I don't know what any of these fields are...
 # Preserving data fields to be the same as EPrime scripts
-expInfo['ConsecNonResp[Session]'] = 0 
+expInfo['Clock.Information'] = 0
+expInfo['ConsecNonResp[Session]'] = 0
 expInfo['ConsecRTLess200[Session]'] = 0 
 expInfo['ExperimentVersion'] = '1.0.0.1180' 
 expInfo['FontStyle'] = 'Verdana'; expInfo['Group'] = 1; expInfo['RunNumber'] = expInfo['Version']; 
@@ -1063,7 +1064,7 @@ if expInfo['Session'] == 'Practice':
 
     # Present practice Block for 0Back Place
     testingBlock = ['0Back_Places.csv','Places0Back']
-    nBackBlock(os.path.join('Sets','Practice',testingBlock[0],testingBlock[1]))
+    nBackBlock(os.path.join('Sets','Practice',testingBlock[0]),testingBlock[1])
 
     # Start 2Back Task
     instructionsComponent = [screen10,screen11,practiceScreen12,practiceScreen13,practiceScreen14,practiceScreen15,
@@ -1310,7 +1311,7 @@ if expInfo['Session'] == 'Practice':
     # Present 2Back Faces Trials
     #nBackBlock('Sets/Practice/2Back_Faces.csv','Faces2Back')
     testingBlock = ['2Back_Faces.csv','Faces2Back']
-    nBackBlock(os.path.join('Sets','Practice',testingBlock[0],testingBlock[1]))
+    nBackBlock(os.path.join('Sets','Practice',testingBlock[0]),testingBlock[1])
 
     # Present break to transitiokn to 2Back Places
     practiceScreen8.draw()
@@ -1326,7 +1327,7 @@ if expInfo['Session'] == 'Practice':
     # Present 2Back Places Trials
     #nBackBlock('Sets/Practice/2Back_Places.csv','Places2Back')
     testingBlock = ['2Back_Places.csv','Places2Back']
-    nBackBlock(os.path.join('Sets','Practice',testingBlock[0],testingBlock[1]))
+    nBackBlock(os.path.join('Sets','Practice',testingBlock[0]),testingBlock[1])
 
     # Present last instructions screen before final practice
     practiceScreen24_1.draw()
@@ -1338,7 +1339,7 @@ if expInfo['Session'] == 'Practice':
     # Present Final Practice Trials
     #nBackBlock('Sets/Practice/Final_Practice_Set.csv','FinalPractice')
     testingBlock = ['Final_Practice_Set.csv','FinalPractice']
-    nBackBlock(os.path.join('Sets','Practice',testingBlock[0],testingBlock[1]))
+    nBackBlock(os.path.join('Sets','Practice',testingBlock[0]),testingBlock[1])
 
     # Present final instructions screen and wait for experimenter to press the spacebar
     practiceScreen25_1.draw()
