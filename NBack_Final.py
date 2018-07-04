@@ -504,7 +504,7 @@ class nbackStim:
         # Determine type of feedback for participant
         if not self.response:
             feedback = tooslow
-        elif (list(set(hand['Match']) & set(self.response[0])) and self.trial.Stim_CRESP == 'Match') or (list(set(hand['NoMatch']) & set(self.response[0])) and self.trial.Stim_CRESP == 'No Match') or (list(set(hand['Match']) & set(self.response[0])) and self.trial.Stim_CRESP == 'Old') or (list(set(hand['NoMatch']) & set(self.response[0])) and self.trial.Stim_CRESP == 'New'):
+        elif (list(set(hand['Match']) & set(self.response[0])) and self.trial['Stim_CRESP'] == 'Match') or (list(set(hand['NoMatch']) & set(self.response[0])) and self.trial['Stim_CRESP'] == 'No Match') or (list(set(hand['Match']) & set(self.response[0])) and self.trial['Stim_CRESP'] == 'Old') or (list(set(hand['NoMatch']) & set(self.response[0])) and self.trial['Stim_CRESP'] == 'New'):
             feedback = correct
         else:
             feedback = incorrect
@@ -527,11 +527,11 @@ class nbackStim:
             # No Response
             accuracy = 0
 
-        elif (list(set(hand['Match']) & set(self.response[0])) and self.trial.Stim_CRESP == 'Match') or (list(set(hand['NoMatch']) & set(self.response[0])) and self.trial.Stim_CRESP == 'No Match'):
+        elif (list(set(hand['Match']) & set(self.response[0])) and self.trial['Stim_CRESP'] == 'Match') or (list(set(hand['NoMatch']) & set(self.response[0])) and self.trial['Stim_CRESP'] == 'No Match'):
             # Determine criteria for accuracy in WM
             accuracy = 1
 
-        elif (list(set(hand['Match']) & set(self.response[0])) and self.trial.Stim_CRESP == 'Old') or (list(set(hand['NoMatch']) & set(self.response[0])) and self.trial.Stim_CRESP == 'New'):
+        elif (list(set(hand['Match']) & set(self.response[0])) and self.trial['Stim_CRESP'] == 'Old') or (list(set(hand['NoMatch']) & set(self.response[0])) and self.trial['Stim_CRESP'] == 'New'):
             # Determine criteria for accuracy in REC
             accuracy = 1
             
@@ -550,9 +550,9 @@ class nbackStim:
             tHandler.addData('Stim.RT',0)
 
         # Record trial correct response
-        if not self.trial.Stim_CRESP:
-            self.trial.Stim_CRESP = ''
-        tHandler.addData('Stim.CRESP',self.trial.Stim_CRESP)
+        if not self.trial['Stim_CRESP']:
+            self.trial['Stim_CRESP'] = ''
+        tHandler.addData('Stim.CRESP',self.trial['Stim_CRESP'])
 
         # Add fields for all time measurements in the time dictionary (i.e. StimOnset, fixationDuration, etc.)
         for i in self.time.keys():
@@ -579,7 +579,7 @@ def nBackBlock(taskList,taskName):
 
     if thisTrial != None:
         for paramName in thisTrial.keys():
-            exec(paramName + '= thisTrial.' + paramName)
+            exec(paramName + '= thisTrial' + "['{0}']").format(paramName)
 
     # Iterate through each stimuli in the tasklist csv file
     if expInfo['Session'] == 'MRI':
@@ -628,7 +628,7 @@ def nBackBlock(taskList,taskName):
     for thisTrial in nBack:
         if thisTrial != None:
             for paramName in thisTrial.keys():
-                exec(paramName + '= thisTrial.' + paramName)
+                exec(paramName + '= thisTrial' + "['{0}']").format(paramName)
 
         # Evaluate the type of trial for each iteration.
         if 'Cue' in thisTrial['BlockType']:
