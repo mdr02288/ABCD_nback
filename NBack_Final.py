@@ -586,7 +586,7 @@ def nBackBlock(taskList,taskName):
 
         # Delay the task while the scanner starts
         if config['siteScanner']['scanner'] in ['Siemens','Phillips']:
-            scannerDelayTime = 15
+            scannerDelayTime = 6.4
             routineTimer.reset(t=scannerDelayTime)
 
             # Draw black fixation cross while MRI starts
@@ -600,7 +600,7 @@ def nBackBlock(taskList,taskName):
             # Define parameters to wait for scanner
             routineTimer.reset()
             triggerCount = 0
-            triggerToInitScan = 8
+            triggerToInitScan = 16
             event.clearEvents()
             waitingScreen.setAutoDraw(True)
 
