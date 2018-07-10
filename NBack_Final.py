@@ -266,6 +266,7 @@ class nbackStim:
         self.target = target
         self.fixation = bFixation
         self.pfixation = pFixation
+        self.alldone = allDone
         self.trial = thisTrial
         self.response = []
         self.time = {}
@@ -420,7 +421,6 @@ class nbackStim:
             # Allow experimenter to exit the script by pressing the quit key. Will quit at the end of the trial (is not immediate).
             if not self.response:
                 self.response = event.getKeys(keyList=hand['Quit']+hand['Match']+hand['NoMatch'],timeStamped=globalClock)
-                
                 if self.response: stimRTTime = globalClock.getTime()
         if not stimRTTime: stimRTTime = 0
 
@@ -768,6 +768,47 @@ def formatOutput(fname):
     orgData = rawData[validHeader]
     orgData.to_csv(fname, index=False) # Remove index from output file
 
+def endScreen():
+        '''Present a fixation cross and "all done" message at end of experiment '''
+        
+        # Set and record clocks for accurate Trial timing
+        fixDuration = 5.0
+        routineTimer.add(fixDuration)
+        fixStartTime = globalClock.getTime()
+
+        # Draw fixation and record onset time
+        bFixation.setAutoDraw(True)
+        fixOnsetTime = globalClock.getTime()
+        event.clearEvents()
+
+        # Present fixation cross and quit script if needed.
+        while routineTimer.getTime() > 0:
+            win.flip()
+
+        # Stop drawing fixation cross and record offset time
+        fixOffsetTime = globalClock.getTime()
+        bFixation.setAutoDraw(False)
+        fixFinishTime = globalClock.getTime()
+        
+        # Draw "all done" screen and record onset time
+        allDone.setAutoDraw(True)
+        allDoneOnsetTime = globalClock.getTime()
+
+        # Present "all done" screen and allow experimenter to quit if needed
+        win.flip()
+        theseKeys = event.waitKeys(keyList=['space'])
+        if theseKeys > 0: 
+            # Stop drawing the target stimuli and record offset time
+            allDoneOffsetTime = globalClock.getTime()
+            allDone.setAutoDraw(False)
+            allDoneFinishTime = globalClock.getTime()
+        
+        # Record times and save data ** IS THIS DATA INCLUDED IN OUTPUT FILE? if so, need to edit.
+        #self.time = {'Fix5sec.Duration': fixDuration, 'Fix5sec.StartTime': fixStartTime, 
+        #    'Fix5sec.OnsetTime': fixOnsetTime, 'Fix5sec.OffsetTime': fixOffsetTime,
+        #    'Fix5sec.FinishTime': fixFinishTime}
+        #self.saveData(expHandler,tHandler)
+
 def exitProtocol():
     '''A protocol to save all data  before the script exits.  Will run at the end of the script or when the 
     escape key is pressed during instructions or a participant's response.'''
@@ -805,11 +846,12 @@ def exitProtocol():
 #    except KeyError:
 #        print "Experiment ended before data was collected.  Can't provide a plot :("
 
-# Initialize Intro Screen
+# Initialize Intro/End Screens
 introTitle = visual.TextStim(win=win,ori=0,name='introTitle',text='N-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=titleLetterSize, wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 blankScreen = visual.TextStim(win=win,ori=0,name='blankScreen',text='',font='Verdana',pos=np.array([0,0])*stimScale,height=titleLetterSize,wrapWidth=wrapWidth)
 pFixation = visual.TextStim(win=win,ori=0,name='pFixation',text='+',font='Verdana',pos=np.array([0,0])*stimScale,height=fixLetterSize,wrapWidth=wrapWidth,color='purple',colorSpace='rgb',opacity=1,depth=1.0)
 bFixation = visual.TextStim(win=win,ori=0,name='bFixation',text='+',font='Verdana',pos=np.array([0,0])*stimScale,height=fixLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
+allDone = visual.TextStim(win=win,ori=0,name='allDone',text='All done!',font='Verdana',pos=np.array([0,0])*stimScale,height=fixLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
 
 # Initialize various stimuli 
 target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Verdana',pos=np.array([-5,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
@@ -1574,6 +1616,7 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
         #launchScan(win,{'TR':0.8,'volumes':370, 'sync':'5','skip':10,'sound':True},globalClock=globalClock,
         #    simResponses = x, mode='Test',wait_msg='waiting for scanner...', wait_timeout=120)
         nBackBlock(os.path.join('Sets','Task','Version%d_%d.csv' % (expInfo['Version'],j)),'nBack')
+        
 
 elif expInfo['Session'] == 'RecMem':
     # Create instructions stim to iterate through
@@ -1666,6 +1709,9 @@ elif expInfo['Session'] == 'RecMem':
     # Start RecMem Final task
     recPractice = False
     nBackBlock(os.path.join('Sets','RecMem','Version%d.csv' % expInfo['Version']),'RecMemTask')
+
+# Show "all done" screen
+endScreen()
 
 # Save and exit from the experiment
 exitProtocol()
