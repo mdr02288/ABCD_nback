@@ -849,7 +849,7 @@ def exitProtocol():
 # Initialize Intro/End Screens
 introTitle = visual.TextStim(win=win,ori=0,name='introTitle',text='N-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=titleLetterSize, wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 blankScreen = visual.TextStim(win=win,ori=0,name='blankScreen',text='',font='Verdana',pos=np.array([0,0])*stimScale,height=titleLetterSize,wrapWidth=wrapWidth)
-pFixation = visual.TextStim(win=win,ori=0,name='pFixation',text='+',font='Verdana',pos=np.array([0,0])*stimScale,height=fixLetterSize,wrapWidth=wrapWidth,color='purple',colorSpace='rgb',opacity=1,depth=1.0)
+pFixation = visual.TextStim(win=win,ori=0,name='pFixation',text='+',font='Verdana',pos=np.array([0,0])*stimScale,height=fixLetterSize,wrapWidth=wrapWidth,color='#FF00FF',colorSpace='rgb',opacity=1,depth=1.0)
 bFixation = visual.TextStim(win=win,ori=0,name='bFixation',text='+',font='Verdana',pos=np.array([0,0])*stimScale,height=fixLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
 allDone = visual.TextStim(win=win,ori=0,name='allDone',text='All done!',font='Verdana',pos=np.array([0,0])*stimScale,height=fixLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
 
