@@ -586,14 +586,27 @@ def nBackBlock(taskList,taskName):
 
         # Delay the task while the scanner starts
         if config['siteScanner']['scanner'] in ['Siemens','Phillips']:
+            triggerCount = 0
+            triggerToInitScan = 1
             scannerDelayTime = 6.4
-            routineTimer.reset(t=scannerDelayTime)
-
-            # Draw black fixation cross while MRI starts
-            bFixation.setAutoDraw(True)
-            while routineTimer.getTime() > 0:
+            event.clearEvents()
+            waitingScreen.setAutoDraw(True)
+            
+            while triggerCount < triggerToInitScan:
                 win.flip()
-            bFixation.setAutoDraw(False)
+                triggerReceived = event.getKeys(keyList=hand['Trigger']+hand['Quit'])
+                
+                if triggerReceived and triggerReceived[0] in hand['Trigger']:
+                   triggerCount += 1
+                   print triggerReceived, triggerCount
+                   # Stop drawing waiting screen, draw black fixation cross while MRI starts
+                   routineTimer.reset(t=scannerDelayTime)
+                   while routineTimer.getTime() > 0:
+                        win.flip()
+                   waitingScreen.setAutoDraw(False)
+                elif triggerReceived and 'escape' in triggerReceived:
+                   print triggerReceived
+                   exitProtocol()
 
         elif config['siteScanner']['scanner'] == 'GE': 
 
