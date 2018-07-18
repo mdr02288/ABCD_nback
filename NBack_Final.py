@@ -857,7 +857,7 @@ allDone = visual.TextStim(win=win,ori=0,name='allDone',text='All done!',font='Ve
 target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Verdana',pos=np.array([-5,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
 twoBack = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
 correct = visual.TextStim(win=win,ori=0,name='correct',text="Correct!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#00FF00',colorSpace='rgb',opacity=1,depth=1.0)
-incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='##FF0000',colorSpace='rgb',opacity=1,depth=1.0)
+incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FF0000',colorSpace='rgb',opacity=1,depth=1.0)
 tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="Too Slow!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FFFF00',colorSpace='rgb',opacity=1,depth=1.0)
 pointerFingerPrompt = visual.TextStim(win=win,ori=0,text='POINTER',font='Verdana',pos=np.array([-4,-8])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 middleFingerPrompt = visual.TextStim(win=win,ori=0,text='MIDDLE',font='Verdana',pos=np.array([4,-8])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
