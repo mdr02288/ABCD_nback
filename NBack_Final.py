@@ -856,9 +856,9 @@ allDone = visual.TextStim(win=win,ori=0,name='allDone',text='All done!',font='Ve
 # Initialize various stimuli 
 target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Verdana',pos=np.array([-5,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
 twoBack = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
-correct = visual.TextStim(win=win,ori=0,name='correct',text="Correct!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='green',colorSpace='rgb',opacity=1,depth=1.0)
-incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='red',colorSpace='rgb',opacity=1,depth=1.0)
-tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="Too Slow!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='yellow',colorSpace='rgb',opacity=1,depth=1.0)
+correct = visual.TextStim(win=win,ori=0,name='correct',text="Correct!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#00FF00',colorSpace='rgb',opacity=1,depth=1.0)
+incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='##FF0000',colorSpace='rgb',opacity=1,depth=1.0)
+tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="Too Slow!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FFFF00',colorSpace='rgb',opacity=1,depth=1.0)
 pointerFingerPrompt = visual.TextStim(win=win,ori=0,text='POINTER',font='Verdana',pos=np.array([-4,-8])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 middleFingerPrompt = visual.TextStim(win=win,ori=0,text='MIDDLE',font='Verdana',pos=np.array([4,-8])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 if expInfo['Session'] == 'RecMem':
@@ -941,9 +941,9 @@ if expInfo['Session'] == 'Practice':
     # Initialize various stimuli 
     target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Verdana',pos=np.array([-5,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
     twoBack = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
-    correct = visual.TextStim(win=win,ori=0,name='correct',text="Correct!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='green',colorSpace='rgb',opacity=1,depth=1.0)
-    incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='red',colorSpace='rgb',opacity=1,depth=1.0)
-    tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="Too Slow!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='yellow',colorSpace='rgb',opacity=1,depth=1.0)
+    correct = visual.TextStim(win=win,ori=0,name='correct',text="Correct!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#00FF00',colorSpace='rgb',opacity=1,depth=1.0)
+    incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FF0000',colorSpace='rgb',opacity=1,depth=1.0)
+    tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="Too Slow!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FFFF00',colorSpace='rgb',opacity=1,depth=1.0)
 
     # Start the clocks
     globalClock.reset()
@@ -1135,9 +1135,9 @@ if expInfo['Session'] == 'Practice':
 
                     # Provide instruction for how to respond
                     if expInfo['Handedness'] == 'Right':
-                        PracticeFO1.middleLabelPrompt.color, PracticeFO1.middleFingerPrompt.color = ['green']*2
+                        PracticeFO1.middleLabelPrompt.color, PracticeFO1.middleFingerPrompt.color = ['#00FF00']*2
                     elif expInfo['Handedness'] == 'Left':
-                        PracticeFO1.pointerLabelPrompt.color, PracticeFO1.pointerFingerPrompt.color = ['green']*2
+                        PracticeFO1.pointerLabelPrompt.color, PracticeFO1.pointerFingerPrompt.color = ['#00FF00']*2
 
                     # Draw the prompts on the screen, change the color back to black after drawing
                     PracticeFO1.pointerFingerPrompt.draw()
@@ -1153,9 +1153,9 @@ if expInfo['Session'] == 'Practice':
 
                     # Provide instruction for how to respond
                     if expInfo['Handedness'] == 'Right':
-                        PracticeFO2.middleLabelPrompt.color, PracticeFO2.middleFingerPrompt.color = ['green']*2
+                        PracticeFO2.middleLabelPrompt.color, PracticeFO2.middleFingerPrompt.color = ['#00FF00']*2
                     elif expInfo['Handedness'] == 'Left':
-                        PracticeFO2.pointerLabelPrompt.color, PracticeFO2.pointerFingerPrompt.color = ['green']*2
+                        PracticeFO2.pointerLabelPrompt.color, PracticeFO2.pointerFingerPrompt.color = ['#00FF00']*2
 
                     # Draw the prompts on the screen, change the color back to black after drawing
                     PracticeFO2.pointerFingerPrompt.draw()
@@ -1175,9 +1175,9 @@ if expInfo['Session'] == 'Practice':
 
                     # Provide instruction for how to respond
                     if expInfo['Handedness'] == 'Left':
-                        PracticeFO1.middleLabelPrompt.color, PracticeFO1.middleFingerPrompt.color = ['green']*2
+                        PracticeFO1.middleLabelPrompt.color, PracticeFO1.middleFingerPrompt.color = ['#00FF00']*2
                     elif expInfo['Handedness'] == 'Right':
-                        PracticeFO1.pointerLabelPrompt.color, PracticeFO1.pointerFingerPrompt.color = ['green']*2
+                        PracticeFO1.pointerLabelPrompt.color, PracticeFO1.pointerFingerPrompt.color = ['#00FF00']*2
 
                     # Draw the prompts on the screen, change the color back to black after drawing
                     PracticeFO1.pointerFingerPrompt.draw()
@@ -1202,9 +1202,9 @@ if expInfo['Session'] == 'Practice':
 
                     # Provide instruction for how to respond
                     if expInfo['Handedness'] == 'Left':
-                        PracticeFO3.pointerLabelPrompt.color, PracticeFO3.pointerFingerPrompt.color = ['green']*2
+                        PracticeFO3.pointerLabelPrompt.color, PracticeFO3.pointerFingerPrompt.color = ['#00FF00']*2
                     elif expInfo['Handedness'] == 'Right':
-                        PracticeFO3.middleLabelPrompt.color, PracticeFO3.middleFingerPrompt.color = ['green']*2
+                        PracticeFO3.middleLabelPrompt.color, PracticeFO3.middleFingerPrompt.color = ['#00FF00']*2
 
                     # Draw the prompts on the screen, change the color back to black after drawing
                     PracticeFO3.pointerFingerPrompt.draw()
@@ -1280,10 +1280,10 @@ if expInfo['Session'] == 'Practice':
 
                 elif i.name in ['practiceScreen18','practiceScreen19','practiceScreen20']:
                     if expInfo['Handedness'] == 'Right':
-                        x.middleLabelPrompt.color, x.middleFingerPrompt.color = ['green'] * 2
+                        x.middleLabelPrompt.color, x.middleFingerPrompt.color = ['#00FF00'] * 2
 
                     elif expInfo['Handedness'] == 'Left':
-                        x.pointerLabelPrompt.color, x.pointerFingerPrompt.color = ['green'] * 2
+                        x.pointerLabelPrompt.color, x.pointerFingerPrompt.color = ['#00FF00'] * 2
 
                     # Draw image stimuli
                     x.stim.draw()
@@ -1317,9 +1317,9 @@ if expInfo['Session'] == 'Practice':
 
                     # Mark the Match Button based if the participant is left or right handed
                     if expInfo['Handedness'] == 'Right':
-                        PracticeFO3.pointerLabelPrompt.color, PracticeFO3.pointerFingerPrompt.color = ['green','green']
+                        PracticeFO3.pointerLabelPrompt.color, PracticeFO3.pointerFingerPrompt.color = ['#00FF00','#00FF00']
                     elif expInfo['Handedness'] == 'Left':
-                        PracticeFO3.middleLabelPrompt.color, PracticeFO3.middleFingerPrompt.color = ['green','green']
+                        PracticeFO3.middleLabelPrompt.color, PracticeFO3.middleFingerPrompt.color = ['#00FF00','#00FF00']
 
                     PracticeFO3.stim.draw()
                     PracticeFO3.middleLabelPrompt.draw()
@@ -1581,9 +1581,9 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
                         # Instructions will be slightly different by participant's handedness
                         # edit the colors for the button prompts.
                         if expInfo['Handedness'] == 'right':
-                            practiceFO3.pointerFingerPrompt.color, practiceFO3.pointerLabelPrompt.color = ('green','green')
+                            practiceFO3.pointerFingerPrompt.color, practiceFO3.pointerLabelPrompt.color = ('#00FF00','#00FF00')
                         elif expInfo['Handedness'] == 'left':
-                            practiceFO3.middleFingerPrompt.color, practiceFO3.middleLabelPrompt.color = ('green','green')
+                            practiceFO3.middleFingerPrompt.color, practiceFO3.middleLabelPrompt.color = ('#00FF00','#00FF00')
 
                         # Draw all stimuli prompts presented
                         practiceFO3.middleFingerPrompt.draw()
