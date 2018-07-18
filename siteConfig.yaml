@@ -15,5 +15,5 @@ dimensions:
   'height': 600
 siteScanner:
   'site': 'Yale'
-  'scanner': 'Siemens'
+  'scanner': 'GE'
   'goggles': None
