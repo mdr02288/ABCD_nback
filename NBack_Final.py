@@ -65,7 +65,7 @@ dlgCorrect = False
 while not dlgCorrect:
     print "Please be sure to check you have the correct pGUID and Version before running the script!!"
     expName = 'Emo_Nback_20180527'  # from the Builder filename that created this script
-    expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Behavioral',u'MRI',u'Practice',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Debugging':[True, False], u'Goggles':[False, True],u'Version':range(1,5)}
+    expInfo = {u'NARGUID': u'ABCD1234', u'Time Point': [u'Year 2',u'Year 4',u'Year 6', u'Year 8',u'Year 10', u'Baseline'], u'Session': [u'Behavioral',u'MRI',u'Practice',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Debugging':[True, False], u'Goggles':[False, True],u'Version':range(1,5)}
     #expInfo = {u'NARGUID': u'ABCD1234', u'Session': [u'Practice',u'Behavioral',u'MRI',u'RecMem'], u'Run': [u'All',u'Run2'],u'Handedness': [u'Right',u'Left'], u'Goggles':[True, False],u'Version':range(1,5)}
     dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
     if dlg.OK == False: core.quit()  # user pressed cancel
