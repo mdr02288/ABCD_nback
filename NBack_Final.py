@@ -1431,8 +1431,8 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
     taskScreen5_2 = visual.TextStim(win=win,ori=0,name='taskScreen5_2',text='to see what game you are playing!',font='Arial',pos=np.array([0,-1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     taskScreen6_1 = visual.TextStim(win=win,ori=0,name='taskScreen6_1',text='Great Job!',font='Arial',pos=np.array([0,3])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     taskScreen6_2 = visual.TextStim(win=win,ori=0,name='taskScreen6_2',text='Again, the games will switch.',font='Arial',pos=np.array([0,1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    taskScreen6_3 = visual.TextStim(win=win,ori=0,name='taskScreen6_3',text='Pay close attention when the plus sign turns purple',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    taskScreen6_4 = visual.TextStim(win=win,ori=0,name='taskScreen6_4',text='to see what game you are playing!',font='Arial',pos=np.array([0,-1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    taskScreen6_3 = visual.TextStim(win=win,ori=0,name='taskScreen6_3',text='\nPay close attention when the plus sign turns purple',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    taskScreen6_4 = visual.TextStim(win=win,ori=0,name='taskScreen6_4',text='\nto see what game you are playing!',font='Arial',pos=np.array([0,-1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 
     # Group screens together by text stimuli presented on each screen
     screen1 = [taskScreen1_1,taskScreen1_2,taskScreen1_3]
