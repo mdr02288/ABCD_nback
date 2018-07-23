@@ -133,6 +133,19 @@ else:
     filename = filename+'_REC'
     wildcard = '*REC*.csv'
 
+# Add Time Point suffix to file name 
+if expInfo['Time Point'] in ['Year 2']:
+    filename = filename+'_Y2'
+elif  expInfo['Time Point'] in ['Year 4']:
+    filename = filename+'_Y4'
+elif  expInfo['Time Point'] in ['Year 6']:
+    filename = filename+'_Y6'
+elif  expInfo['Time Point'] in ['Year 8']:
+    filename = filename+'_Y8'
+elif  expInfo['Time Point'] in ['Year 10']:
+    filename = filename+'_Y10'
+ 
+    
 # Make sure to avoid overwriting the previous logFile
 if expInfo['Run'] == 'Run2':
     filename = filename+'-2'
