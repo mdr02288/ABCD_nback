@@ -252,7 +252,7 @@ class nbackStim:
                 texRes=128, interpolate=True, depth=-1.0)
         else:
             if thisTrial['BlockType'] == 'Cue2Back':
-                self.stim = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=[0,0],height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
+                self.stim = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=[0,0],height=1,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
             elif thisTrial['BlockType'] == 'Fix15secProc':
                 self.stim = []
             elif thisTrial['BlockType'] in ['0-Back','0Back','2-Back','2Back','Cue0Back','Rec']:
@@ -965,8 +965,8 @@ if expInfo['Session'] == 'Practice':
     screen25 = [practiceScreen25_1,practiceScreen25_2,practiceScreen25_3]
 
     # Initialize various stimuli 
-    target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Verdana',pos=np.array([-5,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
-    twoBack = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
+    target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Verdana',pos=np.array([-5,0])*stimScale,height=1,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
+    twoBack = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=1,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
     correct = visual.TextStim(win=win,ori=0,name='correct',text="Correct!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#00FF00',colorSpace='rgb',opacity=1,depth=1.0)
     incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FF0000',colorSpace='rgb',opacity=1,depth=1.0)
     tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="Too Slow!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FFFF00',colorSpace='rgb',opacity=1,depth=1.0)
@@ -1472,7 +1472,7 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
     run1Index = 5 # Index the instructions screen for the first run
 
     # Create instructions stimuli
-    target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Arial',pos=np.array([-5,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
+    target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Arial',pos=np.array([-5,0])*stimScale,height=1,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
     practiceFO1 = nbackStim(expInfo['StimuliDir']+'PracticeFO1.bmp')
     practiceFO3 = nbackStim(expInfo['StimuliDir']+'PracticeFO3.bmp') 
 
