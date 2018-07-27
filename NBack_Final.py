@@ -794,47 +794,6 @@ def formatOutput(fname):
     orgData = rawData[validHeader]
     orgData.to_csv(fname, index=False) # Remove index from output file
 
-def endScreen():
-        '''Present a fixation cross and "all done" message at end of experiment '''
-        
-        # Set and record clocks for accurate Trial timing
-        fixDuration = 5.0
-        routineTimer.add(fixDuration)
-        fixStartTime = globalClock.getTime()
-
-        # Draw fixation and record onset time
-        bFixation.setAutoDraw(True)
-        fixOnsetTime = globalClock.getTime()
-        event.clearEvents()
-
-        # Present fixation cross and quit script if needed.
-        while routineTimer.getTime() > 0:
-            win.flip()
-
-        # Stop drawing fixation cross and record offset time
-        fixOffsetTime = globalClock.getTime()
-        bFixation.setAutoDraw(False)
-        fixFinishTime = globalClock.getTime()
-        
-        # Draw "all done" screen and record onset time
-        allDone.setAutoDraw(True)
-        allDoneOnsetTime = globalClock.getTime()
-
-        # Present "all done" screen and allow experimenter to quit if needed
-        win.flip()
-        theseKeys = event.waitKeys(keyList=['space'])
-        if theseKeys > 0: 
-            # Stop drawing the target stimuli and record offset time
-            allDoneOffsetTime = globalClock.getTime()
-            allDone.setAutoDraw(False)
-            allDoneFinishTime = globalClock.getTime()
-        
-        # Record times and save data ** IS THIS DATA INCLUDED IN OUTPUT FILE? if so, need to edit.
-        #self.time = {'Fix5sec.Duration': fixDuration, 'Fix5sec.StartTime': fixStartTime, 
-        #    'Fix5sec.OnsetTime': fixOnsetTime, 'Fix5sec.OffsetTime': fixOffsetTime,
-        #    'Fix5sec.FinishTime': fixFinishTime}
-        #self.saveData(expHandler,tHandler)
-
 def exitProtocol():
     '''A protocol to save all data  before the script exits.  Will run at the end of the script or when the 
     escape key is pressed during instructions or a participant's response.'''
@@ -1643,6 +1602,45 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
         #    simResponses = x, mode='Test',wait_msg='waiting for scanner...', wait_timeout=120)
         nBackBlock(os.path.join('Sets','Task','Version%d_%d.csv' % (expInfo['Version'],j)),'nBack')
         
+        # Fixation + "all done" screen (run 2)
+        # Set and record clocks for accurate Trial timing
+        fixDuration = 5.0
+        routineTimer.add(fixDuration)
+        fixStartTime = globalClock.getTime()
+
+        # Draw fixation and record onset time
+        bFixation.setAutoDraw(True)
+        fixOnsetTime = globalClock.getTime()
+        event.clearEvents()
+
+        # Present fixation cross and quit script if needed.
+        while routineTimer.getTime() > 0:
+            win.flip()
+
+        # Stop drawing fixation cross and record offset time
+        fixOffsetTime = globalClock.getTime()
+        bFixation.setAutoDraw(False)
+        fixFinishTime = globalClock.getTime()
+        
+        # Draw "all done" screen and record onset time
+        if j == 2:
+            allDone.setAutoDraw(True)
+            allDoneOnsetTime = globalClock.getTime()
+
+            # Present "all done" screen and allow experimenter to quit if needed
+            win.flip()
+            theseKeys = event.waitKeys(keyList=['space'])
+            if theseKeys > 0: 
+                # Stop drawing the target stimuli and record offset time
+                allDoneOffsetTime = globalClock.getTime()
+                allDone.setAutoDraw(False)
+                allDoneFinishTime = globalClock.getTime()
+                
+                # Record times and save data ** IS THIS DATA INCLUDED IN OUTPUT FILE? if so, need to edit.
+                #self.time = {'Fix5sec.Duration': fixDuration, 'Fix5sec.StartTime': fixStartTime, 
+                #    'Fix5sec.OnsetTime': fixOnsetTime, 'Fix5sec.OffsetTime': fixOffsetTime,
+                #    'Fix5sec.FinishTime': fixFinishTime}
+                #self.saveData(expHandler,tHandler)
 
 elif expInfo['Session'] == 'RecMem':
     # Create instructions stim to iterate through
@@ -1735,9 +1733,6 @@ elif expInfo['Session'] == 'RecMem':
     # Start RecMem Final task
     recPractice = False
     nBackBlock(os.path.join('Sets','RecMem','Version%d.csv' % expInfo['Version']),'RecMemTask')
-
-# Show "all done" screen
-endScreen()
 
 # Save and exit from the experiment
 exitProtocol()
