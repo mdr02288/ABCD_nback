@@ -196,7 +196,7 @@ else:
 # Create the window in which the stimuli will be presented
 win = visual.Window(size=(width, height), fullscr=screenFull, screen=len(screens) - 1, allowGUI=False, allowStencil=False,
     monitor=u'testMonitor', color=128, colorSpace='rgb255',
-    blendMode='avg', useFBO=True, units='deg')
+    blendMode='avg', useFBO=True, units='cm')
     
 # Record the frames that are dropped during the task
 win.recordFrameIntervals = True
