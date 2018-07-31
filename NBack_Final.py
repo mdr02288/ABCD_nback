@@ -1382,8 +1382,9 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
     taskScreen1_2 = visual.TextStim(win=win,ori=0,name='taskScreen1_2',text='They are "0-Back" and "2-Back".',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     taskScreen1_3 = visual.TextStim(win=win,ori=0,name='taskScreen1_3',text='You will see the words "Target" or "2-Back" before each game starts.',font='Arial',pos=np.array([0,-2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 
-    taskScreen2_1 = visual.TextStim(win=win,ori=0,name='taskScreen2_1',text='For "0-Back", press MATCH if you see a picture that is the same as the target picture.',font='Arial',pos=np.array([0,8])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    taskScreen2_2 = visual.TextStim(win=win,ori=0,name='taskScreen2_2',text='Press NO MATCH if it is not the same.',font='Arial',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    taskScreen2_1 = visual.TextStim(win=win,ori=0,name='taskScreen2_1',text='For "0-Back", press MATCH if you see a picture that is the same as the target picture.',font='Arial',pos=np.array([0,9])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    taskScreen2_2 = visual.TextStim(win=win,ori=0,name='taskScreen2_2',text='\nthat is the same as the target picture.',font='Arial',pos=np.array([0,8.5])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    taskScreen2_3 = visual.TextStim(win=win,ori=0,name='taskScreen2_3',text='Press NO MATCH if it is not the same.',font='Arial',pos=np.array([0,6.5])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     taskScreen3_1 = visual.TextStim(win=win,ori=0,name='taskScreen3_1',text='For "2-Back", press MATCH if the picture',font='Arial',pos=np.array([0,9])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     taskScreen3_2 = visual.TextStim(win=win,ori=0,name='taskScreen3_2',text='\nyou see is the same as two pictures back.',font='Arial',pos=np.array([0,8.5])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     taskScreen3_3 = visual.TextStim(win=win,ori=0,name='taskScreen3_3',text='Press NO MATCH if not.',font='Arial',pos=np.array([0,6.5])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
@@ -1396,7 +1397,7 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
 
     # Group screens together by text stimuli presented on each screen
     screen1 = [taskScreen1_1,taskScreen1_2,taskScreen1_3]
-    screen2 = [taskScreen2_1,taskScreen2_2]
+    screen2 = [taskScreen2_1,taskScreen2_2,taskScreen2_3]
     screen3 = [taskScreen3_1,taskScreen3_2,taskScreen3_3]
     screen5 = [taskScreen5_1,taskScreen5_2]
     screen6 = [taskScreen6_1,taskScreen6_2,taskScreen6_3,taskScreen6_4]
