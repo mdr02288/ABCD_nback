@@ -1615,7 +1615,7 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
 
                         # Reformat the images and draw them for the example
                         practiceFO1.stim.size = np.array([5,5])*stimScale
-                        practiceFO3G.stim.size = np.array([5,5])*stimScale
+                        PracticeFO3G.stim.size = np.array([5,5])*stimScale
                         practiceFO1.stim.pos -= np.array([8,0])*stimScale
                         practiceFO3G.stim.pos -= np.array([14,0])*stimScale
                         practiceFO1.stim.draw()
@@ -1705,6 +1705,7 @@ elif expInfo['Session'] == 'RecMem':
     recScreen6_4 = visual.TextStim(win=win,ori=0,name='recScreen6_4',text='NEW',font='Arial',pos=np.array([4,0])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen6_5 = visual.TextStim(win=win,ori=0,name='recScreen6_5',text='MIDDLE',font='Arial',pos=np.array([4,-1])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen6_6 = visual.TextStim(win=win,ori=0,name='recScreen6_6',text='Press SPACE to start the game',font='Arial',pos=np.array([0,-6])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    recScreen7 = visual.TextStim(win=win,ori=0,name='recScreen7',text='Get ready!',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 
     # Create list of all elements that should be presented to the participant on one screen
     screen1 = [recScreen1_1, recScreen1_2, recScreen1_3]
@@ -1713,7 +1714,7 @@ elif expInfo['Session'] == 'RecMem':
     screen4 = [recScreen4_1, recScreen4_2, recScreen4_3]
     screen5 = [recScreen5_1, recScreen5_2, recScreen5_3, recScreen5_4, recScreen5_5]
     screen6 = [recScreen6_1, recScreen6_2, recScreen6_3, recScreen6_4, recScreen6_5, recScreen6_6]
-
+    
     # Place all instructions into a list to iterate through
     instructionSlides = [screen1, screen2, screen3, screen4, screen5, screen6]
     practiceIndex = 4
@@ -1767,6 +1768,14 @@ elif expInfo['Session'] == 'RecMem':
         if 'escape' in keypress:
             exitProtocol()
 
+    recScreen7.draw()
+    win.flip()
+    core.wait(2)
+
+    bFixation.draw()
+    win.flip()
+    core.wait(1)
+    
     # Start RecMem Final task
     recPractice = False
     nBackBlock(os.path.join('Sets','RecMem','Version%d.csv' % expInfo['Version']),'RecMemTask')
