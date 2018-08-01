@@ -180,12 +180,13 @@ screens = display.get_screens()
 if expInfo['Debugging'] or expInfo['Goggles']:
     width = config['dimensions']['width']
     height = config['dimensions']['height']
-    screenFull = False
 
     if expInfo['Debugging']:
         stimScale = .6
+        screenFull = False
     elif expInfo['Goggles']:
-        stimScale = (800*600.)/(1260*800) # Just scaling the screen down from standard size
+        stimScale = (800*600.)/(1024*768) # Just scaling the screen down from standard size
+        screenFull = True
 
 else:
     width = screens[-1].width
@@ -598,7 +599,7 @@ def nBackBlock(taskList,taskName):
     if expInfo['Session'] == 'MRI':
 
         # Delay the task while the scanner starts
-        if config['siteScanner']['scanner'] in ['Siemens','Phillips']:
+         if config['siteScanner']['scanner'] in ['Siemens','Phillips']:
             triggerCount = 0
             triggerToInitScan = 1
             scannerDelayTime = 6.4
@@ -621,7 +622,7 @@ def nBackBlock(taskList,taskName):
                    print triggerReceived
                    exitProtocol()
 
-        elif config['siteScanner']['scanner'] == 'GE': 
+         elif config['siteScanner']['scanner'] == 'GE': 
 
             # Define parameters to wait for scanner
             routineTimer.reset()
@@ -647,8 +648,33 @@ def nBackBlock(taskList,taskName):
             waitingScreen.setAutoDraw(False)
             routineTimer.reset()
 
-    else: # Task will be completed behaviorally (without Scanner)
-        routineTimer.reset()
+    elif expInfo['Session'] == 'Behavioral': #Task will be completed behavorially (wuithout scanner)
+         # Define parameters to wait for experimenter
+         routineTimer.reset()
+         triggerCount = 0
+         triggerToInitScan = 1
+         event.clearEvents()
+         waitingScreen.setAutoDraw(True)
+
+         # Present a black fixation cross and wait for the necessary number of trigger signals from scanner
+         while triggerCount < triggerToInitScan:
+             win.flip()
+             triggerReceived = event.getKeys(keyList=hand['Next']+hand['Quit'])
+
+            # If the trigger was received, increment the trigger counter. Exit while loop when counter is equal to triggerToInitScan
+             if triggerReceived and triggerReceived[0] in hand['Next']:
+                 triggerCount += 1
+                 print triggerReceived, triggerCount
+             elif triggerReceived and 'escape' in triggerReceived:
+                print triggerReceived
+                exitProtocol()
+                
+         # Stop waiting for scanner and trigger the rest of the task
+         waitingScreen.setAutoDraw(False)
+         routineTimer.reset()
+            
+    else: #PRACTICE and recmem
+         routineTimer.reset()
 
     # Iterate through all trials and present stimuli accordingly
     for thisTrial in nBack:
@@ -889,19 +915,22 @@ if expInfo['Session'] == 'Practice':
     practiceScreen11_2 = visual.TextStim(win=win,ori=0,name='practiceScreen11_2',text='Otherwise press NO MATCH with your MIDDLE finger.',font='Verdana',pos=np.array([0,-1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen11_3 = visual.TextStim(win=win,ori=0,name='practiceScreen11_3',text='Here is an example:',font='Verdana',pos=np.array([0,-2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen12 = visual.TextStim(win=win,ori=0,name='practiceScreen12',text='This is a NO MATCH because nothing was shown two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    PracticeFO1 = nbackStim(expInfo['StimuliDir']+'PracticeFO1.bmp') 
     practiceScreen13 = visual.TextStim(win=win,ori=0,name='practiceScreen13',text='Again, this is a NO MATCH because nothing was shown two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    PracticeFO2 = nbackStim(expInfo['StimuliDir']+'PracticeFO2.bmp') 
     practiceScreen14 = visual.TextStim(win=win,ori=0,name='practiceScreen14',text='This is a MATCH because it is the same as the picture shown two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen15 = visual.TextStim(win=win,ori=0,name='practiceScreen15',text='This is a NO MATCH because it is a different picture was shown two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    PracticeFO3 = nbackStim(expInfo['StimuliDir']+'PracticeFO3.bmp') 
     practiceScreen16 = visual.TextStim(win=win,ori=0,name='practiceScreen16',text='Let\'s try one together!',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 
+    PracticeFO1 = nbackStim(expInfo['StimuliDir']+'PracticeFO1.bmp') 
+    PracticeFO1G = nbackStim(expInfo['StimuliDir']+'PracticeFO1G.bmp') 
+    PracticeFO2 = nbackStim(expInfo['StimuliDir']+'PracticeFO2.bmp') 
+    PracticeFO3 = nbackStim(expInfo['StimuliDir']+'PracticeFO3.bmp') 
+    PracticeFO3G = nbackStim(expInfo['StimuliDir']+'PracticeFO3G.bmp') 
+    
     practiceScreen17 = visual.TextStim(win=win,ori=0,name='practiceScreen17',text='MATCH or NO MATCH?',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen18 = visual.TextStim(win=win,ori=0,name='practiceScreen18',text='This is a NO MATCH because nothing was shown two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen19 = visual.TextStim(win=win,ori=0,name='practiceScreen19',text='Again, this is a NO MATCH because nothing was shown two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen20 = visual.TextStim(win=win,ori=0,name='practiceScreen20',text='This is a NO MATCH because this picture is different from the one that was presented two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    practiceScreen21 = visual.TextStim(win=win,ori=0,name='practiceScreen21',text='Remember a match is only when the same picture was presented two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    practiceScreen21 = visual.TextStim(win=win,ori=0,name='practiceScreen21',text='Remember a MATCH is only when the same picture was presented two back.',font='Verdana',pos=np.array([0,7])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen22_1 = visual.TextStim(win=win,ori=0,name='practiceScreen22_1',text='In the game you will see pictures one at a time.',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen22_2 = visual.TextStim(win=win,ori=0,name='practiceScreen22_2',text='You need to remember what was shown two back.',font='Verdana',pos=np.array([0,-1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen23 = visual.TextStim(win=win,ori=0,name='practiceScreen23',text='Let\'s practice!',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
@@ -1154,7 +1183,8 @@ if expInfo['Session'] == 'Practice':
                     PracticeFO1.stim.draw()
                 elif i.name is 'practiceScreen14':
                     # Reformat previous practice images
-                    PracticeFO1.stim.pos -= np.array([6,0])*stimScale
+                    PracticeFO1G.stim.pos -= np.array([14,0])*stimScale
+                    PracticeFO1G.stim.size = np.array([5,5])*stimScale
                     PracticeFO2.stim.pos -= np.array([8,0])*stimScale
                     PracticeFO2.stim.size = np.array([5,5])*stimScale
 
@@ -1172,7 +1202,7 @@ if expInfo['Session'] == 'Practice':
                     PracticeFO1.middleLabelPrompt.color, PracticeFO1.middleFingerPrompt.color, PracticeFO1.pointerLabelPrompt.color, PracticeFO1.pointerFingerPrompt.color = ['black']*4
 
                     # Draw the image stimuli
-                    PracticeFO1.stim.draw()
+                    PracticeFO1G.stim.draw()
                     PracticeFO2.stim.draw()
 
                     # Redraw the 2-Back Stimuli
@@ -1184,6 +1214,7 @@ if expInfo['Session'] == 'Practice':
                     PracticeFO2.stim.pos -= np.array([6,0])*stimScale
                     PracticeFO1.stim.size = np.array([5,5])*stimScale
                     PracticeFO1.stim.pos -= np.array([8,0])*stimScale
+
 
                     # Provide instruction for how to respond
                     if expInfo['Handedness'] == 'Left':
@@ -1287,13 +1318,14 @@ if expInfo['Session'] == 'Practice':
                 elif i.name is 'practiceScreen21':
 
                     # Reformat stim to help with learning the 2Back game
-                    PracticeFO3.stim.pos -= np.array([6,0])*stimScale
-                    PracticeFO1.stim.size = np.array([5,5])*stimScale
+                    PracticeFO3G.stim.pos -= np.array([14,0])*stimScale
+                    PracticeFO3G.stim.size = np.array([5,5])*stimScale
                     PracticeFO1.stim.pos -= np.array([8,0])*stimScale
+                    PracticeFO1.stim.size = np.array([5,5])*stimScale
 
                     # Draw Stim
                     PracticeFO1.stim.draw()
-                    PracticeFO3.stim.draw()
+                    PracticeFO3G.stim.draw()
 
                     # Reformat and present a match Stim
                     PracticeFO3.stim.size = np.array([10,10])*stimScale
@@ -1415,6 +1447,7 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
         waitingScreen2 = visual.TextStim(win=win,ori=0,name='waitingScreen2',text='Waiting for experimenter...',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
         screen4 = [taskScreen4_1,taskScreen4_2,taskScreen4_3]
         screen7 = [taskScreen7_1,taskScreen7_2,taskScreen7_3]
+        
     elif expInfo['Session'] == 'MRI':
         taskScreen4_1 = visual.TextStim(win=win,ori=0,name='taskScreen4_1',text='Please respond while the picture is on the screen.',font='Arial',pos=np.array([0,2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
         taskScreen4_2 = visual.TextStim(win=win,ori=0,name='taskScreen4_2',text='Press your POINTER finger for MATCH.',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
@@ -1437,6 +1470,7 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
     target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Arial',pos=np.array([-5,0])*stimScale,height=1,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
     practiceFO1 = nbackStim(expInfo['StimuliDir']+'PracticeFO1.bmp')
     practiceFO3 = nbackStim(expInfo['StimuliDir']+'PracticeFO3.bmp') 
+    practiceFO3G = nbackStim(expInfo['StimuliDir']+'PracticeFO3G.bmp') 
 
     # Create some handy timers
     instructionsClock.reset
@@ -1568,9 +1602,9 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
 
                         # Instructions will be slightly different by participant's handedness
                         # edit the colors for the button prompts.
-                        if expInfo['Handedness'] == 'right':
+                        if expInfo['Handedness'] == 'Right':
                             practiceFO3.pointerFingerPrompt.color, practiceFO3.pointerLabelPrompt.color = ('#00FF00','#00FF00')
-                        elif expInfo['Handedness'] == 'left':
+                        elif expInfo['Handedness'] == 'Left':
                             practiceFO3.middleFingerPrompt.color, practiceFO3.middleLabelPrompt.color = ('#00FF00','#00FF00')
 
                         # Draw all stimuli prompts presented
@@ -1581,11 +1615,11 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
 
                         # Reformat the images and draw them for the example
                         practiceFO1.stim.size = np.array([5,5])*stimScale
-                        practiceFO3.stim.size = np.array([5,5])*stimScale
+                        practiceFO3G.stim.size = np.array([5,5])*stimScale
                         practiceFO1.stim.pos -= np.array([8,0])*stimScale
-                        practiceFO3.stim.pos -= np.array([14,0])*stimScale
+                        practiceFO3G.stim.pos -= np.array([14,0])*stimScale
                         practiceFO1.stim.draw()
-                        practiceFO3.stim.draw()
+                        practiceFO3G.stim.draw()
 
             # Present the screen and wait for a keypress or trigger
             win.flip()
