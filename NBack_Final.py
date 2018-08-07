@@ -1293,6 +1293,7 @@ if expInfo['Session'] == 'Practice':
                         x.pointerLabelPrompt.draw()
                         x.middleLabelPrompt.draw()
                         exampleCounter += 1
+                    x.pointerFingerPrompt.color, x.middleFingerPrompt.color, x.pointerLabelPrompt.color, x.middleLabelPrompt.color = ['black']*4
 
                 elif i.name in ['practiceScreen18','practiceScreen19','practiceScreen20']:
                     if expInfo['Handedness'] == 'Right':
@@ -1330,7 +1331,7 @@ if expInfo['Session'] == 'Practice':
                     # Reformat and present a match Stim
                     PracticeFO3.stim.size = np.array([10,10])*stimScale
                     PracticeFO3.stim.pos = np.array([0,0])*stimScale
-                    PracticeFO3.middleLabelPrompt.color, PracticeFO3.middleFingerPrompt.color, PracticeFO3.pointerLabelPrompt.color, PracticeFO3.pointerFingerPrompt.color = ['black','black','black','black']
+                    PracticeFO3.middleLabelPrompt.color, PracticeFO3.middleFingerPrompt.color, PracticeFO3.pointerLabelPrompt.color, PracticeFO3.pointerFingerPrompt.color = ['black']*4
 
                     # Mark the Match Button based if the participant is left or right handed
                     if expInfo['Handedness'] == 'Right':
@@ -1343,7 +1344,7 @@ if expInfo['Session'] == 'Practice':
                     PracticeFO3.middleFingerPrompt.draw()
                     PracticeFO3.pointerLabelPrompt.draw()
                     PracticeFO3.pointerFingerPrompt.draw()
-                    x.pointerFingerPrompt.color, x.middleFingerPrompt.color, x.pointerLabelPrompt.color, x.middleLabelPrompt.color = ['black']*4
+                    PracticeFO3.pointerFingerPrompt.color, PracticeFO3.middleFingerPrompt.color, PracticeFO3.pointerLabelPrompt.color, PracticeFO3.middleLabelPrompt.color = ['black']*4
 
                 # Present instructions screen
                 win.flip()
@@ -1612,10 +1613,11 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
                         practiceFO3.middleLabelPrompt.draw()
                         practiceFO3.pointerFingerPrompt.draw()
                         practiceFO3.pointerLabelPrompt.draw()
+                        practiceFO3.pointerFingerPrompt.color, practiceFO3.middleFingerPrompt.color, practiceFO3.pointerLabelPrompt.color, practiceFO3.middleLabelPrompt.color = ['black']*4
 
                         # Reformat the images and draw them for the example
                         practiceFO1.stim.size = np.array([5,5])*stimScale
-                        PracticeFO3G.stim.size = np.array([5,5])*stimScale
+                        practiceFO3G.stim.size = np.array([5,5])*stimScale
                         practiceFO1.stim.pos -= np.array([8,0])*stimScale
                         practiceFO3G.stim.pos -= np.array([14,0])*stimScale
                         practiceFO1.stim.draw()

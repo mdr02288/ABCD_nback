@@ -834,3 +834,836 @@
 18.0502 	DATA 	Keypress: space
 18.7012 	DATA 	Keypress: escape
 18.7326 	EXP 	window1: mouseVisible = True
+17.1747 	EXP 	Using Site Configuration: {'keys': {'Quit': ['escape'], 'NoMatch': ['2', 'num_2', 'right'], 'Match': ['1', 'num_1', 'left'], 'Next': ['space']}, 'style': {'textLetterSize': 1.0, 'wrapWidth': 40.0, 'subtitleLetterSize': 1.0, 'titleLetterSize': 3.0, 'fixLetterSize': 2.5}, 'trigger': ['5', '7', '^', 'num_5', 'num_7', '='], 'dimensions': {'width': 800, 'height': 600}, 'siteScanner': {'goggles': 'None', 'site': 'Yale', 'scanner': 'GE'}}
+17.7171 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 128.,  128.,  128.]), colorSpace='rgb255', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x111df8850>, multiSample=False, name='window1', numSamples=2, pos=[320.0, 150.0], screen=0, size=(800, 600), stereo=False, units='cm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+17.7172 	EXP 	window1: recordFrameIntervals = True
+17.7172 	EXP 	window1: recordFrameIntervals = False
+17.8841 	EXP 	window1: recordFrameIntervals = True
+18.0680 	EXP 	window1: recordFrameIntervals = True
+18.1447 	EXP 	Created introTitle = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='introTitle', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='N-Back', units='cm', win=Window(...), wrapWidth=24.0)
+18.1453 	EXP 	Created blankScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='blankScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='', units='cm', win=Window(...), wrapWidth=24.0)
+18.1483 	EXP 	Created pFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF00FF', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='pFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0, 255]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+18.1500 	EXP 	Created bFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='bFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+18.1573 	EXP 	Created allDone = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='allDone', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='All done!', units='cm', win=Window(...), wrapWidth=24.0)
+18.1635 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+18.1674 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+18.1712 	EXP 	Created correct = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#00FF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='correct', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([  0, 255,   0]), text='Correct!', units='cm', win=Window(...), wrapWidth=24.0)
+18.1746 	EXP 	Created incorrect = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF0000', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='incorrect', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0,   0]), text='Incorrect!', units='cm', win=Window(...), wrapWidth=24.0)
+18.1788 	EXP 	Created tooslow = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FFFF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='tooslow', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255, 255,   0]), text='Too Slow!', units='cm', win=Window(...), wrapWidth=24.0)
+18.1838 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='POINTER', units='cm', win=Window(...), wrapWidth=24.0)
+18.1878 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='MIDDLE', units='cm', win=Window(...), wrapWidth=24.0)
+18.1908 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+18.1936 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='NO MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+18.2115 	EXP 	Created taskScreen1_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text='There are two games in this part of the study.', units='cm', win=Window(...), wrapWidth=24.0)
+18.2185 	EXP 	Created taskScreen1_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='They are "0-Back" and "2-Back".', units='cm', win=Window(...), wrapWidth=24.0)
+18.2247 	EXP 	Created taskScreen1_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_3', opacity=1.0, ori=0, pos=array([ 0. , -1.2]), rgb=array([ 0.,  0.,  0.]), text='You will see the words "Target" or "2-Back"', units='cm', win=Window(...), wrapWidth=24.0)
+18.2300 	EXP 	Created taskScreen1_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_4', opacity=1.0, ori=0, pos=array([ 0. , -1.5]), rgb=array([ 0.,  0.,  0.]), text='\nbefore each game starts.', units='cm', win=Window(...), wrapWidth=24.0)
+18.2377 	EXP 	Created taskScreen2_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+18.2429 	EXP 	Created taskScreen2_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nthat is the same as the target picture.', units='cm', win=Window(...), wrapWidth=24.0)
+18.2487 	EXP 	Created taskScreen2_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if it is not the same.', units='cm', win=Window(...), wrapWidth=24.0)
+18.2538 	EXP 	Created taskScreen3_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text='For "2-Back", press MATCH if the picture', units='cm', win=Window(...), wrapWidth=24.0)
+18.2591 	EXP 	Created taskScreen3_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nyou see is the same as two pictures back.', units='cm', win=Window(...), wrapWidth=24.0)
+18.2630 	EXP 	Created taskScreen3_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if not.', units='cm', win=Window(...), wrapWidth=24.0)
+18.2688 	EXP 	Created taskScreen5_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+18.2777 	EXP 	Created taskScreen5_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_2', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='to see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+18.2823 	EXP 	Created taskScreen6_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.8]), rgb=array([ 0.,  0.,  0.]), text='Great Job!', units='cm', win=Window(...), wrapWidth=24.0)
+18.2864 	EXP 	Created taskScreen6_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_2', opacity=1.0, ori=0, pos=array([ 0. ,  0.6]), rgb=array([ 0.,  0.,  0.]), text='Again, the games will switch.', units='cm', win=Window(...), wrapWidth=24.0)
+18.2922 	EXP 	Created taskScreen6_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_3', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+18.2972 	EXP 	Created taskScreen6_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_4', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='\nto see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+18.3029 	EXP 	Created taskScreen4_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+18.3092 	EXP 	Created taskScreen4_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+18.3147 	EXP 	Created taskScreen4_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+18.3214 	EXP 	Created taskScreen4_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_4', opacity=1.0, ori=0, pos=array([ 0. , -1.8]), rgb=array([ 0.,  0.,  0.]), text='PLEASE REMEMBER TO KEEP YOUR HEAD STILL', units='cm', win=Window(...), wrapWidth=24.0)
+18.3270 	EXP 	Created taskScreen7_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+18.3322 	EXP 	Created taskScreen7_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for match.', units='cm', win=Window(...), wrapWidth=24.0)
+18.3370 	EXP 	Created taskScreen7_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+18.3419 	EXP 	Created taskScreen7_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_4', opacity=1.0, ori=0, pos=array([ 0. , -1.8]), rgb=array([ 0.,  0.,  0.]), text='PLEASE REMEMBER TO KEEP YOUR HEAD STILL', units='cm', win=Window(...), wrapWidth=24.0)
+18.3466 	EXP 	Created waitingScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for trigger...', units='cm', win=Window(...), wrapWidth=24.0)
+18.3503 	EXP 	Created waitingScreen2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for trigger...', units='cm', win=Window(...), wrapWidth=24.0)
+18.3575 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+18.3882 	EXP 	Created Stimuli/PracticeFO1.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO1.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO1.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+18.3902 	EXP 	Created Stimuli/PracticeFO3.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+18.3922 	EXP 	Created Stimuli/PracticeFO3G.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3G.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3G.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+18.4171 	WARNING 	t of last frame was 349.46ms (=1/2)
+18.4171 	EXP 	introTitle: autoDraw = True
+18.8742 	DATA 	Keypress: space
+18.8841 	EXP 	introTitle: autoDraw = False
+19.2676 	DATA 	Keypress: space
+19.2846 	WARNING 	t of last frame was 400.51ms (=1/2)
+19.2846 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 1.8,  0. ])
+19.6036 	DATA 	Keypress: space
+19.6172 	WARNING 	t of last frame was 332.67ms (=1/3)
+19.6172 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 0.,  0.])
+19.6172 	EXP 	unnamed TextStim: color = '#00FF00'
+19.6172 	EXP 	unnamed TextStim: color = '#00FF00'
+19.6172 	EXP 	Stimuli/PracticeFO1.bmp: size = array([ 3.,  3.])
+19.6172 	EXP 	Stimuli/PracticeFO3G.bmp: size = array([ 3.,  3.])
+19.6172 	EXP 	Stimuli/PracticeFO1.bmp: pos = array([-4.8,  0. ])
+19.6172 	EXP 	Stimuli/PracticeFO3G.bmp: pos = array([-8.4,  0. ])
+20.4036 	DATA 	Keypress: space
+20.4177 	WARNING 	t of last frame was 800.45ms (=1/1)
+21.2115 	DATA 	Keypress: space
+21.2332 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+21.7715 	DATA 	Keypress: space
+21.7780 	EXP 	Imported Sets/Task/Version1_1.csv as conditions, 92 conditions, 8 params
+21.7786 	EXP 	Created sequence: sequential, trialTypes=92, nReps=1, seed=None
+21.8000 	EXP 	waitingScreen: autoDraw = True
+23.1709 	DATA 	Keypress: space
+24.9207 	DATA 	Keypress: 5
+26.2377 	DATA 	Keypress: 5
+26.4695 	DATA 	Keypress: 5
+26.6536 	DATA 	Keypress: 5
+26.8215 	DATA 	Keypress: 5
+26.9874 	DATA 	Keypress: 5
+27.1546 	DATA 	Keypress: 5
+27.3195 	DATA 	Keypress: 5
+27.5356 	DATA 	Keypress: 5
+27.7196 	DATA 	Keypress: 5
+27.9218 	DATA 	Keypress: 5
+28.3701 	DATA 	Keypress: 5
+28.5881 	DATA 	Keypress: 5
+28.7866 	DATA 	Keypress: 5
+28.9718 	DATA 	Keypress: 5
+29.1543 	DATA 	Keypress: 5
+29.1551 	EXP 	New trial (rep=0, index=0): {'TargetType': u'""', 'Run': 1.0, 'Stimulus': u'""', 'RunTrialNumber_Block': u'""', 'StimType': u'Faces', 'BlockType': u'Cue2Back', 'Stim_CRESP': u'""', 'Block': 1.0}
+29.1623 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+29.1669 	EXP 	waitingScreen: autoDraw = False
+29.1669 	EXP 	pFixation: autoDraw = True
+29.3716 	DATA 	Keypress: 5
+29.6846 	EXP 	pFixation: autoDraw = False
+29.6846 	EXP 	2Back: autoDraw = True
+32.1729 	EXP 	New trial (rep=0, index=1): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'23M_HO.bmp', 'RunTrialNumber_Block': u'2', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+32.1782 	EXP 	Created 23M_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/23M_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'23M_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+32.1846 	EXP 	2Back: autoDraw = False
+32.1846 	EXP 	23M_HO.bmp: autoDraw = True
+32.1846 	EXP 	unnamed TextStim: autoDraw = True
+32.1846 	EXP 	unnamed TextStim: autoDraw = True
+32.1846 	EXP 	unnamed TextStim: autoDraw = True
+32.1846 	EXP 	unnamed TextStim: autoDraw = True
+34.1852 	EXP 	23M_HO.bmp: autoDraw = False
+34.1852 	EXP 	unnamed TextStim: autoDraw = False
+34.1852 	EXP 	unnamed TextStim: autoDraw = False
+34.1852 	EXP 	unnamed TextStim: autoDraw = False
+34.1852 	EXP 	unnamed TextStim: autoDraw = False
+34.1852 	EXP 	bFixation: autoDraw = True
+34.6721 	EXP 	New trial (rep=0, index=2): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'12F_HO.bmp', 'RunTrialNumber_Block': u'3', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+34.6751 	EXP 	Created 12F_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/12F_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'12F_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+34.6854 	EXP 	bFixation: autoDraw = False
+34.6854 	EXP 	12F_HO.bmp: autoDraw = True
+34.6854 	EXP 	unnamed TextStim: autoDraw = True
+34.6854 	EXP 	unnamed TextStim: autoDraw = True
+34.6854 	EXP 	unnamed TextStim: autoDraw = True
+34.6854 	EXP 	unnamed TextStim: autoDraw = True
+36.6854 	EXP 	12F_HO.bmp: autoDraw = False
+36.6854 	EXP 	unnamed TextStim: autoDraw = False
+36.6854 	EXP 	unnamed TextStim: autoDraw = False
+36.6854 	EXP 	unnamed TextStim: autoDraw = False
+36.6854 	EXP 	unnamed TextStim: autoDraw = False
+36.6854 	EXP 	bFixation: autoDraw = True
+36.9048 	DATA 	Keypress: escape
+37.1720 	EXP 	New trial (rep=0, index=3): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'AF02_HO.bmp', 'RunTrialNumber_Block': u'4', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+37.1795 	EXP 	Created AF02_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/AF02_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'AF02_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+37.1851 	EXP 	bFixation: autoDraw = False
+37.1851 	EXP 	AF02_HO.bmp: autoDraw = True
+37.1851 	EXP 	unnamed TextStim: autoDraw = True
+37.1851 	EXP 	unnamed TextStim: autoDraw = True
+37.1851 	EXP 	unnamed TextStim: autoDraw = True
+37.1851 	EXP 	unnamed TextStim: autoDraw = True
+37.5724 	DATA 	Keypress: escape
+38.3389 	DATA 	Keypress: escape
+38.9724 	DATA 	Mouse: Left button down, pos=(359,152)
+38.9729 	DATA 	Mouse:  Left button up, pos=(359,152)
+39.1856 	EXP 	AF02_HO.bmp: autoDraw = False
+39.1856 	EXP 	unnamed TextStim: autoDraw = False
+39.1856 	EXP 	unnamed TextStim: autoDraw = False
+39.1856 	EXP 	unnamed TextStim: autoDraw = False
+39.1856 	EXP 	unnamed TextStim: autoDraw = False
+39.1856 	EXP 	bFixation: autoDraw = True
+39.7258 	EXP 	window1: mouseVisible = True
+8.7031 	EXP 	Using Site Configuration: {'keys': {'Quit': ['escape'], 'NoMatch': ['2', 'num_2', 'right'], 'Match': ['1', 'num_1', 'left'], 'Next': ['space']}, 'style': {'textLetterSize': 1.0, 'wrapWidth': 40.0, 'subtitleLetterSize': 1.0, 'titleLetterSize': 3.0, 'fixLetterSize': 2.5}, 'trigger': ['5', '7', '^', 'num_5', 'num_7', '='], 'dimensions': {'width': 800, 'height': 600}, 'siteScanner': {'goggles': 'None', 'site': 'Yale', 'scanner': 'GE'}}
+9.2456 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 128.,  128.,  128.]), colorSpace='rgb255', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1111b9e50>, multiSample=False, name='window1', numSamples=2, pos=[320.0, 150.0], screen=0, size=(800, 600), stereo=False, units='cm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.2457 	EXP 	window1: recordFrameIntervals = True
+9.2457 	EXP 	window1: recordFrameIntervals = False
+9.4112 	EXP 	window1: recordFrameIntervals = True
+9.6456 	EXP 	window1: recordFrameIntervals = True
+9.7224 	EXP 	Created introTitle = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='introTitle', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='N-Back', units='cm', win=Window(...), wrapWidth=24.0)
+9.7229 	EXP 	Created blankScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='blankScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='', units='cm', win=Window(...), wrapWidth=24.0)
+9.7260 	EXP 	Created pFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF00FF', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='pFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0, 255]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+9.7277 	EXP 	Created bFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='bFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+9.7351 	EXP 	Created allDone = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='allDone', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='All done!', units='cm', win=Window(...), wrapWidth=24.0)
+9.7414 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+9.7453 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+9.7490 	EXP 	Created correct = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#00FF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='correct', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([  0, 255,   0]), text='Correct!', units='cm', win=Window(...), wrapWidth=24.0)
+9.7526 	EXP 	Created incorrect = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF0000', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='incorrect', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0,   0]), text='Incorrect!', units='cm', win=Window(...), wrapWidth=24.0)
+9.7567 	EXP 	Created tooslow = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FFFF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='tooslow', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255, 255,   0]), text='Too Slow!', units='cm', win=Window(...), wrapWidth=24.0)
+9.7618 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='POINTER', units='cm', win=Window(...), wrapWidth=24.0)
+9.7657 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='MIDDLE', units='cm', win=Window(...), wrapWidth=24.0)
+9.7688 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+9.7717 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='NO MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+9.7896 	EXP 	Created taskScreen1_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text='There are two games in this part of the study.', units='cm', win=Window(...), wrapWidth=24.0)
+9.7968 	EXP 	Created taskScreen1_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='They are "0-Back" and "2-Back".', units='cm', win=Window(...), wrapWidth=24.0)
+9.8038 	EXP 	Created taskScreen1_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_3', opacity=1.0, ori=0, pos=array([ 0. , -1.2]), rgb=array([ 0.,  0.,  0.]), text='You will see the words "Target" or "2-Back"', units='cm', win=Window(...), wrapWidth=24.0)
+9.8098 	EXP 	Created taskScreen1_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_4', opacity=1.0, ori=0, pos=array([ 0. , -1.5]), rgb=array([ 0.,  0.,  0.]), text='\nbefore each game starts.', units='cm', win=Window(...), wrapWidth=24.0)
+9.8184 	EXP 	Created taskScreen2_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.8255 	EXP 	Created taskScreen2_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nthat is the same as the target picture.', units='cm', win=Window(...), wrapWidth=24.0)
+9.8320 	EXP 	Created taskScreen2_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if it is not the same.', units='cm', win=Window(...), wrapWidth=24.0)
+9.8371 	EXP 	Created taskScreen3_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text='For "2-Back", press MATCH if the picture', units='cm', win=Window(...), wrapWidth=24.0)
+9.8426 	EXP 	Created taskScreen3_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nyou see is the same as two pictures back.', units='cm', win=Window(...), wrapWidth=24.0)
+9.8463 	EXP 	Created taskScreen3_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if not.', units='cm', win=Window(...), wrapWidth=24.0)
+9.8523 	EXP 	Created taskScreen5_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.8612 	EXP 	Created taskScreen5_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_2', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='to see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+9.8658 	EXP 	Created taskScreen6_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.8]), rgb=array([ 0.,  0.,  0.]), text='Great Job!', units='cm', win=Window(...), wrapWidth=24.0)
+9.8700 	EXP 	Created taskScreen6_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_2', opacity=1.0, ori=0, pos=array([ 0. ,  0.6]), rgb=array([ 0.,  0.,  0.]), text='Again, the games will switch.', units='cm', win=Window(...), wrapWidth=24.0)
+9.8758 	EXP 	Created taskScreen6_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_3', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.8807 	EXP 	Created taskScreen6_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_4', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='\nto see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+9.8866 	EXP 	Created taskScreen4_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.8924 	EXP 	Created taskScreen4_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+9.8981 	EXP 	Created taskScreen4_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+9.9037 	EXP 	Created taskScreen7_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.9085 	EXP 	Created taskScreen7_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for match.', units='cm', win=Window(...), wrapWidth=24.0)
+9.9133 	EXP 	Created taskScreen7_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+9.9190 	EXP 	Created waitingScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for experimenter...', units='cm', win=Window(...), wrapWidth=24.0)
+9.9232 	EXP 	Created waitingScreen2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for experimenter...', units='cm', win=Window(...), wrapWidth=24.0)
+9.9303 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+9.9614 	EXP 	Created Stimuli/PracticeFO1.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO1.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO1.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+9.9633 	EXP 	Created Stimuli/PracticeFO3.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+9.9653 	EXP 	Created Stimuli/PracticeFO3G.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3G.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3G.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+9.9785 	WARNING 	t of last frame was 333.26ms (=1/3)
+9.9785 	EXP 	introTitle: autoDraw = True
+10.5702 	DATA 	Keypress: space
+10.5798 	EXP 	introTitle: autoDraw = False
+10.9251 	DATA 	Keypress: space
+10.9452 	WARNING 	t of last frame was 365.39ms (=1/2)
+10.9452 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 1.8,  0. ])
+11.2130 	DATA 	Keypress: space
+11.2286 	WARNING 	t of last frame was 283.40ms (=1/3)
+11.2286 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 0.,  0.])
+11.2286 	EXP 	unnamed TextStim: color = '#00FF00'
+11.2286 	EXP 	unnamed TextStim: color = '#00FF00'
+11.2286 	EXP 	Stimuli/PracticeFO1.bmp: size = array([ 3.,  3.])
+11.2286 	EXP 	Stimuli/PracticeFO3G.bmp: size = array([ 3.,  3.])
+11.2286 	EXP 	Stimuli/PracticeFO1.bmp: pos = array([-4.8,  0. ])
+11.2286 	EXP 	Stimuli/PracticeFO3G.bmp: pos = array([-8.4,  0. ])
+11.4770 	DATA 	Keypress: space
+11.4954 	WARNING 	t of last frame was 266.81ms (=1/3)
+12.0054 	DATA 	Keypress: space
+12.0120 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+12.3730 	DATA 	Keypress: space
+12.3781 	EXP 	Imported Sets/Task/Version1_1.csv as conditions, 92 conditions, 8 params
+12.3785 	EXP 	Created sequence: sequential, trialTypes=92, nReps=1, seed=None
+12.3958 	EXP 	waitingScreen: autoDraw = True
+12.7977 	DATA 	Keypress: space
+12.8129 	EXP 	New trial (rep=0, index=0): {'TargetType': u'""', 'Run': 1.0, 'Stimulus': u'""', 'RunTrialNumber_Block': u'""', 'StimType': u'Faces', 'BlockType': u'Cue2Back', 'Stim_CRESP': u'""', 'Block': 1.0}
+12.8222 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+12.8285 	EXP 	waitingScreen: autoDraw = False
+12.8285 	EXP 	pFixation: autoDraw = True
+13.3293 	EXP 	pFixation: autoDraw = False
+13.3293 	EXP 	2Back: autoDraw = True
+15.8158 	EXP 	New trial (rep=0, index=1): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'23M_HO.bmp', 'RunTrialNumber_Block': u'2', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+15.8187 	EXP 	Created 23M_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/23M_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'23M_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+15.8290 	EXP 	2Back: autoDraw = False
+15.8290 	EXP 	23M_HO.bmp: autoDraw = True
+15.8290 	EXP 	unnamed TextStim: autoDraw = True
+15.8290 	EXP 	unnamed TextStim: autoDraw = True
+15.8290 	EXP 	unnamed TextStim: autoDraw = True
+15.8290 	EXP 	unnamed TextStim: autoDraw = True
+17.8293 	EXP 	23M_HO.bmp: autoDraw = False
+17.8293 	EXP 	unnamed TextStim: autoDraw = False
+17.8293 	EXP 	unnamed TextStim: autoDraw = False
+17.8293 	EXP 	unnamed TextStim: autoDraw = False
+17.8293 	EXP 	unnamed TextStim: autoDraw = False
+17.8293 	EXP 	bFixation: autoDraw = True
+18.3161 	EXP 	New trial (rep=0, index=2): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'12F_HO.bmp', 'RunTrialNumber_Block': u'3', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+18.3191 	EXP 	Created 12F_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/12F_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'12F_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+18.3294 	EXP 	bFixation: autoDraw = False
+18.3294 	EXP 	12F_HO.bmp: autoDraw = True
+18.3294 	EXP 	unnamed TextStim: autoDraw = True
+18.3294 	EXP 	unnamed TextStim: autoDraw = True
+18.3294 	EXP 	unnamed TextStim: autoDraw = True
+18.3294 	EXP 	unnamed TextStim: autoDraw = True
+19.5155 	DATA 	Keypress: escape
+20.0834 	DATA 	Keypress: escape
+20.3298 	EXP 	12F_HO.bmp: autoDraw = False
+20.3298 	EXP 	unnamed TextStim: autoDraw = False
+20.3298 	EXP 	unnamed TextStim: autoDraw = False
+20.3298 	EXP 	unnamed TextStim: autoDraw = False
+20.3298 	EXP 	unnamed TextStim: autoDraw = False
+20.3298 	EXP 	bFixation: autoDraw = True
+20.4491 	DATA 	Keypress: escape
+20.7983 	DATA 	Keypress: escape
+20.8827 	EXP 	window1: mouseVisible = True
+9.8234 	EXP 	Using Site Configuration: {'keys': {'Quit': ['escape'], 'NoMatch': ['2', 'num_2', 'right'], 'Match': ['1', 'num_1', 'left'], 'Next': ['space']}, 'style': {'textLetterSize': 1.0, 'wrapWidth': 40.0, 'subtitleLetterSize': 1.0, 'titleLetterSize': 3.0, 'fixLetterSize': 2.5}, 'trigger': ['5', '7', '^', 'num_5', 'num_7', '='], 'dimensions': {'width': 800, 'height': 600}, 'siteScanner': {'goggles': 'None', 'site': 'Yale', 'scanner': 'GE'}}
+10.3629 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 128.,  128.,  128.]), colorSpace='rgb255', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x111a37190>, multiSample=False, name='window1', numSamples=2, pos=[320.0, 150.0], screen=0, size=(800, 600), stereo=False, units='cm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.3629 	EXP 	window1: recordFrameIntervals = True
+10.3629 	EXP 	window1: recordFrameIntervals = False
+10.5293 	EXP 	window1: recordFrameIntervals = True
+10.7127 	EXP 	window1: recordFrameIntervals = True
+10.7878 	EXP 	Created introTitle = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='introTitle', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='N-Back', units='cm', win=Window(...), wrapWidth=24.0)
+10.7884 	EXP 	Created blankScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='blankScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='', units='cm', win=Window(...), wrapWidth=24.0)
+10.7916 	EXP 	Created pFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF00FF', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='pFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0, 255]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+10.7933 	EXP 	Created bFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='bFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+10.8006 	EXP 	Created allDone = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='allDone', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='All done!', units='cm', win=Window(...), wrapWidth=24.0)
+10.8067 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+10.8106 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+10.8143 	EXP 	Created correct = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#00FF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='correct', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([  0, 255,   0]), text='Correct!', units='cm', win=Window(...), wrapWidth=24.0)
+10.8180 	EXP 	Created incorrect = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF0000', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='incorrect', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0,   0]), text='Incorrect!', units='cm', win=Window(...), wrapWidth=24.0)
+10.8222 	EXP 	Created tooslow = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FFFF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='tooslow', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255, 255,   0]), text='Too Slow!', units='cm', win=Window(...), wrapWidth=24.0)
+10.8271 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='POINTER', units='cm', win=Window(...), wrapWidth=24.0)
+10.8310 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='MIDDLE', units='cm', win=Window(...), wrapWidth=24.0)
+10.8340 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+10.8368 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='NO MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+10.8546 	EXP 	Created taskScreen1_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text='There are two games in this part of the study.', units='cm', win=Window(...), wrapWidth=24.0)
+10.8616 	EXP 	Created taskScreen1_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='They are "0-Back" and "2-Back".', units='cm', win=Window(...), wrapWidth=24.0)
+10.8678 	EXP 	Created taskScreen1_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_3', opacity=1.0, ori=0, pos=array([ 0. , -1.2]), rgb=array([ 0.,  0.,  0.]), text='You will see the words "Target" or "2-Back"', units='cm', win=Window(...), wrapWidth=24.0)
+10.8731 	EXP 	Created taskScreen1_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_4', opacity=1.0, ori=0, pos=array([ 0. , -1.5]), rgb=array([ 0.,  0.,  0.]), text='\nbefore each game starts.', units='cm', win=Window(...), wrapWidth=24.0)
+10.8807 	EXP 	Created taskScreen2_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.8858 	EXP 	Created taskScreen2_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nthat is the same as the target picture.', units='cm', win=Window(...), wrapWidth=24.0)
+10.8916 	EXP 	Created taskScreen2_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if it is not the same.', units='cm', win=Window(...), wrapWidth=24.0)
+10.8967 	EXP 	Created taskScreen3_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text='For "2-Back", press MATCH if the picture', units='cm', win=Window(...), wrapWidth=24.0)
+10.9022 	EXP 	Created taskScreen3_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nyou see is the same as two pictures back.', units='cm', win=Window(...), wrapWidth=24.0)
+10.9060 	EXP 	Created taskScreen3_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if not.', units='cm', win=Window(...), wrapWidth=24.0)
+10.9118 	EXP 	Created taskScreen5_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.9208 	EXP 	Created taskScreen5_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_2', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='to see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+10.9253 	EXP 	Created taskScreen6_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.8]), rgb=array([ 0.,  0.,  0.]), text='Great Job!', units='cm', win=Window(...), wrapWidth=24.0)
+10.9296 	EXP 	Created taskScreen6_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_2', opacity=1.0, ori=0, pos=array([ 0. ,  0.6]), rgb=array([ 0.,  0.,  0.]), text='Again, the games will switch.', units='cm', win=Window(...), wrapWidth=24.0)
+10.9354 	EXP 	Created taskScreen6_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_3', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.9400 	EXP 	Created taskScreen6_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_4', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='\nto see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+10.9459 	EXP 	Created taskScreen4_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.9515 	EXP 	Created taskScreen4_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+10.9569 	EXP 	Created taskScreen4_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+10.9624 	EXP 	Created taskScreen7_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.9672 	EXP 	Created taskScreen7_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for match.', units='cm', win=Window(...), wrapWidth=24.0)
+10.9719 	EXP 	Created taskScreen7_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+10.9773 	EXP 	Created waitingScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for experimenter...', units='cm', win=Window(...), wrapWidth=24.0)
+10.9815 	EXP 	Created waitingScreen2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for experimenter...', units='cm', win=Window(...), wrapWidth=24.0)
+10.9884 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+11.0198 	EXP 	Created Stimuli/PracticeFO1.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO1.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO1.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+11.0217 	EXP 	Created Stimuli/PracticeFO3.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+11.0236 	EXP 	Created Stimuli/PracticeFO3G.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3G.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3G.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+11.0455 	WARNING 	t of last frame was 333.14ms (=1/3)
+11.0455 	EXP 	introTitle: autoDraw = True
+11.9212 	DATA 	Keypress: space
+11.9292 	EXP 	introTitle: autoDraw = False
+12.2209 	DATA 	Keypress: space
+12.2295 	WARNING 	t of last frame was 300.25ms (=1/3)
+12.2295 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 1.8,  0. ])
+12.4847 	DATA 	Keypress: space
+12.4965 	WARNING 	t of last frame was 266.98ms (=1/3)
+12.4965 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 0.,  0.])
+12.4965 	EXP 	unnamed TextStim: color = '#00FF00'
+12.4965 	EXP 	unnamed TextStim: color = '#00FF00'
+12.4965 	EXP 	Stimuli/PracticeFO1.bmp: size = array([ 3.,  3.])
+12.4965 	EXP 	Stimuli/PracticeFO3G.bmp: size = array([ 3.,  3.])
+12.4965 	EXP 	Stimuli/PracticeFO1.bmp: pos = array([-4.8,  0. ])
+12.4965 	EXP 	Stimuli/PracticeFO3G.bmp: pos = array([-8.4,  0. ])
+14.3487 	DATA 	Keypress: space
+14.3634 	WARNING 	t of last frame was 1866.94ms (=1/0)
+16.1166 	DATA 	Keypress: space
+16.1317 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+20.8479 	DATA 	Keypress: space
+20.8529 	EXP 	Imported Sets/Task/Version1_1.csv as conditions, 92 conditions, 8 params
+20.8534 	EXP 	Created sequence: sequential, trialTypes=92, nReps=1, seed=None
+20.8637 	EXP 	waitingScreen: autoDraw = True
+21.4665 	DATA 	Keypress: space
+21.4674 	EXP 	New trial (rep=0, index=0): {'TargetType': u'""', 'Run': 1.0, 'Stimulus': u'""', 'RunTrialNumber_Block': u'""', 'StimType': u'Faces', 'BlockType': u'Cue2Back', 'Stim_CRESP': u'""', 'Block': 1.0}
+21.4748 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+21.4802 	EXP 	waitingScreen: autoDraw = False
+21.4802 	EXP 	pFixation: autoDraw = True
+21.9973 	EXP 	pFixation: autoDraw = False
+21.9973 	EXP 	2Back: autoDraw = True
+24.4850 	EXP 	New trial (rep=0, index=1): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'23M_HO.bmp', 'RunTrialNumber_Block': u'2', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+24.4878 	EXP 	Created 23M_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/23M_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'23M_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+24.4972 	EXP 	2Back: autoDraw = False
+24.4972 	EXP 	23M_HO.bmp: autoDraw = True
+24.4972 	EXP 	unnamed TextStim: autoDraw = True
+24.4972 	EXP 	unnamed TextStim: autoDraw = True
+24.4972 	EXP 	unnamed TextStim: autoDraw = True
+24.4972 	EXP 	unnamed TextStim: autoDraw = True
+25.1841 	DATA 	Keypress: left
+26.4979 	EXP 	23M_HO.bmp: autoDraw = False
+26.4979 	EXP 	unnamed TextStim: autoDraw = False
+26.4979 	EXP 	unnamed TextStim: autoDraw = False
+26.4979 	EXP 	unnamed TextStim: autoDraw = False
+26.4979 	EXP 	unnamed TextStim: autoDraw = False
+26.4979 	EXP 	bFixation: autoDraw = True
+26.9845 	EXP 	New trial (rep=0, index=2): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'12F_HO.bmp', 'RunTrialNumber_Block': u'3', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+26.9873 	EXP 	Created 12F_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/12F_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'12F_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+26.9977 	EXP 	bFixation: autoDraw = False
+26.9977 	EXP 	12F_HO.bmp: autoDraw = True
+26.9977 	EXP 	unnamed TextStim: autoDraw = True
+26.9977 	EXP 	unnamed TextStim: autoDraw = True
+26.9977 	EXP 	unnamed TextStim: autoDraw = True
+26.9977 	EXP 	unnamed TextStim: autoDraw = True
+27.4173 	DATA 	Keypress: right
+28.9981 	EXP 	12F_HO.bmp: autoDraw = False
+28.9981 	EXP 	unnamed TextStim: autoDraw = False
+28.9981 	EXP 	unnamed TextStim: autoDraw = False
+28.9981 	EXP 	unnamed TextStim: autoDraw = False
+28.9981 	EXP 	unnamed TextStim: autoDraw = False
+28.9981 	EXP 	bFixation: autoDraw = True
+29.4837 	EXP 	New trial (rep=0, index=3): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'AF02_HO.bmp', 'RunTrialNumber_Block': u'4', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+29.4871 	EXP 	Created AF02_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/AF02_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'AF02_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+29.4977 	EXP 	bFixation: autoDraw = False
+29.4977 	EXP 	AF02_HO.bmp: autoDraw = True
+29.4977 	EXP 	unnamed TextStim: autoDraw = True
+29.4977 	EXP 	unnamed TextStim: autoDraw = True
+29.4977 	EXP 	unnamed TextStim: autoDraw = True
+29.4977 	EXP 	unnamed TextStim: autoDraw = True
+29.8171 	DATA 	Keypress: right
+31.4991 	EXP 	AF02_HO.bmp: autoDraw = False
+31.4991 	EXP 	unnamed TextStim: autoDraw = False
+31.4991 	EXP 	unnamed TextStim: autoDraw = False
+31.4991 	EXP 	unnamed TextStim: autoDraw = False
+31.4991 	EXP 	unnamed TextStim: autoDraw = False
+31.4991 	EXP 	bFixation: autoDraw = True
+31.9844 	EXP 	New trial (rep=0, index=4): {'TargetType': u'target', 'Run': 1.0, 'Stimulus': u'12F_HO.bmp', 'RunTrialNumber_Block': u'5', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'Match', 'Block': 1.0}
+31.9875 	EXP 	Created 12F_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/12F_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'12F_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+31.9980 	EXP 	bFixation: autoDraw = False
+31.9980 	EXP 	12F_HO.bmp: autoDraw = True
+31.9980 	EXP 	unnamed TextStim: autoDraw = True
+31.9980 	EXP 	unnamed TextStim: autoDraw = True
+31.9980 	EXP 	unnamed TextStim: autoDraw = True
+31.9980 	EXP 	unnamed TextStim: autoDraw = True
+32.4357 	DATA 	Keypress: right
+33.9990 	EXP 	12F_HO.bmp: autoDraw = False
+33.9990 	EXP 	unnamed TextStim: autoDraw = False
+33.9990 	EXP 	unnamed TextStim: autoDraw = False
+33.9990 	EXP 	unnamed TextStim: autoDraw = False
+33.9990 	EXP 	unnamed TextStim: autoDraw = False
+33.9990 	EXP 	bFixation: autoDraw = True
+34.3014 	DATA 	Keypress: escape
+34.4846 	EXP 	New trial (rep=0, index=5): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'WM011_HO.bmp', 'RunTrialNumber_Block': u'6', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+34.4879 	EXP 	Created WM011_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/WM011_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'WM011_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+34.4986 	EXP 	bFixation: autoDraw = False
+34.4986 	EXP 	WM011_HO.bmp: autoDraw = True
+34.4986 	EXP 	unnamed TextStim: autoDraw = True
+34.4986 	EXP 	unnamed TextStim: autoDraw = True
+34.4986 	EXP 	unnamed TextStim: autoDraw = True
+34.4986 	EXP 	unnamed TextStim: autoDraw = True
+35.5859 	DATA 	Keypress: escape
+36.4990 	EXP 	WM011_HO.bmp: autoDraw = False
+36.4990 	EXP 	unnamed TextStim: autoDraw = False
+36.4990 	EXP 	unnamed TextStim: autoDraw = False
+36.4990 	EXP 	unnamed TextStim: autoDraw = False
+36.4990 	EXP 	unnamed TextStim: autoDraw = False
+36.4990 	EXP 	bFixation: autoDraw = True
+36.9521 	DATA 	Keypress: escape
+37.0440 	EXP 	window1: mouseVisible = True
+8.1573 	EXP 	Using Site Configuration: {'keys': {'Quit': ['escape'], 'NoMatch': ['2', 'num_2', 'right'], 'Match': ['1', 'num_1', 'left'], 'Next': ['space']}, 'style': {'textLetterSize': 1.0, 'wrapWidth': 40.0, 'subtitleLetterSize': 1.0, 'titleLetterSize': 3.0, 'fixLetterSize': 2.5}, 'trigger': ['5', '7', '^', 'num_5', 'num_7', '='], 'dimensions': {'width': 800, 'height': 600}, 'siteScanner': {'goggles': 'None', 'site': 'Yale', 'scanner': 'GE'}}
+8.6864 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 128.,  128.,  128.]), colorSpace='rgb255', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x111503090>, multiSample=False, name='window1', numSamples=2, pos=[320.0, 150.0], screen=0, size=(800, 600), stereo=False, units='cm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.6865 	EXP 	window1: recordFrameIntervals = True
+8.6865 	EXP 	window1: recordFrameIntervals = False
+8.8523 	EXP 	window1: recordFrameIntervals = True
+9.0352 	EXP 	window1: recordFrameIntervals = True
+9.1079 	EXP 	Created introTitle = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='introTitle', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='N-Back', units='cm', win=Window(...), wrapWidth=24.0)
+9.1085 	EXP 	Created blankScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='blankScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='', units='cm', win=Window(...), wrapWidth=24.0)
+9.1114 	EXP 	Created pFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF00FF', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='pFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0, 255]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+9.1131 	EXP 	Created bFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='bFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+9.1206 	EXP 	Created allDone = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='allDone', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='All done!', units='cm', win=Window(...), wrapWidth=24.0)
+9.1269 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+9.1307 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+9.1344 	EXP 	Created correct = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#00FF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='correct', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([  0, 255,   0]), text='Correct!', units='cm', win=Window(...), wrapWidth=24.0)
+9.1378 	EXP 	Created incorrect = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF0000', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='incorrect', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0,   0]), text='Incorrect!', units='cm', win=Window(...), wrapWidth=24.0)
+9.1420 	EXP 	Created tooslow = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FFFF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='tooslow', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255, 255,   0]), text='Too Slow!', units='cm', win=Window(...), wrapWidth=24.0)
+9.1469 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='POINTER', units='cm', win=Window(...), wrapWidth=24.0)
+9.1507 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='MIDDLE', units='cm', win=Window(...), wrapWidth=24.0)
+9.1537 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+9.1565 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='NO MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+9.1741 	EXP 	Created taskScreen1_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text='There are two games in this part of the study.', units='cm', win=Window(...), wrapWidth=24.0)
+9.1811 	EXP 	Created taskScreen1_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='They are "0-Back" and "2-Back".', units='cm', win=Window(...), wrapWidth=24.0)
+9.1873 	EXP 	Created taskScreen1_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_3', opacity=1.0, ori=0, pos=array([ 0. , -1.2]), rgb=array([ 0.,  0.,  0.]), text='You will see the words "Target" or "2-Back"', units='cm', win=Window(...), wrapWidth=24.0)
+9.1926 	EXP 	Created taskScreen1_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_4', opacity=1.0, ori=0, pos=array([ 0. , -1.5]), rgb=array([ 0.,  0.,  0.]), text='\nbefore each game starts.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2004 	EXP 	Created taskScreen2_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.2055 	EXP 	Created taskScreen2_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nthat is the same as the target picture.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2111 	EXP 	Created taskScreen2_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if it is not the same.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2161 	EXP 	Created taskScreen3_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text='For "2-Back", press MATCH if the picture', units='cm', win=Window(...), wrapWidth=24.0)
+9.2215 	EXP 	Created taskScreen3_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nyou see is the same as two pictures back.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2252 	EXP 	Created taskScreen3_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if not.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2308 	EXP 	Created taskScreen5_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.2397 	EXP 	Created taskScreen5_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_2', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='to see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+9.2441 	EXP 	Created taskScreen6_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.8]), rgb=array([ 0.,  0.,  0.]), text='Great Job!', units='cm', win=Window(...), wrapWidth=24.0)
+9.2482 	EXP 	Created taskScreen6_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_2', opacity=1.0, ori=0, pos=array([ 0. ,  0.6]), rgb=array([ 0.,  0.,  0.]), text='Again, the games will switch.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2538 	EXP 	Created taskScreen6_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_3', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.2585 	EXP 	Created taskScreen6_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_4', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='\nto see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+9.2641 	EXP 	Created taskScreen4_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.2697 	EXP 	Created taskScreen4_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2751 	EXP 	Created taskScreen4_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2807 	EXP 	Created taskScreen7_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+9.2853 	EXP 	Created taskScreen7_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for match.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2901 	EXP 	Created taskScreen7_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+9.2956 	EXP 	Created waitingScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for experimenter...', units='cm', win=Window(...), wrapWidth=24.0)
+9.2997 	EXP 	Created waitingScreen2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for experimenter...', units='cm', win=Window(...), wrapWidth=24.0)
+9.3066 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+9.3377 	EXP 	Created Stimuli/PracticeFO1.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO1.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO1.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+9.3395 	EXP 	Created Stimuli/PracticeFO3.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+9.3415 	EXP 	Created Stimuli/PracticeFO3G.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3G.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3G.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+9.3501 	WARNING 	t of last frame was 315.24ms (=1/3)
+9.3501 	EXP 	introTitle: autoDraw = True
+9.6428 	DATA 	Keypress: space
+9.6523 	EXP 	introTitle: autoDraw = False
+9.9796 	DATA 	Keypress: space
+10.0020 	WARNING 	t of last frame was 349.64ms (=1/2)
+10.0020 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 1.8,  0. ])
+10.2595 	DATA 	Keypress: space
+10.2846 	WARNING 	t of last frame was 282.64ms (=1/3)
+10.2846 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 0.,  0.])
+10.2846 	EXP 	unnamed TextStim: color = '#00FF00'
+10.2846 	EXP 	unnamed TextStim: color = '#00FF00'
+10.2846 	EXP 	Stimuli/PracticeFO1.bmp: size = array([ 3.,  3.])
+10.2846 	EXP 	Stimuli/PracticeFO3G.bmp: size = array([ 3.,  3.])
+10.2846 	EXP 	Stimuli/PracticeFO1.bmp: pos = array([-4.8,  0. ])
+10.2846 	EXP 	Stimuli/PracticeFO3G.bmp: pos = array([-8.4,  0. ])
+10.8276 	DATA 	Keypress: space
+10.8351 	WARNING 	t of last frame was 550.46ms (=1/1)
+11.6595 	DATA 	Keypress: space
+11.6691 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+12.7794 	DATA 	Keypress: space
+12.7842 	EXP 	Imported Sets/Task/Version1_1.csv as conditions, 92 conditions, 8 params
+12.7847 	EXP 	Created sequence: sequential, trialTypes=92, nReps=1, seed=None
+12.8022 	EXP 	waitingScreen: autoDraw = True
+12.9893 	DATA 	Keypress: space
+13.0035 	EXP 	New trial (rep=0, index=0): {'TargetType': u'""', 'Run': 1.0, 'Stimulus': u'""', 'RunTrialNumber_Block': u'""', 'StimType': u'Faces', 'BlockType': u'Cue2Back', 'Stim_CRESP': u'""', 'Block': 1.0}
+13.0118 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+13.0185 	EXP 	waitingScreen: autoDraw = False
+13.0185 	EXP 	pFixation: autoDraw = True
+13.5198 	EXP 	pFixation: autoDraw = False
+13.5198 	EXP 	2Back: autoDraw = True
+14.2224 	DATA 	Keypress: space
+16.0230 	EXP 	New trial (rep=0, index=1): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'23M_HO.bmp', 'RunTrialNumber_Block': u'2', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+16.0266 	EXP 	Created 23M_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/23M_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'23M_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+16.0365 	EXP 	2Back: autoDraw = False
+16.0365 	EXP 	23M_HO.bmp: autoDraw = True
+16.0365 	EXP 	unnamed TextStim: autoDraw = True
+16.0365 	EXP 	unnamed TextStim: autoDraw = True
+16.0365 	EXP 	unnamed TextStim: autoDraw = True
+16.0365 	EXP 	unnamed TextStim: autoDraw = True
+16.5891 	DATA 	Keypress: left
+16.9552 	DATA 	Keypress: right
+18.0355 	EXP 	23M_HO.bmp: autoDraw = False
+18.0355 	EXP 	unnamed TextStim: autoDraw = False
+18.0355 	EXP 	unnamed TextStim: autoDraw = False
+18.0355 	EXP 	unnamed TextStim: autoDraw = False
+18.0355 	EXP 	unnamed TextStim: autoDraw = False
+18.0355 	EXP 	bFixation: autoDraw = True
+18.2562 	DATA 	Keypress: escape
+18.5209 	EXP 	New trial (rep=0, index=2): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'12F_HO.bmp', 'RunTrialNumber_Block': u'3', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+18.5235 	EXP 	Created 12F_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/12F_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'12F_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+18.5357 	EXP 	bFixation: autoDraw = False
+18.5357 	EXP 	12F_HO.bmp: autoDraw = True
+18.5357 	EXP 	unnamed TextStim: autoDraw = True
+18.5357 	EXP 	unnamed TextStim: autoDraw = True
+18.5357 	EXP 	unnamed TextStim: autoDraw = True
+18.5357 	EXP 	unnamed TextStim: autoDraw = True
+19.4364 	DATA 	Keypress: escape
+19.8571 	DATA 	Keypress: escape
+20.1555 	DATA 	Keypress: escape
+20.5196 	EXP 	12F_HO.bmp: autoDraw = False
+20.5196 	EXP 	unnamed TextStim: autoDraw = False
+20.5196 	EXP 	unnamed TextStim: autoDraw = False
+20.5196 	EXP 	unnamed TextStim: autoDraw = False
+20.5196 	EXP 	unnamed TextStim: autoDraw = False
+20.5196 	EXP 	bFixation: autoDraw = True
+20.8392 	DATA 	Keypress: escape
+21.0522 	EXP 	window1: mouseVisible = True
+6.8743 	EXP 	Using Site Configuration: {'keys': {'Quit': ['escape'], 'NoMatch': ['2', 'num_2', 'right'], 'Match': ['1', 'num_1', 'left'], 'Next': ['space']}, 'style': {'textLetterSize': 1.0, 'wrapWidth': 40.0, 'subtitleLetterSize': 1.0, 'titleLetterSize': 3.0, 'fixLetterSize': 2.5}, 'trigger': ['5', '7', '^', 'num_5', 'num_7', '='], 'dimensions': {'width': 800, 'height': 600}, 'siteScanner': {'goggles': 'None', 'site': 'Yale', 'scanner': 'GE'}}
+7.3795 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 128.,  128.,  128.]), colorSpace='rgb255', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x111e03090>, multiSample=False, name='window1', numSamples=2, pos=[320.0, 150.0], screen=0, size=(800, 600), stereo=False, units='cm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.3795 	EXP 	window1: recordFrameIntervals = True
+7.3795 	EXP 	window1: recordFrameIntervals = False
+7.5453 	EXP 	window1: recordFrameIntervals = True
+7.7283 	EXP 	window1: recordFrameIntervals = True
+7.8023 	EXP 	Created introTitle = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='introTitle', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='N-Back', units='cm', win=Window(...), wrapWidth=24.0)
+7.8029 	EXP 	Created blankScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='blankScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='', units='cm', win=Window(...), wrapWidth=24.0)
+7.8059 	EXP 	Created pFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF00FF', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='pFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0, 255]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+7.8077 	EXP 	Created bFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='bFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+7.8150 	EXP 	Created allDone = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='allDone', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='All done!', units='cm', win=Window(...), wrapWidth=24.0)
+7.8213 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+7.8252 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+7.8290 	EXP 	Created correct = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#00FF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='correct', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([  0, 255,   0]), text='Correct!', units='cm', win=Window(...), wrapWidth=24.0)
+7.8325 	EXP 	Created incorrect = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF0000', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='incorrect', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0,   0]), text='Incorrect!', units='cm', win=Window(...), wrapWidth=24.0)
+7.8367 	EXP 	Created tooslow = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FFFF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='tooslow', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255, 255,   0]), text='Too Slow!', units='cm', win=Window(...), wrapWidth=24.0)
+7.8418 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='POINTER', units='cm', win=Window(...), wrapWidth=24.0)
+7.8458 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='MIDDLE', units='cm', win=Window(...), wrapWidth=24.0)
+7.8489 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+7.8519 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='NO MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+7.8701 	EXP 	Created taskScreen1_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text='There are two games in this part of the study.', units='cm', win=Window(...), wrapWidth=24.0)
+7.8772 	EXP 	Created taskScreen1_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='They are "0-Back" and "2-Back".', units='cm', win=Window(...), wrapWidth=24.0)
+7.8835 	EXP 	Created taskScreen1_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_3', opacity=1.0, ori=0, pos=array([ 0. , -1.2]), rgb=array([ 0.,  0.,  0.]), text='You will see the words "Target" or "2-Back"', units='cm', win=Window(...), wrapWidth=24.0)
+7.8889 	EXP 	Created taskScreen1_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_4', opacity=1.0, ori=0, pos=array([ 0. , -1.5]), rgb=array([ 0.,  0.,  0.]), text='\nbefore each game starts.', units='cm', win=Window(...), wrapWidth=24.0)
+7.8968 	EXP 	Created taskScreen2_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+7.9021 	EXP 	Created taskScreen2_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nthat is the same as the target picture.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9079 	EXP 	Created taskScreen2_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if it is not the same.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9130 	EXP 	Created taskScreen3_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text='For "2-Back", press MATCH if the picture', units='cm', win=Window(...), wrapWidth=24.0)
+7.9183 	EXP 	Created taskScreen3_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nyou see is the same as two pictures back.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9221 	EXP 	Created taskScreen3_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if not.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9281 	EXP 	Created taskScreen5_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+7.9369 	EXP 	Created taskScreen5_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_2', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='to see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+7.9414 	EXP 	Created taskScreen6_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.8]), rgb=array([ 0.,  0.,  0.]), text='Great Job!', units='cm', win=Window(...), wrapWidth=24.0)
+7.9455 	EXP 	Created taskScreen6_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_2', opacity=1.0, ori=0, pos=array([ 0. ,  0.6]), rgb=array([ 0.,  0.,  0.]), text='Again, the games will switch.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9513 	EXP 	Created taskScreen6_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_3', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+7.9560 	EXP 	Created taskScreen6_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_4', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='\nto see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+7.9618 	EXP 	Created taskScreen4_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+7.9675 	EXP 	Created taskScreen4_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9730 	EXP 	Created taskScreen4_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9787 	EXP 	Created taskScreen7_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+7.9834 	EXP 	Created taskScreen7_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for match.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9883 	EXP 	Created taskScreen7_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+7.9939 	EXP 	Created waitingScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for experimenter...', units='cm', win=Window(...), wrapWidth=24.0)
+7.9981 	EXP 	Created waitingScreen2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for experimenter...', units='cm', win=Window(...), wrapWidth=24.0)
+8.0050 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+8.0364 	EXP 	Created Stimuli/PracticeFO1.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO1.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO1.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+8.0383 	EXP 	Created Stimuli/PracticeFO3.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+8.0403 	EXP 	Created Stimuli/PracticeFO3G.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3G.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3G.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+8.0625 	WARNING 	t of last frame was 334.45ms (=1/2)
+8.0625 	EXP 	introTitle: autoDraw = True
+8.4371 	DATA 	Keypress: space
+8.4452 	EXP 	introTitle: autoDraw = False
+8.5955 	DATA 	Keypress: space
+8.6115 	WARNING 	t of last frame was 166.33ms (=1/6)
+8.6115 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 1.8,  0. ])
+9.0120 	DATA 	Keypress: space
+9.0292 	WARNING 	t of last frame was 417.68ms (=1/2)
+9.0292 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 0.,  0.])
+9.0292 	EXP 	unnamed TextStim: color = '#00FF00'
+9.0292 	EXP 	unnamed TextStim: color = '#00FF00'
+9.0292 	EXP 	unnamed TextStim: color = 'black'
+9.0292 	EXP 	unnamed TextStim: color = 'black'
+9.0292 	EXP 	unnamed TextStim: color = 'black'
+9.0292 	EXP 	unnamed TextStim: color = 'black'
+9.0292 	EXP 	Stimuli/PracticeFO1.bmp: size = array([ 3.,  3.])
+9.0292 	EXP 	Stimuli/PracticeFO3G.bmp: size = array([ 3.,  3.])
+9.0292 	EXP 	Stimuli/PracticeFO1.bmp: pos = array([-4.8,  0. ])
+9.0292 	EXP 	Stimuli/PracticeFO3G.bmp: pos = array([-8.4,  0. ])
+9.7798 	DATA 	Keypress: space
+9.7951 	WARNING 	t of last frame was 765.88ms (=1/1)
+10.9875 	DATA 	Keypress: space
+10.9956 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+11.2836 	DATA 	Keypress: space
+11.2884 	EXP 	Imported Sets/Task/Version1_1.csv as conditions, 92 conditions, 8 params
+11.2889 	EXP 	Created sequence: sequential, trialTypes=92, nReps=1, seed=None
+11.2954 	EXP 	waitingScreen: autoDraw = True
+11.7817 	DATA 	Keypress: space
+11.7825 	EXP 	New trial (rep=0, index=0): {'TargetType': u'""', 'Run': 1.0, 'Stimulus': u'""', 'RunTrialNumber_Block': u'""', 'StimType': u'Faces', 'BlockType': u'Cue2Back', 'Stim_CRESP': u'""', 'Block': 1.0}
+11.7900 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+11.7952 	EXP 	waitingScreen: autoDraw = False
+11.7952 	EXP 	pFixation: autoDraw = True
+12.3124 	EXP 	pFixation: autoDraw = False
+12.3124 	EXP 	2Back: autoDraw = True
+14.7998 	EXP 	New trial (rep=0, index=1): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'23M_HO.bmp', 'RunTrialNumber_Block': u'2', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+14.8027 	EXP 	Created 23M_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/23M_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'23M_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+14.8136 	EXP 	2Back: autoDraw = False
+14.8136 	EXP 	23M_HO.bmp: autoDraw = True
+14.8136 	EXP 	unnamed TextStim: autoDraw = True
+14.8136 	EXP 	unnamed TextStim: autoDraw = True
+14.8136 	EXP 	unnamed TextStim: autoDraw = True
+14.8136 	EXP 	unnamed TextStim: autoDraw = True
+16.8127 	EXP 	23M_HO.bmp: autoDraw = False
+16.8127 	EXP 	unnamed TextStim: autoDraw = False
+16.8127 	EXP 	unnamed TextStim: autoDraw = False
+16.8127 	EXP 	unnamed TextStim: autoDraw = False
+16.8127 	EXP 	unnamed TextStim: autoDraw = False
+16.8127 	EXP 	bFixation: autoDraw = True
+17.2997 	EXP 	New trial (rep=0, index=2): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'12F_HO.bmp', 'RunTrialNumber_Block': u'3', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+17.3024 	EXP 	Created 12F_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/12F_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'12F_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+17.3131 	EXP 	bFixation: autoDraw = False
+17.3131 	EXP 	12F_HO.bmp: autoDraw = True
+17.3131 	EXP 	unnamed TextStim: autoDraw = True
+17.3131 	EXP 	unnamed TextStim: autoDraw = True
+17.3131 	EXP 	unnamed TextStim: autoDraw = True
+17.3131 	EXP 	unnamed TextStim: autoDraw = True
+19.3133 	EXP 	12F_HO.bmp: autoDraw = False
+19.3133 	EXP 	unnamed TextStim: autoDraw = False
+19.3133 	EXP 	unnamed TextStim: autoDraw = False
+19.3133 	EXP 	unnamed TextStim: autoDraw = False
+19.3133 	EXP 	unnamed TextStim: autoDraw = False
+19.3133 	EXP 	bFixation: autoDraw = True
+19.7990 	EXP 	New trial (rep=0, index=3): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'AF02_HO.bmp', 'RunTrialNumber_Block': u'4', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+19.8025 	EXP 	Created AF02_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/AF02_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'AF02_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+19.8132 	EXP 	bFixation: autoDraw = False
+19.8132 	EXP 	AF02_HO.bmp: autoDraw = True
+19.8132 	EXP 	unnamed TextStim: autoDraw = True
+19.8132 	EXP 	unnamed TextStim: autoDraw = True
+19.8132 	EXP 	unnamed TextStim: autoDraw = True
+19.8132 	EXP 	unnamed TextStim: autoDraw = True
+21.8137 	EXP 	AF02_HO.bmp: autoDraw = False
+21.8137 	EXP 	unnamed TextStim: autoDraw = False
+21.8137 	EXP 	unnamed TextStim: autoDraw = False
+21.8137 	EXP 	unnamed TextStim: autoDraw = False
+21.8137 	EXP 	unnamed TextStim: autoDraw = False
+21.8137 	EXP 	bFixation: autoDraw = True
+22.3001 	EXP 	New trial (rep=0, index=4): {'TargetType': u'target', 'Run': 1.0, 'Stimulus': u'12F_HO.bmp', 'RunTrialNumber_Block': u'5', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'Match', 'Block': 1.0}
+22.3033 	EXP 	Created 12F_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/12F_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'12F_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+22.3142 	EXP 	bFixation: autoDraw = False
+22.3142 	EXP 	12F_HO.bmp: autoDraw = True
+22.3142 	EXP 	unnamed TextStim: autoDraw = True
+22.3142 	EXP 	unnamed TextStim: autoDraw = True
+22.3142 	EXP 	unnamed TextStim: autoDraw = True
+22.3142 	EXP 	unnamed TextStim: autoDraw = True
+22.7659 	DATA 	Keypress: space
+24.3141 	EXP 	12F_HO.bmp: autoDraw = False
+24.3141 	EXP 	unnamed TextStim: autoDraw = False
+24.3141 	EXP 	unnamed TextStim: autoDraw = False
+24.3141 	EXP 	unnamed TextStim: autoDraw = False
+24.3141 	EXP 	unnamed TextStim: autoDraw = False
+24.3141 	EXP 	bFixation: autoDraw = True
+24.8005 	EXP 	New trial (rep=0, index=5): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'WM011_HO.bmp', 'RunTrialNumber_Block': u'6', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+24.8039 	EXP 	Created WM011_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/WM011_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'WM011_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+24.8137 	EXP 	bFixation: autoDraw = False
+24.8137 	EXP 	WM011_HO.bmp: autoDraw = True
+24.8137 	EXP 	unnamed TextStim: autoDraw = True
+24.8137 	EXP 	unnamed TextStim: autoDraw = True
+24.8137 	EXP 	unnamed TextStim: autoDraw = True
+24.8137 	EXP 	unnamed TextStim: autoDraw = True
+26.5674 	DATA 	Keypress: escape
+26.8143 	EXP 	WM011_HO.bmp: autoDraw = False
+26.8143 	EXP 	unnamed TextStim: autoDraw = False
+26.8143 	EXP 	unnamed TextStim: autoDraw = False
+26.8143 	EXP 	unnamed TextStim: autoDraw = False
+26.8143 	EXP 	unnamed TextStim: autoDraw = False
+26.8143 	EXP 	bFixation: autoDraw = True
+27.3580 	EXP 	window1: mouseVisible = True
+9.3814 	EXP 	Using Site Configuration: {'keys': {'Quit': ['escape'], 'NoMatch': ['2', 'num_2', 'right'], 'Match': ['1', 'num_1', 'left'], 'Next': ['space']}, 'style': {'textLetterSize': 1.0, 'wrapWidth': 40.0, 'subtitleLetterSize': 1.0, 'titleLetterSize': 3.0, 'fixLetterSize': 2.5}, 'trigger': ['5', '7', '^', 'num_5', 'num_7', '='], 'dimensions': {'width': 800, 'height': 600}, 'siteScanner': {'goggles': 'None', 'site': 'Yale', 'scanner': 'GE'}}
+9.9246 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 128.,  128.,  128.]), colorSpace='rgb255', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x111cc4090>, multiSample=False, name='window1', numSamples=2, pos=[320.0, 150.0], screen=0, size=(800, 600), stereo=False, units='cm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.9246 	EXP 	window1: recordFrameIntervals = True
+9.9247 	EXP 	window1: recordFrameIntervals = False
+10.0905 	EXP 	window1: recordFrameIntervals = True
+10.2744 	EXP 	window1: recordFrameIntervals = True
+10.3493 	EXP 	Created introTitle = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='introTitle', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='N-Back', units='cm', win=Window(...), wrapWidth=24.0)
+10.3500 	EXP 	Created blankScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.7999999999999998, italic=False, name='blankScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='', units='cm', win=Window(...), wrapWidth=24.0)
+10.3530 	EXP 	Created pFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF00FF', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='pFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0, 255]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+10.3547 	EXP 	Created bFixation = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='bFixation', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='+', units='cm', win=Window(...), wrapWidth=24.0)
+10.3621 	EXP 	Created allDone = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1.5, italic=False, name='allDone', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='All done!', units='cm', win=Window(...), wrapWidth=24.0)
+10.3686 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+10.3724 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+10.3762 	EXP 	Created correct = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#00FF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='correct', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([  0, 255,   0]), text='Correct!', units='cm', win=Window(...), wrapWidth=24.0)
+10.3797 	EXP 	Created incorrect = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FF0000', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='incorrect', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255,   0,   0]), text='Incorrect!', units='cm', win=Window(...), wrapWidth=24.0)
+10.3838 	EXP 	Created tooslow = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='#FFFF00', colorSpace='hex', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='tooslow', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([255, 255,   0]), text='Too Slow!', units='cm', win=Window(...), wrapWidth=24.0)
+10.3888 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='POINTER', units='cm', win=Window(...), wrapWidth=24.0)
+10.3926 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.8]), rgb=array([ 0.,  0.,  0.]), text='MIDDLE', units='cm', win=Window(...), wrapWidth=24.0)
+10.3957 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([-2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+10.3984 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=0.6, italic=False, name='unnamed TextStim', opacity=1.0, ori=0, pos=array([ 2.4, -4.2]), rgb=array([ 0.,  0.,  0.]), text='NO MATCH', units='cm', win=Window(...), wrapWidth=24.0)
+10.4159 	EXP 	Created taskScreen1_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text='There are two games in this part of the study.', units='cm', win=Window(...), wrapWidth=24.0)
+10.4229 	EXP 	Created taskScreen1_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='They are "0-Back" and "2-Back".', units='cm', win=Window(...), wrapWidth=24.0)
+10.4291 	EXP 	Created taskScreen1_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_3', opacity=1.0, ori=0, pos=array([ 0. , -1.2]), rgb=array([ 0.,  0.,  0.]), text='You will see the words "Target" or "2-Back"', units='cm', win=Window(...), wrapWidth=24.0)
+10.4343 	EXP 	Created taskScreen1_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen1_4', opacity=1.0, ori=0, pos=array([ 0. , -1.5]), rgb=array([ 0.,  0.,  0.]), text='\nbefore each game starts.', units='cm', win=Window(...), wrapWidth=24.0)
+10.4419 	EXP 	Created taskScreen2_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.4470 	EXP 	Created taskScreen2_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nthat is the same as the target picture.', units='cm', win=Window(...), wrapWidth=24.0)
+10.4527 	EXP 	Created taskScreen2_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen2_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if it is not the same.', units='cm', win=Window(...), wrapWidth=24.0)
+10.4576 	EXP 	Created taskScreen3_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_1', opacity=1.0, ori=0, pos=array([ 0. ,  5.4]), rgb=array([ 0.,  0.,  0.]), text='For "2-Back", press MATCH if the picture', units='cm', win=Window(...), wrapWidth=24.0)
+10.4629 	EXP 	Created taskScreen3_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_2', opacity=1.0, ori=0, pos=array([ 0. ,  5.1]), rgb=array([ 0.,  0.,  0.]), text='\nyou see is the same as two pictures back.', units='cm', win=Window(...), wrapWidth=24.0)
+10.4666 	EXP 	Created taskScreen3_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen3_3', opacity=1.0, ori=0, pos=array([ 0. ,  3.9]), rgb=array([ 0.,  0.,  0.]), text='Press NO MATCH if not.', units='cm', win=Window(...), wrapWidth=24.0)
+10.4723 	EXP 	Created taskScreen5_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_1', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.4814 	EXP 	Created taskScreen5_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen5_2', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='to see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+10.4861 	EXP 	Created taskScreen6_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.8]), rgb=array([ 0.,  0.,  0.]), text='Great Job!', units='cm', win=Window(...), wrapWidth=24.0)
+10.4907 	EXP 	Created taskScreen6_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_2', opacity=1.0, ori=0, pos=array([ 0. ,  0.6]), rgb=array([ 0.,  0.,  0.]), text='Again, the games will switch.', units='cm', win=Window(...), wrapWidth=24.0)
+10.4965 	EXP 	Created taskScreen6_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_3', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.5012 	EXP 	Created taskScreen6_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen6_4', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='\nto see what game you are playing!', units='cm', win=Window(...), wrapWidth=24.0)
+10.5068 	EXP 	Created taskScreen4_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.5126 	EXP 	Created taskScreen4_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+10.5182 	EXP 	Created taskScreen4_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+10.5248 	EXP 	Created taskScreen4_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen4_4', opacity=1.0, ori=0, pos=array([ 0. , -1.8]), rgb=array([ 0.,  0.,  0.]), text='PLEASE REMEMBER TO KEEP YOUR HEAD STILL', units='cm', win=Window(...), wrapWidth=24.0)
+10.5304 	EXP 	Created taskScreen7_1 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_1', opacity=1.0, ori=0, pos=array([ 0. ,  1.2]), rgb=array([ 0.,  0.,  0.]), text=newstr(...), units='cm', win=Window(...), wrapWidth=24.0)
+10.5350 	EXP 	Created taskScreen7_2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Press your POINTER finger for match.', units='cm', win=Window(...), wrapWidth=24.0)
+10.5402 	EXP 	Created taskScreen7_3 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_3', opacity=1.0, ori=0, pos=array([ 0. , -0.6]), rgb=array([ 0.,  0.,  0.]), text='Press your MIDDLE finger for NO MATCH.', units='cm', win=Window(...), wrapWidth=24.0)
+10.5451 	EXP 	Created taskScreen7_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='taskScreen7_4', opacity=1.0, ori=0, pos=array([ 0. , -1.8]), rgb=array([ 0.,  0.,  0.]), text='PLEASE REMEMBER TO KEEP YOUR HEAD STILL', units='cm', win=Window(...), wrapWidth=24.0)
+10.5496 	EXP 	Created waitingScreen = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for trigger...', units='cm', win=Window(...), wrapWidth=24.0)
+10.5533 	EXP 	Created waitingScreen2 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.6, italic=False, name='waitingScreen2', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Waiting for trigger...', units='cm', win=Window(...), wrapWidth=24.0)
+10.5603 	EXP 	Created target = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, name='target', opacity=1.0, ori=0, pos=array([-3.,  0.]), rgb=array([ 0.,  0.,  0.]), text='Target = ', units='cm', win=Window(...), wrapWidth=24.0)
+10.5910 	EXP 	Created Stimuli/PracticeFO1.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO1.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO1.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+10.5930 	EXP 	Created Stimuli/PracticeFO3.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+10.5949 	EXP 	Created Stimuli/PracticeFO3G.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Stimuli/PracticeFO3G.bmp', interpolate=True, mask=None, maskParams=None, name='Stimuli/PracticeFO3G.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+10.6074 	WARNING 	t of last frame was 333.48ms (=1/2)
+10.6074 	EXP 	introTitle: autoDraw = True
+11.2154 	DATA 	Keypress: space
+11.2227 	EXP 	introTitle: autoDraw = False
+31.1706 	DATA 	Keypress: space
+31.1929 	WARNING 	t of last frame was 19970.19ms (=1/0)
+31.1929 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 1.8,  0. ])
+33.8662 	DATA 	Keypress: space
+33.8753 	WARNING 	t of last frame was 2682.47ms (=1/0)
+33.8753 	EXP 	Stimuli/PracticeFO3.bmp: pos = array([ 0.,  0.])
+33.8753 	EXP 	unnamed TextStim: color = '#00FF00'
+33.8753 	EXP 	unnamed TextStim: color = '#00FF00'
+33.8753 	EXP 	unnamed TextStim: color = 'black'
+33.8753 	EXP 	unnamed TextStim: color = 'black'
+33.8753 	EXP 	unnamed TextStim: color = 'black'
+33.8753 	EXP 	unnamed TextStim: color = 'black'
+33.8753 	EXP 	Stimuli/PracticeFO1.bmp: size = array([ 3.,  3.])
+33.8753 	EXP 	Stimuli/PracticeFO3G.bmp: size = array([ 3.,  3.])
+33.8753 	EXP 	Stimuli/PracticeFO1.bmp: pos = array([-4.8,  0. ])
+33.8753 	EXP 	Stimuli/PracticeFO3G.bmp: pos = array([-8.4,  0. ])
+35.5461 	DATA 	Keypress: space
+35.5601 	WARNING 	t of last frame was 1684.76ms (=1/0)
+36.8181 	DATA 	Keypress: space
+36.8271 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+37.4021 	DATA 	Keypress: space
+37.4076 	EXP 	Imported Sets/Task/Version1_1.csv as conditions, 92 conditions, 8 params
+37.4081 	EXP 	Created sequence: sequential, trialTypes=92, nReps=1, seed=None
+37.4271 	EXP 	waitingScreen: autoDraw = True
+39.3267 	DATA 	Keypress: 5
+39.4599 	DATA 	Keypress: 5
+39.6134 	DATA 	Keypress: 5
+39.7631 	DATA 	Keypress: 5
+39.8956 	DATA 	Keypress: 5
+40.0123 	DATA 	Keypress: 5
+40.1796 	DATA 	Keypress: 5
+40.3293 	DATA 	Keypress: 5
+40.4785 	DATA 	Keypress: 5
+40.6293 	DATA 	Keypress: 5
+40.7801 	DATA 	Keypress: 5
+41.1299 	DATA 	Keypress: 5
+41.4628 	DATA 	Keypress: 5
+41.6965 	DATA 	Keypress: 5
+41.9301 	DATA 	Keypress: 5
+42.1961 	DATA 	Keypress: 5
+42.1969 	EXP 	New trial (rep=0, index=0): {'TargetType': u'""', 'Run': 1.0, 'Stimulus': u'""', 'RunTrialNumber_Block': u'""', 'StimType': u'Faces', 'BlockType': u'Cue2Back', 'Stim_CRESP': u'""', 'Block': 1.0}
+42.2041 	EXP 	Created 2Back = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=1.0, flipHoriz=False, flipVert=False, font='Verdana', fontFiles=[], height=1, italic=False, name='2Back', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 0.,  0.,  0.]), text='2-Back', units='cm', win=Window(...), wrapWidth=24.0)
+42.2088 	EXP 	waitingScreen: autoDraw = False
+42.2088 	EXP 	pFixation: autoDraw = True
+42.7279 	EXP 	pFixation: autoDraw = False
+42.7279 	EXP 	2Back: autoDraw = True
+45.2150 	EXP 	New trial (rep=0, index=1): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'23M_HO.bmp', 'RunTrialNumber_Block': u'2', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+45.2178 	EXP 	Created 23M_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/23M_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'23M_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+45.2280 	EXP 	2Back: autoDraw = False
+45.2280 	EXP 	23M_HO.bmp: autoDraw = True
+45.2280 	EXP 	unnamed TextStim: autoDraw = True
+45.2280 	EXP 	unnamed TextStim: autoDraw = True
+45.2280 	EXP 	unnamed TextStim: autoDraw = True
+45.2280 	EXP 	unnamed TextStim: autoDraw = True
+47.2278 	EXP 	23M_HO.bmp: autoDraw = False
+47.2278 	EXP 	unnamed TextStim: autoDraw = False
+47.2278 	EXP 	unnamed TextStim: autoDraw = False
+47.2278 	EXP 	unnamed TextStim: autoDraw = False
+47.2278 	EXP 	unnamed TextStim: autoDraw = False
+47.2278 	EXP 	bFixation: autoDraw = True
+47.7142 	EXP 	New trial (rep=0, index=2): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'12F_HO.bmp', 'RunTrialNumber_Block': u'3', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+47.7173 	EXP 	Created 12F_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/12F_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'12F_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+47.7272 	EXP 	bFixation: autoDraw = False
+47.7272 	EXP 	12F_HO.bmp: autoDraw = True
+47.7272 	EXP 	unnamed TextStim: autoDraw = True
+47.7272 	EXP 	unnamed TextStim: autoDraw = True
+47.7272 	EXP 	unnamed TextStim: autoDraw = True
+47.7272 	EXP 	unnamed TextStim: autoDraw = True
+49.7288 	EXP 	12F_HO.bmp: autoDraw = False
+49.7288 	EXP 	unnamed TextStim: autoDraw = False
+49.7288 	EXP 	unnamed TextStim: autoDraw = False
+49.7288 	EXP 	unnamed TextStim: autoDraw = False
+49.7288 	EXP 	unnamed TextStim: autoDraw = False
+49.7288 	EXP 	bFixation: autoDraw = True
+50.0320 	DATA 	Keypress: escape
+50.2139 	EXP 	New trial (rep=0, index=3): {'TargetType': u'nonlure', 'Run': 1.0, 'Stimulus': u'AF02_HO.bmp', 'RunTrialNumber_Block': u'4', 'StimType': u'PosFace', 'BlockType': u'2-Back', 'Stim_CRESP': u'No Match', 'Block': 1.0}
+50.2171 	EXP 	Created AF02_HO.bmp = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image=u'Stimuli/AF02_HO.bmp', interpolate=True, mask=None, maskParams=None, name=u'AF02_HO.bmp', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([ 6.,  6.]), texRes=128, units='cm', win=Window(...))
+50.2284 	EXP 	bFixation: autoDraw = False
+50.2284 	EXP 	AF02_HO.bmp: autoDraw = True
+50.2284 	EXP 	unnamed TextStim: autoDraw = True
+50.2284 	EXP 	unnamed TextStim: autoDraw = True
+50.2284 	EXP 	unnamed TextStim: autoDraw = True
+50.2284 	EXP 	unnamed TextStim: autoDraw = True
+50.5653 	DATA 	Keypress: escape
+51.6319 	DATA 	Keypress: escape
+52.2285 	EXP 	AF02_HO.bmp: autoDraw = False
+52.2285 	EXP 	unnamed TextStim: autoDraw = False
+52.2285 	EXP 	unnamed TextStim: autoDraw = False
+52.2285 	EXP 	unnamed TextStim: autoDraw = False
+52.2285 	EXP 	unnamed TextStim: autoDraw = False
+52.2285 	EXP 	bFixation: autoDraw = True
+52.7653 	EXP 	window1: mouseVisible = True
