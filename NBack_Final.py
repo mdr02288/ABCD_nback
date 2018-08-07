@@ -1781,6 +1781,39 @@ elif expInfo['Session'] == 'RecMem':
     # Start RecMem Final task
     recPractice = False
     nBackBlock(os.path.join('Sets','RecMem','Version%d.csv' % expInfo['Version']),'RecMemTask')
+    
+    # Fixation + "all done" screen (run 2)
+    # Set and record clocks for accurate Trial timing
+    fixDuration = .5
+    routineTimer.add(fixDuration)
+    fixStartTime = globalClock.getTime()
+
+    # Draw fixation and record onset time
+    bFixation.setAutoDraw(True)
+    fixOnsetTime = globalClock.getTime()
+    event.clearEvents()
+
+    # Present fixation cross and quit script if needed.
+    while routineTimer.getTime() > 0:
+        win.flip()
+
+    # Stop drawing fixation cross and record offset time
+    fixOffsetTime = globalClock.getTime()
+    bFixation.setAutoDraw(False)
+    fixFinishTime = globalClock.getTime()
+    
+    # Draw "all done" screen and record onset time
+    allDone.setAutoDraw(True)
+    allDoneOnsetTime = globalClock.getTime()
+
+    # Present "all done" screen and allow experimenter to quit if needed
+    win.flip()
+    theseKeys = event.waitKeys(keyList=['space'])
+    if theseKeys > 0: 
+        # Stop drawing the target stimuli and record offset time
+        allDoneOffsetTime = globalClock.getTime()
+        allDone.setAutoDraw(False)
+        allDoneFinishTime = globalClock.getTime()
 
 # Save and exit from the experiment
 exitProtocol()
