@@ -1598,7 +1598,7 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
                         practiceFO3.stim.draw()
                         target.draw()
                     elif element.name == 'taskScreen3_2':
-                        practiceFO3.stim.pos = np.array([0,0])*stimScale
+                        practiceFO3.stim.pos = np.array([3,0])*stimScale
                         practiceFO3.stim.draw()
 
                         # Instructions will be slightly different by participant's handedness
@@ -1607,6 +1607,12 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
                             practiceFO3.pointerFingerPrompt.color, practiceFO3.pointerLabelPrompt.color = ('#00FF00','#00FF00')
                         elif expInfo['Handedness'] == 'Left':
                             practiceFO3.middleFingerPrompt.color, practiceFO3.middleLabelPrompt.color = ('#00FF00','#00FF00')
+                        
+                        # Shift text to the right so it aligns with the images (right-shifted to avoid getting cut off)
+                        practiceFO3.pointerFingerPrompt.pos = np.array([-1,-8])*handFlip
+                        practiceFO3.middleFingerPrompt.pos = np.array([7,-8])*handFlip
+                        practiceFO3.pointerLabelPrompt.pos = np.array([-1,-7])*handFlip
+                        practiceFO3.middleLabelPrompt.pos = np.array([7,-7])*handFlip
 
                         # Draw all stimuli prompts presented
                         practiceFO3.middleFingerPrompt.draw()
@@ -1615,11 +1621,17 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
                         practiceFO3.pointerLabelPrompt.draw()
                         practiceFO3.pointerFingerPrompt.color, practiceFO3.middleFingerPrompt.color, practiceFO3.pointerLabelPrompt.color, practiceFO3.middleLabelPrompt.color = ['black']*4
 
+                        # Move text back to original position
+                        practiceFO3.pointerFingerPrompt.pos = np.array([-4,-8])*handFlip
+                        practiceFO3.middleFingerPrompt.pos = np.array([4,-8])*handFlip
+                        practiceFO3.pointerLabelPrompt.pos = np.array([-4,-7])*handFlip
+                        practiceFO3.middleLabelPrompt.pos = np.array([4,-7])*handFlip
+                        
                         # Reformat the images and draw them for the example
                         practiceFO1.stim.size = np.array([5,5])*stimScale
                         practiceFO3G.stim.size = np.array([5,5])*stimScale
-                        practiceFO1.stim.pos -= np.array([8,0])*stimScale
-                        practiceFO3G.stim.pos -= np.array([14,0])*stimScale
+                        practiceFO1.stim.pos -= np.array([5,0])*stimScale
+                        practiceFO3G.stim.pos -= np.array([11,0])*stimScale
                         practiceFO1.stim.draw()
                         practiceFO3G.stim.draw()
 
