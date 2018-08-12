@@ -412,7 +412,10 @@ class nbackStim:
 
         # Set timing durations and record clocks for accurate Trial timing
         stimDuration = 2.0
-        fixDuration = 0.5
+        if expInfo['Session'] == 'RecMem':
+            fixDuration = 2
+        else:
+            fixDuration = 0.5
         stimRTTime = []
         routineTimer.add(stimDuration) # For non-slip timings.  Add time for each trial so that script continues at the appropriately determined time.
         stimStartTime = globalClock.getTime()
@@ -1738,7 +1741,7 @@ elif expInfo['Session'] == 'RecMem':
     instructionsClock.reset()
     globalClock.reset()
     routineTimer.reset()
-
+    
     # Present instructions to participant
     for i in instructionSlides[:practiceIndex]:
 
@@ -1759,9 +1762,13 @@ elif expInfo['Session'] == 'RecMem':
         if 'escape' in keypress:
             exitProtocol()
 
+    bFixation.draw()
+    win.flip()
+    core.wait(1)
+    
     recPractice = True
     nBackBlock(os.path.join('Sets','RecMem','PracticeSet.csv'),'RecMemPractice')
-        
+    
     # Present instructions to participant
     for i in instructionSlides[practiceIndex:]:
 
@@ -1781,7 +1788,7 @@ elif expInfo['Session'] == 'RecMem':
         keypress = event.waitKeys(keyList=hand['Quit']+hand['Next'])
         if 'escape' in keypress:
             exitProtocol()
-
+    
     recScreen7.draw()
     win.flip()
     core.wait(2)
