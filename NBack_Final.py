@@ -413,7 +413,7 @@ class nbackStim:
         # Set timing durations and record clocks for accurate Trial timing
         stimDuration = 2.0
         if expInfo['Session'] == 'RecMem':
-            fixDuration = 2
+            fixDuration = 2.0
         else:
             fixDuration = 0.5
         stimRTTime = []
@@ -514,7 +514,7 @@ class nbackStim:
         self.fixation.setAutoDraw(True)
 
         # Present stimuli for timer and stop drawing stimuli
-        while routineTimer.getTime() > 1.0:
+        while routineTimer.getTime() > 1.5:
             win.flip()
         self.fixation.setAutoDraw(False)
 
@@ -872,7 +872,7 @@ target = visual.TextStim(win=win,ori=0,name='target',text="Target = ",font='Verd
 twoBack = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
 correct = visual.TextStim(win=win,ori=0,name='correct',text="Correct!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#00FF00',colorSpace='rgb',opacity=1,depth=1.0)
 incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FF0000',colorSpace='rgb',opacity=1,depth=1.0)
-tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="Too Slow!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FFFF00',colorSpace='rgb',opacity=1,depth=1.0)
+tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="No response detected.",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FFFF00',colorSpace='rgb',opacity=1,depth=1.0)
 pointerFingerPrompt = visual.TextStim(win=win,ori=0,text='POINTER',font='Verdana',pos=np.array([-4,-8])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 middleFingerPrompt = visual.TextStim(win=win,ori=0,text='MIDDLE',font='Verdana',pos=np.array([4,-8])*handFlip,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 if expInfo['Session'] == 'RecMem':
@@ -909,7 +909,7 @@ if expInfo['Session'] == 'Practice':
     practiceScreen6_3 = visual.TextStim(win=win,ori=0,name='practiceScreen6_3',text='Please press it now.',alignHoriz='center',font='Verdana',pos=np.array([0,-2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen7 = visual.TextStim(win=win,ori=0,name='practiceScreen7',text="Let's practice now!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen8 = visual.TextStim(win=win,ori=0,name='practiceScreen8',text="Please wait for experimenter.",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    practiceScreen9 = visual.TextStim(win=win,ori=0,name='practiceScreen9',text='Press Space to continue.',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    practiceScreen9 = visual.TextStim(win=win,ori=0,name='practiceScreen9',text='Press SPACE to continue.',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
 
     practiceScreen10_1 = visual.TextStim(win=win,ori=0,name='practiceScreen10_1',text='For 2-Back, you will see pictures',font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     practiceScreen10_2 = visual.TextStim(win=win,ori=0,name='practiceScreen10_2',text='one at a time on the screen.',font='Verdana',pos=np.array([0,-1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
@@ -949,7 +949,7 @@ if expInfo['Session'] == 'Practice':
     screen4 = [practiceScreen4_1,practiceScreen4_2]
     screen5 = [practiceScreen5_1,practiceScreen5_2,practiceScreen5_3,practiceScreen5_4,practiceScreen5_5]
     screen6 = [practiceScreen6_1,practiceScreen6_2,practiceScreen6_3]
-    screen10 = [practiceScreen10_1,practiceScreen10_2]
+    screen10 = [practiceScreen10_1,practiceScreen10_2,practiceScreen10_3]
     screen11 = [practiceScreen11_1,practiceScreen11_2,practiceScreen11_3]
     screen22 = [practiceScreen22_1,practiceScreen22_2]
     screen24 = [practiceScreen24_1,practiceScreen24_2,practiceScreen24_3]
@@ -960,7 +960,7 @@ if expInfo['Session'] == 'Practice':
     twoBack = visual.TextStim(win=win,ori=0,name='2Back',text='2-Back',font='Verdana',pos=np.array([0,0])*stimScale,height=1,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=1.0)
     correct = visual.TextStim(win=win,ori=0,name='correct',text="Correct!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#00FF00',colorSpace='rgb',opacity=1,depth=1.0)
     incorrect = visual.TextStim(win=win,ori=0,name='incorrect',text="Incorrect!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FF0000',colorSpace='rgb',opacity=1,depth=1.0)
-    tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="Too Slow!",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FFFF00',colorSpace='rgb',opacity=1,depth=1.0)
+    tooslow = visual.TextStim(win=win,ori=0,name='tooslow',text="No response detected.",font='Verdana',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='#FFFF00',colorSpace='rgb',opacity=1,depth=1.0)
 
     # Start the clocks
     globalClock.reset()
@@ -1111,7 +1111,7 @@ if expInfo['Session'] == 'Practice':
     nBackBlock(os.path.join('Sets','Practice',testingBlock[0]),testingBlock[1])
 
     # Present break to transition to 0Back Places
-    practiceScreen8.draw()
+    practiceScreen9.draw()
     win.flip()
 
     # Wait until keypress to move on or exit.
@@ -1125,6 +1125,13 @@ if expInfo['Session'] == 'Practice':
     testingBlock = ['0Back_Places.csv','Places0Back']
     nBackBlock(os.path.join('Sets','Practice',testingBlock[0]),testingBlock[1])
 
+    # Present break to transition to 2Back Task
+    practiceScreen9.draw()
+    win.flip()
+
+    # Wait until keypress to move on or exit.
+    keypress = event.waitKeys(keyList=hand['Quit']+hand['Next'])
+    
     # Start 2Back Task
     instructionsComponent = [screen10,screen11,practiceScreen12,practiceScreen13,practiceScreen14,practiceScreen15,
         practiceScreen16,practiceScreen17,practiceScreen18,practiceScreen17,practiceScreen19,practiceScreen17,practiceScreen20,practiceScreen21]
@@ -1367,6 +1374,13 @@ if expInfo['Session'] == 'Practice':
     win.flip()
     keypress = event.waitKeys(keyList=hand['Quit']+hand['Next'])
 
+    # Present "Let's practice"
+    practiceScreen23.draw()
+    win.flip()
+
+    # Wait until keypress to move on or exit
+    keypress = event.waitKeys(keyList=hand['Quit']+hand['Next'])
+    
     # Quit the task if the escape key is pressed
     if 'escape' in keypress:
         exitProtocol()
@@ -1377,7 +1391,7 @@ if expInfo['Session'] == 'Practice':
     nBackBlock(os.path.join('Sets','Practice',testingBlock[0]),testingBlock[1])
 
     # Present break to transitiokn to 2Back Places
-    practiceScreen8.draw()
+    practiceScreen9.draw()
     win.flip()
 
     # Wait until keypress to move on or exit
@@ -1461,8 +1475,8 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
         taskScreen7_2 = visual.TextStim(win=win,ori=0,name='taskScreen7_2',text='Press your POINTER finger for match.',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
         taskScreen7_3 = visual.TextStim(win=win,ori=0,name='taskScreen7_3',text='Press your MIDDLE finger for NO MATCH.',font='Arial',pos=np.array([0,-1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
         taskScreen7_4 = visual.TextStim(win=win,ori=0,name='taskScreen7_4',text='PLEASE REMEMBER TO KEEP YOUR HEAD STILL',font='Arial',pos=np.array([0,-3])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-        waitingScreen = visual.TextStim(win=win,ori=0,name='waitingScreen',text='Waiting for trigger...',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-        waitingScreen2 = visual.TextStim(win=win,ori=0,name='waitingScreen2',text='Waiting for trigger...',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+        waitingScreen = visual.TextStim(win=win,ori=0,name='waitingScreen',text='Waiting for scanner...',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+        waitingScreen2 = visual.TextStim(win=win,ori=0,name='waitingScreen2',text='Waiting for scanner...',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
         screen4 = [taskScreen4_1,taskScreen4_2,taskScreen4_3,taskScreen4_4]
         screen7 = [taskScreen7_1,taskScreen7_2,taskScreen7_3,taskScreen7_4]
 
@@ -1712,7 +1726,7 @@ elif expInfo['Session'] == 'RecMem':
     recScreen4_2 = visual.TextStim(win=win,ori=0,name='recScreen4_2',text='PLEASE RESPOND WHILE THE PICTURE IS ON THE SCREEN',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen4_3 = visual.TextStim(win=win,ori=0,name='recScreen4_3',text='Press SPACE to continue',font='Arial',pos=np.array([0,-2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen5_1 = visual.TextStim(win=win,ori=0,name='recScreen5_1',text='The feedback you were just given',font='Arial',pos=np.array([0,3])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
-    recScreen5_2 = visual.TextStim(win=win,ori=0,name='recScreen5_2',text='(Correct, Incorrect, Too Slow),',font='Arial',pos=np.array([0,2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
+    recScreen5_2 = visual.TextStim(win=win,ori=0,name='recScreen5_2',text='(Correct, Incorrect, No response detected),',font='Arial',pos=np.array([0,2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen5_3 = visual.TextStim(win=win,ori=0,name='recScreen5_3',text='was meant to help you understand the game.',font='Arial',pos=np.array([0,1])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen5_4 = visual.TextStim(win=win,ori=0,name='recScreen5_4',text='You WILL NOT get feedback in the real game.',font='Arial',pos=np.array([0,0])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
     recScreen5_5 = visual.TextStim(win=win,ori=0,name='recScreen5_5',text='Press SPACE to continue',font='Arial',pos=np.array([0,-2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
@@ -1795,7 +1809,7 @@ elif expInfo['Session'] == 'RecMem':
 
     bFixation.draw()
     win.flip()
-    core.wait(1)
+    core.wait(2)
     
     # Start RecMem Final task
     recPractice = False
@@ -1803,7 +1817,7 @@ elif expInfo['Session'] == 'RecMem':
     
     # Fixation + "all done" screen (run 2)
     # Set and record clocks for accurate Trial timing
-    fixDuration = .5
+    fixDuration = 2
     routineTimer.add(fixDuration)
     fixStartTime = globalClock.getTime()
 
