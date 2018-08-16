@@ -1425,6 +1425,8 @@ if expInfo['Session'] == 'Practice':
     win.flip()
     keypress = event.waitKeys(keyList=hand['Next'])
 
+    exitProtocol()
+    
 elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
 
     # Creates the instructions screens for the tasks
@@ -1541,6 +1543,7 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
+                exitProtocol()
             if len(theseKeys) > 0:  # at least one key was pressed
                 # a response ends the routine
                 continueRoutine = False 
@@ -1709,7 +1712,8 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
                 #    'Fix5sec.OnsetTime': fixOnsetTime, 'Fix5sec.OffsetTime': fixOffsetTime,
                 #    'Fix5sec.FinishTime': fixFinishTime}
                 #self.saveData(expHandler,tHandler)
-
+    exitProtocol()
+    
 elif expInfo['Session'] == 'RecMem':
     # Create instructions stim to iterate through
     recScreen1_1 = visual.TextStim(win=win,ori=0,name='recScreen1_1',text='Now, we will test your memory for some of the',font='Arial',pos=np.array([0,2])*stimScale,height=textLetterSize,wrapWidth=wrapWidth,color='black',colorSpace='rgb',opacity=1,depth=-1.0)
@@ -1847,6 +1851,8 @@ elif expInfo['Session'] == 'RecMem':
         allDoneOffsetTime = globalClock.getTime()
         allDone.setAutoDraw(False)
         allDoneFinishTime = globalClock.getTime()
+
+    exitProtocol()
 
 # Save and exit from the experiment
 exitProtocol()
