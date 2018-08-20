@@ -100,13 +100,20 @@ expInfo['ConsecNonResp[Session]'] = 0
 expInfo['ConsecRTLess200[Session]'] = 0 
 expInfo['ExperimentVersion'] = '1.0.0.1180' 
 expInfo['FontStyle'] = 'Verdana'; expInfo['Group'] = 1; expInfo['RunNumber'] = expInfo['Version']; 
+expInfo['RandomSeed'] = 0
 expInfo['RuntimeCapabilities'] = 'Professional'; expInfo['RuntimeVersion'] = '2.0.10.356'; 
 expInfo['RuntimeVersionExpected'] = '2.0.10.356'; 
+expInfo['RunTrialNumber[Session]'] = 1
+expInfo['SessionStartDateTimeUtc'] = 0
 expInfo['SessionDate'] = datetime.datetime.now().strftime(u'%m/%d/%Y'); expInfo['SessionStart'] = '';
 expInfo['SessionTime'] = datetime.datetime.now().strftime(u'%H:%M:%S');
 expInfo['StudioVersion'] = '2.0.10.252'; expInfo['SUBID'] = 0; expInfo['Target'] = 1; 
 expInfo['TotalRespGreater200[Session]'] = 0; expInfo['TrialsPerRun[Session]'] = 160; 
 expInfo['StimuliDir'] = 'Stimuli'+os.sep
+expInfo['ConsecNonResp[Block]'] = 0
+expInfo['ConsecRTLess200[Block]'] = 0
+expInfo['ConsecSameResp'] = 0
+expInfo['ControlAcc'] = 0
 
 expInfo['date'] = datetime.datetime.now().strftime(u'%Y-%m-%d_%H%M%S')  # add a simple timestamp
 
@@ -1712,7 +1719,6 @@ elif expInfo['Session'] == 'Behavioral' or expInfo['Session'] == 'MRI':
                 #    'Fix5sec.OnsetTime': fixOnsetTime, 'Fix5sec.OffsetTime': fixOffsetTime,
                 #    'Fix5sec.FinishTime': fixFinishTime}
                 #self.saveData(expHandler,tHandler)
-    exitProtocol()
     
 elif expInfo['Session'] == 'RecMem':
     # Create instructions stim to iterate through
@@ -1851,8 +1857,6 @@ elif expInfo['Session'] == 'RecMem':
         allDoneOffsetTime = globalClock.getTime()
         allDone.setAutoDraw(False)
         allDoneFinishTime = globalClock.getTime()
-
-    exitProtocol()
 
 # Save and exit from the experiment
 exitProtocol()
