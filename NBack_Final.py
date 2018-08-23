@@ -322,7 +322,10 @@ class nbackStim:
         cueFixOffsetTime = globalClock.getTime()
         self.pfixation.setAutoDraw(False)
         cueFixFinishTime = globalClock.getTime()
-        
+        cueFixDurationError = (cueFixOffsetTime-cueFixOnsetTime) - cueFixDuration
+        cueFixOffsetDelay = cueFixFinishTime - cueFixOffsetTime
+        cueFixOnsetDelay = cueFixOnsetTime - cueFixStartTime
+
         # Set clocks appropriately
         cue2BackStartTime = globalClock.getTime()
         routineTimer.add(cue2BackDuration) # For non-slip timings.  Add time for each trial so that script continues at the appropriately determined time.
@@ -344,14 +347,19 @@ class nbackStim:
         cue2BackOffsetTime = globalClock.getTime()
         self.stim.setAutoDraw(False)
         cue2BackFinishTime = globalClock.getTime()
+        cue2BackDurationError = (cue2BackOffsetTime-cue2BackOnsetTime) - cue2BackDuration
+        cue2BackOffsetDelay = cue2BackFinishTime - cue2BackOffsetTime
+        cue2BackOnsetDelay = cue2BackOnsetTime - cue2BackStartTime
 
         # Record times and save data
-        self.time = {'CueFix.Duration': cueFixDuration, 'CueFix.OnsetTime': cueFixOnsetTime, 
-            'CueFix.OffsetTime': cueFixOffsetTime, 'CueFix.StartTime': cueFixStartTime,
-            'CueFix.FinishTime': cueFixFinishTime,
-            'Cue2Back.Duration': cue2BackDuration, 'Cue2Back.OnsetTime': cue2BackOnsetTime, 
-            'Cue2Back.OffsetTime': cue2BackOffsetTime,'Cue2Back.StartTime': cue2BackStartTime,
-            'Cue2Back.FinishTime': cue2BackFinishTime}
+        self.time = {'CueFix.Duration': cueFixDuration, 'CueFix.DurationError': cueFixDurationError,
+            'CueFix.OnsetTime': cueFixOnsetTime, 'CueFix.OffsetTime': cueFixOffsetTime,
+            'CueFix.StartTime': cueFixStartTime, 'CueFix.FinishTime': cueFixFinishTime,
+            'CueFix.OnsetDelay': cueFixOnsetDelay, 'CueFix.OffsetDelay': cueFixOffsetDelay,
+            'Cue2Back.Duration': cue2BackDuration, 'Cue2Back.DurationError': cue2BackDurationError,
+            'Cue2Back.OnsetTime': cue2BackOnsetTime, 'Cue2Back.OffsetTime': cue2BackOffsetTime,
+            'Cue2Back.StartTime': cue2BackStartTime, 'Cue2Back.FinishTime': cue2BackFinishTime,
+            'Cue2Back.OnsetDelay': cue2BackOnsetDelay, 'Cue2Back.OffsetDelay': cue2BackOffsetDelay}
         self.saveData(expHandler,tHandler)
 
     def cueTarget(self,expHandler,tHandler):
@@ -380,7 +388,10 @@ class nbackStim:
         cueFixOffsetTime = globalClock.getTime()
         self.pfixation.setAutoDraw(False)
         cueFixFinishTime = globalClock.getTime()
-        
+        cueFixDurationError = (cueFixOffsetTime-cueFixOnsetTime) - cueFixDuration
+        cueFixOffsetDelay = cueFixFinishTime - cueFixOffsetTime
+        cueFixOnsetDelay = cueFixOnsetTime - cueFixStartTime
+
         # Draw and present 2Back and record onset time
         cueTargetStartTime = globalClock.getTime()
         routineTimer.add(cueTargetDuration) # For non-slip timings.  Add time for each trial so that script continues at the appropriately determined time.
@@ -404,14 +415,19 @@ class nbackStim:
         self.target.setAutoDraw(False)
         self.stim.setAutoDraw(False)
         cueTargetFinishTime = globalClock.getTime()
+        cueTargetDurationError = (cueTargetOffsetTime-cueTargetOnsetTime) - cueTargetDuration
+        cueTargetOffsetDelay = cueTargetFinishTime - cueTargetOffsetTime
+        cueTargetOnsetDelay = cueTargetOnsetTime - cueTargetStartTime
 
         # Record times and save data
-        self.time = {'CueFix.Duration':cueFixDuration, 'CueFix.OnsetTime': cueFixOnsetTime,
-            'CueFix.OffsetTime': cueFixOffsetTime, 'CueFix.StartTime': cueFixStartTime,
-            'CueFix.FinishTime': cueFixFinishTime,
-            'CueTarget.Duration': cueTargetDuration, 'CueTarget.OnsetTime': cueTargetOnsetTime, 
-            'CueTarget.OffsetTime': cueTargetOffsetTime, 'CueTarget.StartTime': cueTargetStartTime,
-            'CueTarget.FinishTime': cueTargetFinishTime}
+        self.time = {'CueFix.Duration':cueFixDuration, 'CueFix.DurationError':cueFixDurationError,
+            'CueFix.OnsetTime': cueFixOnsetTime, 'CueFix.OffsetTime': cueFixOffsetTime,
+            'CueFix.StartTime': cueFixStartTime, 'CueFix.FinishTime': cueFixFinishTime,
+            'CueFix.OnsetDelay': cueFixOnsetDelay, 'CueFix.OffsetDelay': cueFixOffsetDelay,
+            'CueTarget.Duration': cueTargetDuration, 'CueTarget.DurationError': cueTargetDurationError,
+            'CueTarget.OnsetTime': cueTargetOnsetTime, 'CueTarget.OffsetTime': cueTargetOffsetTime,
+            'CueTarget.StartTime': cueTargetStartTime, 'CueTarget.FinishTime': cueTargetFinishTime,
+            'CueTarget.OnsetDelay': cueTargetOnsetDelay, 'CueTarget.OffsetDelay': cueTargetOffsetDelay}
         self.saveData(expHandler,tHandler)
 
     def presentStim(self,expHandler,tHandler):
@@ -456,7 +472,10 @@ class nbackStim:
         self.pointerLabelPrompt.setAutoDraw(False)
         self.pointerFingerPrompt.setAutoDraw(False)
         stimFinishTime = globalClock.getTime()
-
+        stimDurationError = (stimOffsetTime - stimOnsetTime) - stimDuration
+        stimOffsetDelay = stimFinishTime - stimOffsetTime
+        stimOnsetDelay = stimOnsetTime - stimStartTime
+        
         # Get Stimulus Start Time and start drawing stimuli on screen 
         fixStartTime = globalClock.getTime() 
         routineTimer.add(fixDuration) # For non-slip timings.  Add time for each trial so that script continues at the appropriately determined time.
@@ -471,12 +490,20 @@ class nbackStim:
         fixOffsetTime = globalClock.getTime()
         self.fixation.setAutoDraw(False)
         fixFinishTime = globalClock.getTime()
+        fixDurationError = (fixOffsetTime - fixOnsetTime) - fixDuration
+        fixOffsetDelay = fixFinishTime - fixOffsetTime
+        fixOnsetDelay = fixOnsetTime - fixStartTime
 
         # Record times and save data
-        self.time = {'Stim.Duration': stimDuration, 'Stim.FinishTime': stimFinishTime, 'Stim.RTTime':stimRTTime, 
-            'Stim.OffsetTime': stimOffsetTime, 'Stim.OnsetTime': stimOnsetTime, 'Stim.StartTime': stimStartTime, 
-            'Fix.Duration': fixDuration, 'Fix.FinishTime': fixFinishTime, 'Fix.OffsetTime': fixOffsetTime, 
-            'Fix.OnsetTime': fixOnsetTime, 'Fix.StartTime': fixStartTime}
+        self.time = {'Stim.Duration': stimDuration, 'Stim.DurationError': stimDurationError,
+            'Stim.OffsetTime': stimOffsetTime, 'Stim.OnsetTime': stimOnsetTime,
+            'Stim.StartTime': stimStartTime, 'Stim.FinishTime': stimFinishTime,
+            'Stim.OnsetDelay': stimOnsetDelay, 'Stim.OffsetDelay': stimOffsetDelay,
+            'Stim.RTTime':stimRTTime, 
+            'Fix.Duration': fixDuration, 'Fix.DurationError': fixDurationError,
+            'Fix.OnsetTime': fixOnsetTime, 'Fix.OffsetTime': fixOffsetTime,
+            'Fix.StartTime': fixStartTime, 'Fix.FinishTime': fixFinishTime,
+            'Fix.OnsetDelay': fixOnsetDelay, 'Fix.OffsetDelay': fixOffsetDelay}
         self.saveData(expHandler,tHandler)
 
     def fixBlock(self,expHandler,tHandler):
@@ -504,11 +531,15 @@ class nbackStim:
         fixOffsetTime = globalClock.getTime()
         self.fixation.setAutoDraw(False)
         fixFinishTime = globalClock.getTime()
-
+        fixDurationError = (fixOffsetTime - fixOnsetTime) - fixDuration
+        fixOffsetDelay = fixFinishTime - fixOffsetTime
+        fixOnsetDelay = fixOnsetTime - fixStartTime
+        
         # Record times and save data
-        self.time = {'Fix15sec.Duration': fixDuration, 'Fix15sec.StartTime': fixStartTime, 
+        self.time = {'Fix15sec.Duration': fixDuration, 'Fix15sec.DurationError': fixDurationError,
             'Fix15sec.OnsetTime': fixOnsetTime, 'Fix15sec.OffsetTime': fixOffsetTime,
-            'Fix15sec.FinishTime': fixFinishTime}
+            'Fix15sec.StartTime': fixStartTime, 'Fix15sec.FinishTime': fixFinishTime,
+            'Fix15sec.OnsetDelay': fixOnsetDelay, 'Fix15sec.OffsetDelay': fixOffsetDelay}
         self.saveData(expHandler,tHandler)
 
     def feedback(self):
