@@ -854,7 +854,16 @@ def formatOutput(fname):
         'SyncSlide.Duration','SyncSlide.DurationError','SyncSlide.FinishTime','SyncSlide.OnsetDelay','SyncSlide.OnsetTime','SyncSlide.OnsetToOnsetTime','SyncSlide.RESP','SyncSlide.StartTime',
         'SyncSlideDur','VFDuration[Trial]']
     elif expInfo['Session'] == 'Practice':
-        print "Practice Files also need to be organized similarly to above lol"
+        headerList = ['ExperimentName','Subject','Session','Allowed','Clock.Information','DataFile.Basename','ExperimentVersion','FontStyle','Group','Handedness',
+        'Main.RefreshRate','NARGUID','Nontarget','RandomSeed','RuntimeCapabilities','RuntimeVersion','RuntimeVersionExpected','SessionDate',
+        'SessionStartDateTimeUtc','SessionTime','StimuliDir','StudioVersion','SUBID','Target','TotalRespGreater200',
+        'TrialsPerRun','Block','Instruction15.DurationError','Instruction15.OnsetDelay','Instruction15.OnsetTime','Instruction15.OnsetToOnsetTime','MasterList',
+        'MasterList.Cycle','MasterList.Sample','Practice','Procedure[Block]','Running[Block]','RunNumberFilterValue','Stimulus[Block]',
+        'Trial','BlockType','CorrectResponse','Cue2BackOnsetDelay','Cue2BackOnsetTime',
+        'Fix.DurationError','Fix.OnsetDelay','Fix.OnsetTime',
+        'Procedure[Trial]','Running[Trial]','Stim.ACC','Stim.CRESP',
+        'Stim.OnsetDelay','Stim.OnsetTime','Stim.RESP','Stim.RT','Stim.RTTime',
+        'StimType','Stimulus[Trial]','TargetType']
 
     # Read in data from output
     rawData = pd.read_csv(fname)
