@@ -842,10 +842,10 @@ def formatOutput(fname):
         'Instruction7.DurationError','Instruction7.OnsetDelay','Instruction7.OnsetTime','Instruction7.OnsetToOnsetTime','Instruction8.DurationError','Instruction8.OnsetDelay',
         'Instruction8.OnsetTime','Instruction8.OnsetToOnsetTime','Instruction9.DurationError','Instruction9.OnsetDelay','Instruction9.OnsetTime','Instruction9.OnsetToOnsetTime',
         'IntroButtonMap.Duration','IntroButtonMap.DurationError','IntroButtonMap.FinishTime','IntroButtonMap.OnsetDelay','IntroButtonMap.OnsetTime','IntroButtonMap.OnsetToOnsetTime',
-        'IntroButtonMap.RESP','IntroButtonMap.StartTime','Practice','PreStimFix.Duration[Block]','PreStimFix.DurationError[Block]','PreStimFix.FinishTime[Block]','PreStimFix.OnsetDelay[Block]',
-        'PreStimFix.OnsetTime[Block]','PreStimFix.OnsetToOnsetTime[Block]','PreStimFix.StartTime[Block]','Procedure[Block]','Run1','Run2','Running[Block]','Stim.ACC[Block]',
-        'Stim.CRESP[Block]','Stim.Duration[Block]','Stim.DurationError[Block]','Stim.FinishTime[Block]','Stim.OnsetDelay[Block]','Stim.OnsetTime[Block]','Stim.OnsetToOnsetTime[Block]',
-        'Stim.RESP[Block]','Stim.RT[Block]','Stim.RTTime[Block]','Stim.StartTime[Block]','StimType[Block]','Stimulus[Block]','v1ProcList','v1ProcList.Cycle','v1ProcList.Sample','VFDuration[Block]',
+        'IntroButtonMap.RESP','IntroButtonMap.StartTime','Practice','PreStimFix.Duration','PreStimFix.DurationError','PreStimFix.FinishTime','PreStimFix.OnsetDelay',
+        'PreStimFix.OnsetTime','PreStimFix.OnsetToOnsetTime','PreStimFix.StartTime','Procedure[Block]','Run1','Run2','Running[Block]','Stim.ACC',
+        'Stim.CRESP','Stim.Duration','Stim.DurationError','Stim.FinishTime','Stim.OnsetDelay','Stim.OnsetTime','Stim.OnsetToOnsetTime',
+        'Stim.RESP','Stim.RT','Stim.RTTime','Stim.StartTime','StimType','Stimulus','v1ProcList','v1ProcList.Cycle','v1ProcList.Sample','VFDuration',
         'Trial','CorrectResponse','Fix.Duration[Trial]','Fix.DurationError[Trial]','Fix.FinishTime[Trial]','Fix.OnsetDelay[Trial]','Fix.OnsetTime[Trial]','Fix.OnsetToOnsetTime[Trial]',
         'Fix.StartTime[Trial]','PracticeList','PracticeList.Cycle','PracticeList.Sample','PreStimFix.Duration[Trial]','PreStimFix.DurationError[Trial]','PreStimFix.FinishTime[Trial]',
         'PreStimFix.OnsetDelay[Trial]','PreStimFix.OnsetTime[Trial]','PreStimFix.OnsetToOnsetTime[Trial]','PreStimFix.StartTime[Trial]','Procedure[Trial]','ReadyList','ReadyList.Cycle',
@@ -853,6 +853,27 @@ def formatOutput(fname):
         'Stim.OnsetTime[Trial]','Stim.OnsetToOnsetTime[Trial]','Stim.RESP[Trial]','Stim.RT[Trial]','Stim.RTTime[Trial]','Stim.StartTime[Trial]','StimType[Trial]','Stimulus[Trial]',
         'SyncSlide.Duration','SyncSlide.DurationError','SyncSlide.FinishTime','SyncSlide.OnsetDelay','SyncSlide.OnsetTime','SyncSlide.OnsetToOnsetTime','SyncSlide.RESP','SyncSlide.StartTime',
         'SyncSlideDur','VFDuration[Trial]']
+    #elif expInfo['Session'] == 'RecMem':
+        #headerList = ['ExperimentName','Subject','Session','Allowed','Clock.Information','DataFile.Basename','ExperimentVersion','FontStyle','Group','Handedness',
+        #'Main.RefreshRate','NARGUID','NewResp','OldResp','RandomSeed','RunNumber','RuntimeCapabilities','RuntimeVersion','RuntimeVersionExpected','SessionDate',
+        #'SessionStartDateTimeUtc','SessionTime','StimuliDir','StudioVersion','SUBID','Block','Fix.Duration[Block]','Fix.DurationError[Block]','Fix.FinishTime[Block]',
+        #'Fix.OnsetDelay[Block]','Fix.OnsetTime[Block]','Fix.OnsetToOnsetTime[Block]','Fix.StartTime[Block]','GetReady.Duration','GetReady.DurationError','GetReady.FinishTime',
+        #'GetReady.OnsetDelay','GetReady.OnsetTime','GetReady.OnsetToOnsetTime','GetReady.RESP','GetReady.StartTime','Instruction1.DurationError','Instruction1.OnsetDelay',
+        #'Instruction1.OnsetTime','Instruction1.OnsetToOnsetTime','Instruction2.DurationError','Instruction2.OnsetDelay','Instruction2.OnsetTime','Instruction2.OnsetToOnsetTime',
+        #'Instruction7.DurationError','Instruction7.OnsetDelay','Instruction7.OnsetTime','Instruction7.OnsetToOnsetTime','Instruction8.DurationError','Instruction8.OnsetDelay',
+        #'Instruction8.OnsetTime','Instruction8.OnsetToOnsetTime','Instruction9.DurationError','Instruction9.OnsetDelay','Instruction9.OnsetTime','Instruction9.OnsetToOnsetTime',
+        #'IntroButtonMap.Duration','IntroButtonMap.DurationError','IntroButtonMap.FinishTime','IntroButtonMap.OnsetDelay','IntroButtonMap.OnsetTime','IntroButtonMap.OnsetToOnsetTime',
+        #'IntroButtonMap.RESP','IntroButtonMap.StartTime','Practice','PreStimFix.Duration[Block]','PreStimFix.DurationError[Block]','PreStimFix.FinishTime[Block]','PreStimFix.OnsetDelay[Block]',
+        #'PreStimFix.OnsetTime[Block]','PreStimFix.OnsetToOnsetTime[Block]','PreStimFix.StartTime[Block]','Procedure[Block]','Run1','Run2','Running[Block]','Stim.ACC[Block]',
+        #'Stim.CRESP[Block]','Stim.Duration[Block]','Stim.DurationError[Block]','Stim.FinishTime[Block]','Stim.OnsetDelay[Block]','Stim.OnsetTime[Block]','Stim.OnsetToOnsetTime[Block]',
+        #'Stim.RESP[Block]','Stim.RT[Block]','Stim.RTTime[Block]','Stim.StartTime[Block]','StimType[Block]','Stimulus[Block]','v1ProcList','v1ProcList.Cycle','v1ProcList.Sample','VFDuration[Block]',
+        #'Trial','CorrectResponse','Fix.Duration[Trial]','Fix.DurationError[Trial]','Fix.FinishTime[Trial]','Fix.OnsetDelay[Trial]','Fix.OnsetTime[Trial]','Fix.OnsetToOnsetTime[Trial]',
+        #'Fix.StartTime[Trial]','PracticeList','PracticeList.Cycle','PracticeList.Sample','PreStimFix.Duration[Trial]','PreStimFix.DurationError[Trial]','PreStimFix.FinishTime[Trial]',
+        #'PreStimFix.OnsetDelay[Trial]','PreStimFix.OnsetTime[Trial]','PreStimFix.OnsetToOnsetTime[Trial]','PreStimFix.StartTime[Trial]','Procedure[Trial]','ReadyList','ReadyList.Cycle',
+        #'ReadyList.Sample','Running[Trial]','Stim.ACC[Trial]','Stim.CRESP[Trial]','Stim.Duration[Trial]','Stim.DurationError[Trial]','Stim.FinishTime[Trial]','Stim.OnsetDelay[Trial]',
+        #'Stim.OnsetTime[Trial]','Stim.OnsetToOnsetTime[Trial]','Stim.RESP[Trial]','Stim.RT[Trial]','Stim.RTTime[Trial]','Stim.StartTime[Trial]','StimType[Trial]','Stimulus[Trial]',
+        #'SyncSlide.Duration','SyncSlide.DurationError','SyncSlide.FinishTime','SyncSlide.OnsetDelay','SyncSlide.OnsetTime','SyncSlide.OnsetToOnsetTime','SyncSlide.RESP','SyncSlide.StartTime',
+        #'SyncSlideDur','VFDuration[Trial]']
     elif expInfo['Session'] == 'Practice':
         headerList = ['ExperimentName','Subject','Session','Allowed','Clock.Information','DataFile.Basename','ExperimentVersion','FontStyle','Group','Handedness',
         'Main.RefreshRate','NARGUID','Nontarget','RandomSeed','RuntimeCapabilities','RuntimeVersion','RuntimeVersionExpected','SessionDate',
@@ -1915,6 +1936,7 @@ elif expInfo['Session'] == 'RecMem':
         allDoneOffsetTime = globalClock.getTime()
         allDone.setAutoDraw(False)
         allDoneFinishTime = globalClock.getTime()
+    exitProtocol()
 
 # Save and exit from the experiment
 exitProtocol()
