@@ -608,7 +608,6 @@ class nbackStim:
         if not self.trial['Stim_CRESP']:
             self.trial['Stim_CRESP'] = ''
         tHandler.addData('Stim.CRESP',self.trial['Stim_CRESP'])
-        tHandler.addData('CorrectResponse',self.trial['Stim_CRESP'])
 
         # Add fields for all time measurements in the time dictionary (i.e. StimOnset, fixationDuration, etc.)
         for i in self.time.keys():
@@ -616,19 +615,6 @@ class nbackStim:
 
         # Add participant accuracy and the correct response for the trial
         tHandler.addData('Stim.ACC',accuracy)
-        
-        # Add Procedure[Block] output column
-        if self.trial['BlockType'] in ['Cue0Back']:
-            tHandler.addData('Procedure[Block]','Cue0BackPROC')
-        elif self.trial['BlockType'] in ['Cue2Back']:
-            tHandler.addData('Procedure[Block]','Cue2BackPROC')
-        elif self.trial['BlockType'] in ['Fix15secPROC']:
-            tHandler.addData('Procedure[Block]','Fix15secPROC')
-        elif self.trial['BlockType'] in ['EndProc']:
-            tHandler.addData('Procedure[Block]','EndProc')
-        else:
-            tHandler.addData('Procedure[Block]','TrialsPROC')
-        
         expHandler.nextEntry()
 
         # Exit task if the escape key was pressed
@@ -875,10 +861,6 @@ def formatOutput(fname):
     orgData = rawData[validHeader]
     orgData.to_csv(fname, index=False) # Remove index from output file
 
-    with open(fname, 'w') as f:
-        f.write(fname+'\n')
-    orgData.to_csv(fname, mode='a')
-    
 def exitProtocol():
     '''A protocol to save all data  before the script exits.  Will run at the end of the script or when the 
     escape key is pressed during instructions or a participant's response.'''
@@ -888,7 +870,7 @@ def exitProtocol():
         os.makedirs(pathname)
 
     # Save the data in wide format and in Pickle
-    thisExp.saveAsWideText(filename+'.csv',delim=',')
+    thisExp.saveAsWideText(filename+'.csv')
     thisExp.saveAsPickle(filename)
     
     # Find the last dataFile in the list of data
