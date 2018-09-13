@@ -242,8 +242,16 @@ else:
     handFlip = np.array([-1,1])*stimScale
     
 # Preserve EPrime data fields
-expInfo['Nontarget'] = hand['NoMatch']
-expInfo['Allowed'] = hand['Match']+hand['NoMatch']
+# Eliminate commas in output file
+s_Nontarget = hand['NoMatch']
+s_Nontarget = ','.join(map(str,s_Nontarget))
+s_Nontarget = s_Nontarget.replace(',', '+')
+expInfo['Nontarget'] = s_Nontarget
+
+s_Allowed = hand['Match']+hand['NoMatch']
+s_Allowed = ','.join(map(str,s_Allowed))
+s_Allowed = s_Allowed.replace(',', '+')
+expInfo['Allowed'] = s_Allowed
 
 ###
 ### Defining variables.  Create image and text stimuli classes to make stimuli easier later.
@@ -607,9 +615,19 @@ class nbackStim:
         # Record trial correct response
         if not self.trial['Stim_CRESP']:
             self.trial['Stim_CRESP'] = ''
-        tHandler.addData('Stim.CRESP',self.trial['Stim_CRESP'])
-        tHandler.addData('CorrectResponse',self.trial['Stim_CRESP'])
-
+        #tHandler.addData('Stim.CRESP',self.trial['Stim_CRESP'])
+        #tHandler.addData('CorrectResponse',self.trial['Stim_CRESP'])
+        
+        if self.trial['Stim_CRESP'] == 'Match':
+            tHandler.addData('Stim.CRESP',1)
+            tHandler.addData('CorrectResponse',1)
+        elif self.trial['Stim_CRESP'] == 'No Match':
+            tHandler.addData('Stim.CRESP',0)
+            tHandler.addData('CorrectResponse',0)
+        elif self.trial['Stim_CRESP'] == '':
+            tHandler.addData('Stim.CRESP',self.trial['Stim_CRESP'])
+            tHandler.addData('CorrectResponse',self.trial['Stim_CRESP'])
+            
         # Add fields for all time measurements in the time dictionary (i.e. StimOnset, fixationDuration, etc.)
         for i in self.time.keys():
             tHandler.addData(i,int(self.time[i]*1000))
