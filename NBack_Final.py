@@ -605,11 +605,18 @@ class nbackStim:
         # Record participant responses
         if self.response:
             # Record the participant's response, reaction time, and Correct Response
-            tHandler.addData('Stim.RESP',self.response[0][0])
+            tHandler.addData('Stim.RESP_KEY',self.response[0][0])
+            if list(set(hand['Match']) & set(self.response[0])):
+                tHandler.addData('Stim.RESP',1)
+            elif list(set(hand['NoMatch']) & set(self.response[0])):
+                tHandler.addData('Stim.RESP',2)
+            else:
+                tHandler.addData('Stim.RESP','')
             if self.response[0][0] != 'escape':
                 tHandler.addData('Stim.RT',int((self.response[0][1]-self.time['Stim.OnsetTime'])*1000))
         else:
             tHandler.addData('Stim.RESP','')
+            tHandler.addData('Stim.RESP_KEY','')
             tHandler.addData('Stim.RT',0)
 
         # Record trial correct response
@@ -622,8 +629,14 @@ class nbackStim:
             tHandler.addData('Stim.CRESP',1)
             tHandler.addData('CorrectResponse',1)
         elif self.trial['Stim_CRESP'] == 'No Match':
-            tHandler.addData('Stim.CRESP',0)
-            tHandler.addData('CorrectResponse',0)
+            tHandler.addData('Stim.CRESP',2)
+            tHandler.addData('CorrectResponse',2)
+        elif self.trial['Stim_CRESP'] == 'Old':
+            tHandler.addData('Stim.CRESP',1)
+            tHandler.addData('CorrectResponse',1)
+        elif self.trial['Stim_CRESP'] == 'New':
+            tHandler.addData('Stim.CRESP',2)
+            tHandler.addData('CorrectResponse',2)
         elif self.trial['Stim_CRESP'] == '':
             tHandler.addData('Stim.CRESP',self.trial['Stim_CRESP'])
             tHandler.addData('CorrectResponse',self.trial['Stim_CRESP'])
@@ -843,7 +856,7 @@ def formatOutput(fname):
             'Fix15sec.OnsetDelay','Fix15sec.OnsetTime','Fix15sec.OnsetToOnsetTime','Fix15sec.StartTime','Procedure[Block]','Run1Block1','Run1Block2',
             'Run1Block3','Run1Block4','Run1Block5','Run1Block6','Run1Block7','Run1Block8','Run2Block1','Run2Block2','Run2Block3','Run2Block4','Run2Block5',
             'Run2Block6','Run2Block7','Run2Block8','Running[Block]','RunTrialNumber[Block]','Stim.ACC','Stim.CRESP','Stim.Duration','Stim.DurationError',
-            'Stim.FinishTime','Stim.OffsetDelay','Stim.OffsetTime','Stim.OnsetDelay','Stim.OnsetTime','Stim.OnsetToOnsetTime','Stim.RESP','Stim.RT',
+            'Stim.FinishTime','Stim.OffsetDelay','Stim.OffsetTime','Stim.OnsetDelay','Stim.OnsetTime','Stim.OnsetToOnsetTime','Stim.RESP','Stim.RESP_KEY','Stim.RT',
             'Stim.RTTime','Stim.StartTime','StimType','Stimulus','TargetType','TotalRespGreater200[Block]','TrialsPerRun[Block]','v1ProcList','v1ProcList.Cycle',
             'v1ProcList.Sample','Trial','GetReady.DurationError','GetReady.OffsetDelay','GetReady.OffsetTime','GetReady.OnsetDelay','GetReady.OnsetTime',
             'GetReady.OnsetToOnsetTime','GetReady.RTTime','GetReady2.DurationError','GetReady2.OffsetDelay','GetReady2.OffsetTime','GetReady2.OnsetDelay',
@@ -863,7 +876,7 @@ def formatOutput(fname):
         'IntroButtonMap.RESP','IntroButtonMap.StartTime','Practice','PreStimFix.Duration','PreStimFix.DurationError','PreStimFix.FinishTime','PreStimFix.OnsetDelay',
         'PreStimFix.OnsetTime','PreStimFix.OnsetToOnsetTime','PreStimFix.StartTime','Procedure[Block]','Run1','Run2','Running[Block]','Stim.ACC',
         'Stim.CRESP','Stim.Duration','Stim.DurationError','Stim.FinishTime','Stim.OnsetDelay','Stim.OnsetTime','Stim.OnsetToOnsetTime',
-        'Stim.RESP','Stim.RT','Stim.RTTime','Stim.StartTime','StimType','Stimulus','v1ProcList','v1ProcList.Cycle','v1ProcList.Sample','VFDuration',
+        'Stim.RESP','Stim.RESP_KEY','Stim.RT','Stim.RTTime','Stim.StartTime','StimType','Stimulus','v1ProcList','v1ProcList.Cycle','v1ProcList.Sample','VFDuration',
         'Trial','CorrectResponse','Fix.Duration[Trial]','Fix.DurationError[Trial]','Fix.FinishTime[Trial]','Fix.OnsetDelay[Trial]','Fix.OnsetTime[Trial]','Fix.OnsetToOnsetTime[Trial]',
         'Fix.StartTime[Trial]','PracticeList','PracticeList.Cycle','PracticeList.Sample','PreStimFix.Duration[Trial]','PreStimFix.DurationError[Trial]','PreStimFix.FinishTime[Trial]',
         'PreStimFix.OnsetDelay[Trial]','PreStimFix.OnsetTime[Trial]','PreStimFix.OnsetToOnsetTime[Trial]','PreStimFix.StartTime[Trial]','Procedure[Trial]','ReadyList','ReadyList.Cycle',
@@ -901,7 +914,7 @@ def formatOutput(fname):
         'Trial','BlockType','CorrectResponse','Cue2BackOnsetDelay','Cue2BackOnsetTime',
         'Fix.DurationError','Fix.OnsetDelay','Fix.OnsetTime',
         'Procedure[Trial]','Running[Trial]','Stim.ACC','Stim.CRESP',
-        'Stim.OnsetDelay','Stim.OnsetTime','Stim.RESP','Stim.RT','Stim.RTTime',
+        'Stim.OnsetDelay','Stim.OnsetTime','Stim.RESP','Stim.RESP_KEY','Stim.RT','Stim.RTTime',
         'StimType','Stimulus[Trial]','TargetType']
 
     # Read in data from output
