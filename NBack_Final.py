@@ -936,10 +936,11 @@ def formatOutput(fname):
     orgData = rawData[validHeader]
     orgData.to_csv(fname, index=False) # Remove index from output file
 
+    # Print path and filename at top of output file
     with open(fname, 'w') as f:
         f.write(fname+'\n')
-    orgData.to_csv(fname, mode='a')
-    
+    orgData.to_csv(fname, mode='a',index=False)
+
 def exitProtocol():
     '''A protocol to save all data  before the script exits.  Will run at the end of the script or when the 
     escape key is pressed during instructions or a participant's response.'''
